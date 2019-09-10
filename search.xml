@@ -1,19 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[20190910]]></title>
-    <url>%2Fposts%2F52ab3164.html</url>
-    <content type="text"><![CDATA[hello]]></content>
+    <title><![CDATA[使用hexo下next主题时一些配置]]></title>
+    <url>%2Fposts%2F2b624375.html</url>
+    <content type="text"><![CDATA[前言在 Hexo 中有两份主要的配置文件，其名称都是 _config.yml。 其中，一份位于站点根目录下，主要包含 Hexo 本身的配置；另一份位于主题目录下，这份配置由主题作者提供，主要用于配置主题相关的选项。为了描述方便，在以下说明中，将前者称为站点配置文件， 后者称为主题配置文件。网站脚注12345678910111213141516171819202122footer:#建站时间 since: 2018#作者头像并且是动画效果 icon: name: user animated: true color: "##66CDAA"#显示版权作者 copyright: aigisss 爱即是诗#不显示Hexo powered: enable: false version: false#不显示主题和版本 theme: enable: false version: false#显示备案号 beian: enable: true icp: 赣ICP备18013338-1号版权声明1234creative_commons: license: by-nc-sa sidebar: false post: true代码块123456789codeblock: # 自定义边框半径，默认是1 # 值越大弧度越大 border_radius: 6 # 右上角显示复制按钮 copy_button: enable: true # 显示复制结果 show_result: true分享123456789101112131415161718needmoreshare2: enable: true postbottom: #文章底部 enable: false options: iconStyle: box boxForm: horizontal position: bottomCenter networks: Weibo,Wechat,Douban,QQZone,Twitter,Facebook #左下角悬浮按钮 float: enable: true options: iconStyle: box boxForm: horizontal position: middleRight networks: Weibo,Wechat,Douban,QQZone,Twitter,Facebook访问次数123456789101112# busuanzi统计busuanzi_count: enable: true # 总访客数 total_visitors: true total_visitors_icon: user # 总浏览量 total_views: true total_views_icon: eye # 文章浏览量 post_views: true post_views_icon: eye顶部阅读进度条1234reading_progress: enable: true color: "#37c6c0" height: 2px加载动画123456789101112131415161718192021222324motion:# 启用 enable: true # 异步加载 async: true transition: # Transition variants: # fadeIn | fadeOut | flipXIn | flipXOut | flipYIn | flipYOut | flipBounceXIn | flipBounceXOut | flipBounceYIn | flipBounceYOut # swoopIn | swoopOut | whirlIn | whirlOut | shrinkIn | shrinkOut | expandIn | expandOut # bounceIn | bounceOut | bounceUpIn | bounceUpOut | bounceDownIn | bounceDownOut | bounceLeftIn | bounceLeftOut | bounceRightIn | bounceRightOut # slideUpIn | slideUpOut | slideDownIn | slideDownOut | slideLeftIn | slideLeftOut | slideRightIn | slideRightOut # slideUpBigIn | slideUpBigOut | slideDownBigIn | slideDownBigOut | slideLeftBigIn | slideLeftBigOut | slideRightBigIn | slideRightBigOut # perspectiveUpIn | perspectiveUpOut | perspectiveDownIn | perspectiveDownOut | perspectiveLeftIn | perspectiveLeftOut | perspectiveRightIn | perspectiveRightOut # 文章摘要动画 post_block: bounceIn # 加载各种页面动画（分类，关于，标签等等） post_header: fadeIn # 文章详情动画 post_body: fadeIn # coll_header: fadeIn # Only for Pisces | Gemini. # 侧边栏（人物头像的那部分） sidebar: fadeIn搜索功能NexT自带提供了两个搜索algolia_searchlocal_search其实这个local_search已经很好用了，配置algolia_search挺麻烦的，而且搜索功能也用的不多毕竟有万能的Ctrl + F123456789local_search: enable: true # if auto, trigger search by changing input # if manual, trigger search by pressing enter key or search button trigger: auto # show top n results per article, show all results by setting to -1 top_n_per_article: 1 # unescape html strings to the readable one unescape: false添加RSS订阅12345678910npm install hexo-generator-feed --save复制代码# Extensionsplugins: hexo-generate-feedfeed: # RSS订阅插件 type: atom path: atom.xml limit: 0 #0就是代表所有数学公式1234567891011# Math Equations Render Supportmath: enable: true # Default(true) will load mathjax/katex script on demand # That is it only render those page who has 'mathjax: true' in Front Matter. # If you set it to false, it will load mathjax/katex srcipt EVERY PAGE. per_page: true engine: mathjax #engine: katex还需要在文章的Front-matter里打开mathjax开关，比如：12345title: 使用hexo下next主题搭建博客的记录tags: 日常abbrlink: 326cb881date: 2019-09-09 09:58:21mathjax: true网上一大堆说会出现语义冲突—–类 Latex 格式书写的数学公式下划线_表示下标，有特殊的含义，如果被强制转换为&lt;em&gt;标签，那么 MathJax 引擎在渲染数学公式的时候就会出错。类似的语义冲突的符号还包括*, {, }, \\等。但是！！在我试验下没有出现此类问题，只要在主题中打开，md中申明mathjax: true就好了，可能在我使用的next6.7中解决了冲突。比如以下的公式能出来！1\Gamma(z) = \int_0^\infty t^&#123;z-1&#125;e^&#123;-t&#125;dt\,.$$\Gamma(z) = \int_0^\infty t^{z-1}e^{-t}dt,.$$12345678$$P = \frac&#123;\sum_&#123;i=1&#125;^n (x_i- x)(y_i- y)&#125;&#123;\displaystyle \left[\sum_&#123;i=1&#125;^n (x_i-x)^2\sum_&#123;i=1&#125;^n (y_i-y)^2\right]^&#123;1/2&#125; &#125;$$$$P = \frac{\sum_{i=1}^n (x_i- x)(y_i- y)}{\displaystyle \left[\sum_{i=1}^n (x_i-x)^2\sum_{i=1}^n (y_i-y)^2\right]^{1/2} }$$]]></content>
   </entry>
   <entry>
-    <title><![CDATA[Hello World]]></title>
-    <url>%2Fposts%2F4a17b156.html</url>
-    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.Quick StartCreate a new post1$ hexo new "My New Post"More info: WritingRun server1$ hexo serverMore info: ServerGenerate static files1$ hexo generateMore info: GeneratingDeploy to remote sites1$ hexo deployMore info: Deployment]]></content>
-  </entry>
-  <entry>
-    <title><![CDATA[20190909]]></title>
+    <title><![CDATA[使用hexo下next主题时出错]]></title>
     <url>%2Fposts%2F326cb881.html</url>
-    <content type="text"><![CDATA[12345678map.on("click", function(e) &#123; var features = map.queryRenderedFeatures(e.point); document.getElementById("features").innerHTML = JSON.stringify( features, null, 2 );&#125;);​ “hexo-prism-plugin”: “^2.3.0”,]]></content>
+    <content type="text"><![CDATA[next6.3+自带代码复制，使用代码高亮插件时hexo-prism-plugin时会不起作用在主题下的_config.yml文件中设置：使用了 hexo-asset-image 和 hexo-abbrlink 后，图片显示不出来。issue：https://github.com/rozbo/hexo-abbrlink/issues/19解决方法：https://github.com/foreveryang321/hexo-asset-image]]></content>
       <tags>
         <tag>日常</tag>
       </tags>
@@ -53,16 +48,5 @@
     <title><![CDATA[使用coding-pages时出现静态文件丢失]]></title>
     <url>%2Fposts%2F372cd070.html</url>
     <content type="text"><![CDATA[出现这种情况，发现静态资源都加载不到，后来网上搜索了半天，才发现原来你要打算用 coding 的 pages 服务部署你的博客的话，你创建项目的名字必须和用户名保持一致，不能自己随便自定义。我重新创建了一个和用户名一致的项目，部署到他的 pages 服务，访问正常]]></content>
-  </entry>
-  <entry>
-    <title><![CDATA[我就试试]]></title>
-    <url>%2Fposts%2F9396c7b6.html</url>
-    <content type="text"><![CDATA[hello world附加一段文章摘要，字数最好在 140 字以内，会出现在 meta 的 description 里面]]></content>
-      <categories>
-        <category>DIY</category>
-      </categories>
-      <tags>
-        <tag>DIY</tag>
-      </tags>
   </entry>
 </search>
