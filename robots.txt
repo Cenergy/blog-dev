@@ -17,4 +17,4 @@ Allow: /
 Allow: /archives/
 Allow: /categories/
 Allow: /tags/
-Sitemap: /sitemap.xml
+Sitemap: /sitemap.xml,/baidusitemap.xml

@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.aigisss.com/posts/eba3f111.html</loc>
+    
+    <lastmod>2019-09-13T15:27:52.967Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://blog.aigisss.com/posts/326cb881.html</loc>
     
     <lastmod>2019-09-13T13:16:29.267Z</lastmod>
@@ -23,23 +30,16 @@
   </url>
   
   <url>
-    <loc>https://blog.aigisss.com/posts/2b624375.html</loc>
-    
-    <lastmod>2019-09-12T14:22:38.233Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.aigisss.com/posts/eba3f111.html</loc>
-    
-    <lastmod>2019-09-12T14:22:17.725Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://blog.aigisss.com/posts/d5d49586.html</loc>
     
     <lastmod>2019-09-12T14:19:07.794Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.aigisss.com/categories/index.html</loc>
+    
+    <lastmod>2019-09-09T12:58:53.000Z</lastmod>
     
   </url>
   
@@ -59,13 +59,6 @@
   
   <url>
     <loc>https://blog.aigisss.com/tags/index.html</loc>
-    
-    <lastmod>2019-09-09T12:58:53.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.aigisss.com/categories/index.html</loc>
     
     <lastmod>2019-09-09T12:58:53.000Z</lastmod>
     
