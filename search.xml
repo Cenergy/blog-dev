@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[重构2——改善既有代码的设计]]></title>
+    <url>%2Fposts%2Fb189f81a.html</url>
+    <content type="text"><![CDATA[重构的原则何谓重构重构这个词既可以是名词也可以是动词，名词形式的定义的是：对软件内部结构的调整，目的是在不改变软件可观察行为的前提下，提高其可理解性，降低其修改成本。动词形式的定义的是：使用一系列的重构手法，在不改变可观察行为的前提下，调整其结构]]></content>
+      <tags>
+        <tag>摘抄</tag>
+        <tag>总结</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[VSCode中python代码输出中文乱码解决方法]]></title>
     <url>%2Fposts%2F87ed0839.html</url>
     <content type="text"><![CDATA[在 vscode 中编写 python 代码，输出中文时，控制台输出为乱码解决方法：先检查右下角编码集设置是否正确修改完后运行仍不行，可以在”文件”－”首选项”－”用户设置”中搜索 code-runner.executorMap 选项，提示需要在 setting.json 中修改在 json 中添加下列属性123"code-runner.executorMap": &#123;"python": "set PYTHONIOENCODING=utf8 &amp;&amp; python -u"&#125;https://mp.weixin.qq.com/s/QIJ-QHkxZUyKyQAPG49vPg]]></content>
