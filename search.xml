@@ -1,9 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[mapboxgl实现marker的聚类]]></title>
+    <url>%2Fposts%2Fa2d9d205.html</url>
+    <content type="text"><![CDATA[]]></content>
+      <tags>
+        <tag>mapbox</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[vue学习与总结]]></title>
+    <url>%2Fposts%2F3d0c447.html</url>
+    <content type="text"><![CDATA[组件切换vue 提供了 component，来展示对应的名称组件component 是一个占位符,:is 属性，可以用来指定展示的组件的名称插值表达式v-cloakv-textv-htmlv-bind(缩写:)v-on(缩写@)v-model 只能用于表单元素v-forv-ifv-show一般来说，v-if有更高的切换消耗而v-show有更高的初始渲染消耗。因此，如果需要频繁切换，v-show较好，如果运行时条件不太可能改变v-if较好事件修饰符.stop.prevent.capture.self.oncevue中绑定样式两种方式 v-bind:class和v-bind:style]]></content>
+      <tags>
+        <tag>vue</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[重构2——改善既有代码的设计]]></title>
     <url>%2Fposts%2Fb189f81a.html</url>
-    <content type="text"><![CDATA[前言都能写出计算机可以理解代码，唯有写出人类容易理解的代码的，才是优秀的程序员。好代码的标准就是人们能否轻而易举地修改它重构的原则何谓重构重构这个词既可以是名词也可以是动词，名词形式的定义的是：对软件内部结构的调整，目的是在不改变软件可观察行为的前提下，提高其可理解性，降低其修改成本。动词形式的定义的是：使用一系列的重构手法，在不改变可观察行为的前提下，调整其结构]]></content>
+    <content type="text"><![CDATA[前言都能写出计算机可以理解代码，唯有写出人类容易理解的代码的，才是优秀的程序员。好代码的标准就是人们能否轻而易举地修改它重构的原则何谓重构重构这个词既可以是名词也可以是动词，名词形式的定义的是：对软件内部结构的调整，目的是在不改变软件可观察行为的前提下，提高其可理解性，降低其修改成本。动词形式的定义的是：使用一系列的重构手法，在不改变可观察行为的前提下，调整其结构为何重构重构改进软件的设计重构时软件更容易理解重构帮助找到bug重构提高编程速度何时重构预备性重构：让添加的新功能更容易帮助理解的重构：使代码更容易理解捡垃圾式重构有计划的重构和见机行事的重构长期重构复审代码时重构何时不重构重写比重构还容易只有需要理解其工作原理时，对其重构才有价值。]]></content>
       <tags>
         <tag>摘抄</tag>
         <tag>总结</tag>
