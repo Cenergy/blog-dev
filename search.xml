@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[JavaScript面向对象编程总结]]></title>
+    <url>%2Fposts%2F9364fbab.html</url>
+    <content type="text"><![CDATA[What is Object-oriented ProgrammingOOP是一种编程范例，或者编程风格，这是围绕对象而不是函数面向对象编程中的四个核心概念Encapsulation封装Abstraction 抽象Inheritance 继承Polymorphism 多态区别与面向过程编程改变了其中一个函数，然后其他几个函数可能就奔溃了，这就是我们说的意大利面条代码。 函数之间深层次的关联变成了各种问题的来源，OOP就应运而生。OOP 就一组相关的变量和函数组成合成一个单元，我们称之为对象(object)。把里面的函数称为方法，里面的变量称之为属性。最好的函数是那些没有参数的函数，参数个数越少，使用和维护就越简单。这就是封装！向外隐藏一些属性和方法，这将会使这些对象的接口更简单使用封装重新组合的相关的变量和函数，这样可以减少复杂性，可以在程序的不同部分重用这些对象或者在不同程序中，通过抽象，隐藏细节和复杂性，只显示必要性，这种技术降低了复杂性，也隔离了代码更改的影响。继承让我们消除多余的代码多态性可以避免写出复杂丑陋的选择性代码编辑器和插件推荐vscode，安装插件live server原型Prototypes 和 原型继承Prototyical InheritanceJavaScript中的类并不同于Java或者c#中的类，因为Javascript是动态语言，所以类的本质上是更像是为了配合原型和原型继承所采取的必要的技术。12345678910111213141516171819202122232425//使用字面量创建对象const circle=&#123;&#125; //一个Javascript的对象实际上是一组键值对的集合//使用字面量语法来创建多个对象是有问题的，那就是对象的行为性，就像人一样可以做很多事就叫做行为性。//解决方法就是用工厂函数（factory）或者构造函数（constructor）//工厂函数function createCircle(radius)&#123; return &#123;radius, draw()&#123; console.log('draw') &#125; &#125;&#125;const circle2=createCircle(1)// 构造函数function Circle(radius)&#123; this.radius=raius; this.draw=function ()&#123; console.log('draw') &#125;&#125;const circle3=new Circle(2)//当我们使用new操作符调用一个函数时，3件事发生了//首先new操作符创建了一个空对象，然后设置this指向这个对象，最后返回这个对象补充：字面量是变量的字符串表示形式。它不是一种值，而是一种变量记法。1234const a=1 //1是字面量const b='hello world' //hello world是字面量const c=[1,2,3] //[1,2,3]是字面量const d=&#123;"foo":"bar"&#125; //&#123;"foo":"bar"&#125;是字面量每个对象都有构造函数属性这个属性引用了用来创建这个对象的构造函数1234new String() // ''," ",``new Boolean() // true ,falsenew Number() //1,2,3,4,5,6new Object() //&#123;&#125;值类型复制值对象或者引用类型复制他们的引用12345678910111213let number=10;function increase(number)&#123; number++;&#125;increase(number);console.log(number) //10let object=&#123;value:10&#125;;function increase(object)&#123; object.value++;&#125;increase(object);console.log(object) //&#123;value:11&#125;不知道要访问的对象名称属性，是在运行时产生的，可以使用方括号的语法,或者属性名不符合命名规则时。抽象意味着我们应该隐藏细节和复杂部分，只显示或者暴露必要的部分next station is]]></content>
+      <tags>
+        <tag>javascript</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[mapboxgl实现marker的聚类]]></title>
     <url>%2Fposts%2Fa2d9d205.html</url>
     <content type="text"><![CDATA[]]></content>
@@ -11,7 +19,11 @@
   <entry>
     <title><![CDATA[vue学习与总结]]></title>
     <url>%2Fposts%2F3d0c447.html</url>
-    <content type="text"><![CDATA[组件切换vue 提供了 component，来展示对应的名称组件component 是一个占位符,:is 属性，可以用来指定展示的组件的名称插值表达式v-cloakv-textv-htmlv-bind(缩写:)v-on(缩写@)v-model 只能用于表单元素v-forv-ifv-show一般来说，v-if有更高的切换消耗而v-show有更高的初始渲染消耗。因此，如果需要频繁切换，v-show较好，如果运行时条件不太可能改变v-if较好事件修饰符.stop.prevent.capture.self.oncevue中绑定样式两种方式 v-bind:class和v-bind:style定义指令使用Vue.directive()定义全局的指令，比如v-focus其中 参数1：指令的名称，定义时不需要加v-的前缀使用的时候必须在指令名称前面加上v-前缀来调用参数2：是一个对象，这个对象上有一些指令相关的函数，这些函数可以在特定的阶段执行相关的操作12345678Vue.dirctive('focus',&#123;bind:function(el)&#123; //每当指令绑定到元素上的时候会立即执行这个bind函数，只执行一次 //每个函数中的第一个参数永远是el表示被绑定的指令的那个元素，是原生的js对象 //每当指令绑定到元素上的时候会立即执行这个bind函数，只执行一次 //&#125;&#125;]]></content>
+    <content type="text"><![CDATA[组件切换vue 提供了 component，来展示对应的名称组件component 是一个占位符,:is 属性，可以用来指定展示的组件的名称插值表达式v-cloakv-textv-htmlv-bind(缩写:)v-on(缩写@)v-model 只能用于表单元素v-forv-ifv-show一般来说，v-if 有更高的切换消耗而 v-show 有更高的初始渲染消耗。因此，如果需要频繁切换，v-show 较好，如果运行时条件不太可能改变 v-if 较好事件修饰符.stop.prevent.capture.self.oncevue 中绑定样式两种方式 v-bind:class 和 v-bind:style定义指令使用 Vue.directive()定义全局的指令，比如 v-focus其中 参数 1：指令的名称，定义时不需要加 v-的前缀使用的时候必须在指令名称前面加上 v-前缀来调用参数 2：是一个对象，这个对象上有一些指令相关的函数，这些函数可以在特定的阶段执行相关的操作123456789101112131415Vue.dirctive('focus',&#123;bind:function(el)&#123; //每当指令绑定到元素上的时候会立即执行这个bind函数，只执行一次 //每个函数中的第一个参数永远是el表示被绑定的指令的那个元素，是原生的js对象 //每当指令绑定到元素上的时候会立即执行这个bind函数，只执行一次 // 和样式相关的操作，一般都可以在bind执行&#125;, inserted(el)&#123; el.focus(); // 和js行为相关的操作，最好在inserted中执行，防止js行为不生效 &#125;, updated(el)&#123; //当Vnode更新时，会执行updated，可能会触发多次 &#125;&#125;私有指令的定义123456dirctives:&#123; //自定义指令的简写形式，等同于定义了 bind 和 update 两个钩子函数 'fontsize':function (el,binding)&#123; el.style.fontSize=binding.value &#125; &#125;JSONP的实现原理由于浏览器安全限制，不允许AXAJ访问协议不同、域名不同、端口号不同——不符合同源策略的。可以通过动态创建script标签的形式，把script标签的src属性指向数据接口的地址。因为script标签不存在跨域限制，这种数据获取方式称之为JSONP具体实现过程先在客户端定义一个回调方法，预定义对数据的操作；再把这个回调方法的名称通过URL传参的形式提交到服务器的数据接口；服务器数据接口组织好要发送给客户端的数据，再拿客户端传递过来的回调方法名称拼接出一个调用这个方法的字符串，发送给客户端解析执行；客户端拿到服务器的返回的字符串之后，当作script脚本执行。]]></content>
+      <categories>
+        <category>编程</category>
+        <category>更新中</category>
+      </categories>
       <tags>
         <tag>vue</tag>
       </tags>
@@ -20,6 +32,10 @@
     <title><![CDATA[重构2——改善既有代码的设计]]></title>
     <url>%2Fposts%2Fb189f81a.html</url>
     <content type="text"><![CDATA[前言都能写出计算机可以理解代码，唯有写出人类容易理解的代码的，才是优秀的程序员。好代码的标准就是人们能否轻而易举地修改它重构的原则何谓重构重构这个词既可以是名词也可以是动词，名词形式的定义的是：对软件内部结构的调整，目的是在不改变软件可观察行为的前提下，提高其可理解性，降低其修改成本。动词形式的定义的是：使用一系列的重构手法，在不改变可观察行为的前提下，调整其结构为何重构重构改进软件的设计重构时软件更容易理解重构帮助找到bug重构提高编程速度何时重构预备性重构：让添加的新功能更容易帮助理解的重构：使代码更容易理解捡垃圾式重构有计划的重构和见机行事的重构长期重构复审代码时重构何时不重构重写比重构还容易只有需要理解其工作原理时，对其重构才有价值。]]></content>
+      <categories>
+        <category>技术</category>
+        <category>更新中</category>
+      </categories>
       <tags>
         <tag>摘抄</tag>
         <tag>总结</tag>
@@ -66,7 +82,8 @@
     <url>%2Fposts%2Fd5d49586.html</url>
     <content type="text"><![CDATA[与服务器上的代码产生冲突如果系统中有一些配置文件在服务器上做了配置修改,然后后续开发又新添加一些配置项的时候，在发布这个配置文件的时候,会发生代码冲突:error: Your local changes to the following files would be overwritten by merge:protected/config/main.phpPlease, commit your changes or stash them before you can merge.如果希望保留生产服务器上所做的改动,仅仅并入新配置项, 处理方法如下:123git stashgit pullgit stash pop然后可以使用 git diff -w +文件名来确认代码自动合并的情况.反过来,如果希望用代码库中的文件完全覆盖本地工作版本. 方法如下:12git reset --hardgit pull其中 git reset 是针对版本,如果想针对文件回退本地修改,使用1git checkout HEAD file/to/restore辛辛苦苦加班一星期敲的代码没了过程是这样的，在终端输入 git log，列出所有的 commit 信息，如下图：commit 的信息很简单，就是做了 6 个功能，每个功能对应一个 commit 的提交，分别是 feature-1 到 feature-6。接下来执行了强制回滚，如下：1git reset --hard 2216d4e回滚到了 feature-1 上，并且回滚的时候加了–hard，导致之前 feature-2 到 feature-6 的所有代码全部弄丢了，现在 git log 的显示如下：现在 feature-2 到 feature-6 的代码没了。。。。。然鹅还没完，在这个基础上新添加了一个 commit 提交，信息叫 feature-7，如下图：现在 feature-2 到 feature-6 全没了，还多了一个 feature-7请问 如何把丢失的代码 feature-2 到 feature-6 全部恢复回来，并且 feature-7 的代码也要保留用git reflog和git cherry-pick就能解决在终端里输入：1git reflog然后就会展示出所有你之前git操作，你以前所有的操作都被git记录了下来，如下图：这时候要记好两个值：4c97ff3和cd52afc，他们分别是feature-7和feature-6的hash码。然后执行回滚，回到feature-6上：1git reset --hard cd52afc现在我们回到了feature-6上，如下图：我们回到了feature-6上，但是feature-7没了，如何加上来呢？这个时候就用上了git cherry-pick，刚刚我们知道了feature-7的hash码为4c97ff3，操作如下：1git cherry-pick 4c97ff3回车之后，你的feature-7的代码就回来了。期间可能会有一些冲突，按照提示解决就好。最后的结果如下图：feature-1 到 feature-7的代码就合并到了一起，以前的代码也都回来了。原文出自前端时光机]]></content>
       <categories>
-        <category>技术</category>
+        <category>编程</category>
+        <category>更新中</category>
       </categories>
       <tags>
         <tag>git</tag>

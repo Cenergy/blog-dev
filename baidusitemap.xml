@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://blog.aigisss.com/posts/9364fbab.html</loc>
+    <lastmod>2019-09-19</lastmod>
+  </url>  <url>
     <loc>https://blog.aigisss.com/posts/3d0c447.html</loc>
-    <lastmod>2019-09-17</lastmod>
+    <lastmod>2019-09-18</lastmod>
+  </url>  <url>
+    <loc>https://blog.aigisss.com/posts/d5d49586.html</loc>
+    <lastmod>2019-09-18</lastmod>
   </url>  <url>
     <loc>https://blog.aigisss.com/posts/b189f81a.html</loc>
-    <lastmod>2019-09-17</lastmod>
+    <lastmod>2019-09-18</lastmod>
   </url>  <url>
     <loc>https://blog.aigisss.com/posts/a2d9d205.html</loc>
     <lastmod>2019-09-17</lastmod>
@@ -20,9 +26,6 @@
     <lastmod>2019-09-13</lastmod>
   </url>  <url>
     <loc>https://blog.aigisss.com/posts/372cd070.html</loc>
-    <lastmod>2019-09-12</lastmod>
-  </url>  <url>
-    <loc>https://blog.aigisss.com/posts/d5d49586.html</loc>
     <lastmod>2019-09-12</lastmod>
   </url>
 </urlset>
