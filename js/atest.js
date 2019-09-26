@@ -1,3 +1,3 @@
-// build time:Wed Sep 25 2019 23:24:01 GMT+0800 (GMT+08:00)
+// build time:Thu Sep 26 2019 23:40:44 GMT+0800 (GMT+08:00)
 function Shape(){}Shape.prototype.duplicate=function(){console.log("duplicate")};function Circle(e,t){Shape.call(this,t);this.radius=e}Circle.prototype.draw=function(){console.log("draw")};const s=new Shape;const c=new Circle(1);Circle.prototype=Object.create(Object.prototype);function extend(e,t){e.prototype=Object.create(t.prototype);e.prototype.constructor=e}extend(Circle,Shape);
 //rebuild by neat 
