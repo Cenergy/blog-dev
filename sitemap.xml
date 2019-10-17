@@ -2,23 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://blog.aigisss.com/posts/456b6ccc.html</loc>
+    <loc>https://blog.aigisss.com/posts/ab44f639.html</loc>
     
-    <lastmod>2019-10-09T15:33:23.126Z</lastmod>
+    <lastmod>2019-10-17T15:12:37.637Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://blog.aigisss.com/posts/ab44f639.html</loc>
+    <loc>https://blog.aigisss.com/posts/e1a3a842.html</loc>
     
-    <lastmod>2019-10-09T15:30:36.214Z</lastmod>
+    <lastmod>2019-10-17T15:12:37.630Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.aigisss.com/about/index.html</loc>
+    
+    <lastmod>2019-10-17T15:12:13.921Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://blog.aigisss.com/posts/89cc5dea.html</loc>
     
-    <lastmod>2019-10-09T14:53:00.116Z</lastmod>
+    <lastmod>2019-10-10T15:46:06.050Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.aigisss.com/posts/456b6ccc.html</loc>
+    
+    <lastmod>2019-10-09T15:33:23.126Z</lastmod>
     
   </url>
   
@@ -100,14 +114,7 @@
   </url>
   
   <url>
-    <loc>https://blog.aigisss.com/about/index.html</loc>
-    
-    <lastmod>2019-09-09T12:58:53.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.aigisss.com/categories/index.html</loc>
+    <loc>https://blog.aigisss.com/notes/index.html</loc>
     
     <lastmod>2019-09-09T12:58:53.000Z</lastmod>
     
@@ -121,7 +128,7 @@
   </url>
   
   <url>
-    <loc>https://blog.aigisss.com/notes/index.html</loc>
+    <loc>https://blog.aigisss.com/categories/index.html</loc>
     
     <lastmod>2019-09-09T12:58:53.000Z</lastmod>
     
