@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[使用vscode在leetcode上提交代码]]></title>
     <url>%2Fposts%2F64ddb0a.html</url>
-    <content type="text"><![CDATA[前言在浏览器上使用leetcode总觉得不是很方便，如果能和vscode结合，应该是珠联璧合、如虎添翼、珠联璧合。事实上是在vscode的插件库中已经有了，直接搜索leetcode，第一个出现的就是。安装使用这个插件是有条件的，要有node环境安装好了在左边就有一个leetcode的图标， 登入成功后刷新列表，即可查看题目。效果如下：如果没有账号，就要去力扣(LeetCode)官网或者LeetCode注册账号！！初步的可以在// @lc code=end下面结合Code Runner得到初步验证更多用例的测试需要点Test来验证。可以使用Submit来看看自己的代码的排名情况。可以去讨论一下或者看看别人的的解决方法。提交到github，然后就可以到处做题目了！！]]></content>
+    <content type="text"><![CDATA[前言在浏览器上使用 leetcode 总觉得不是很方便，如果能和 vscode 结合，应该是如鱼得水、如虎添翼、珠联璧合。事实上是在 vscode 的插件库中已经有了，直接搜索 leetcode，第一个出现的就是。安装使用这个插件是有条件的，要有 node 环境安装好了在左边就有一个 leetcode 的图标， 登入成功后刷新列表，即可查看题目。效果如下：如果没有账号，就要去力扣(LeetCode)官网或者LeetCode注册账号！！初步的可以在// @lc code=end下面结合Code Runner得到初步验证更多用例的测试需要点Test来验证。可以使用Submit来看看自己的代码的排名情况。可以去讨论一下或者看看别人的的解决方法。提交到 github，然后就可以到处做题目了！！]]></content>
       <tags>
         <tag>vscode</tag>
         <tag>leetcode</tag>
