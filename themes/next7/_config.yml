@@ -123,13 +123,13 @@ scheme: Gemini
 # When running the site in a subdirectory (e.g. domain.tld/blog), remove the leading slash from link value (/archives -> archives).
 # External url should start with http:// or https://
 menu:
-  总部: ../ || google
+  总部: http://www.aigisss.com/ || google
   home: / || home
   about: /about/ || user
   tags: /tags/ || tags
   categories: /categories/ || th
-  archives: /archives/ || archive
   # schedule: /schedule/ || calendar
+  archives: /archives/ || archive
   #sitemap: /sitemap.xml || sitemap
   #commonweal: /404/ || heartbeat
 
@@ -219,6 +219,7 @@ links:
   X北辰北的个人博客: https://www.xbeichen.cn
   3nice.cc: https://www.3nice.cc/
   Forex Trading: https://www.fi-forex.com/
+  Xiayin Lou: https://elaiza.pro
 
 # Table Of Contents in the Sidebar
 toc:
