@@ -8,12 +8,12 @@ subtitle: 爱即是诗 #网站副标题
 description: 真正的伟大,即在于以脆弱的凡人之躯而具有神性的不可战胜。
 author: Gong
 language: zh-CN #主题文件名称
-timezone:
+timezone: Asia/Shanghai
 
 # URL  #绑定域名
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://blog.aigisss.com/blog
-root: /blog/
+url: https://blog.aigisss.com
+root: /
 # permalink: :year/:month/:day/:title/
 # permalink_defaults:
 permalink: posts/:abbrlink.html
@@ -86,7 +86,7 @@ deploy:
   type: git
   repo:
     github: https://github.com/Cenergy/blog.git
-    coding: https://git.dev.tencent.com/AIGIS/blog.git
+    coding: https://e.coding.net/aigis/blog.git
   branch: master
 ## 下面是新增的
 #启动搜索功能

@@ -77,9 +77,9 @@
   {%- endif %}
 
   <!-- 页面点击小红心 -->
-  <script type="text/javascript" src="/blog/lib/others/love.js"></script>
+  <script type="text/javascript" src="/lib/others/love.js"></script>
     <!--崩溃欺骗-->
-  <script type="text/javascript" src="/blog/lib/others/crash_cheat.js"></script>
+  <script type="text/javascript" src="/lib/others/crash_cheat.js"></script>
 
 
 </body>

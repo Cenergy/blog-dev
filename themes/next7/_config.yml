@@ -1013,8 +1013,8 @@ vendors:
   # fancybox: //cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js
   # fancybox_css: //cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css
   jquery:
-  fancybox: /blog/lib/fancybox/jquery.fancybox.min.js
-  fancybox_css: /blog/lib/fancybox/jquery.fancybox.min.css
+  fancybox: /lib/fancybox/jquery.fancybox.min.js
+  fancybox_css: /lib/fancybox/jquery.fancybox.min.css
 
   # Medium-zoom
   # Example:
@@ -1047,7 +1047,7 @@ vendors:
 
   # Valine
   # Example:
-  valine: /blog/lib/valine/Valine.min.js
+  valine: /lib/valine/Valine.min.js
   # valine: //cdnjs.cloudflare.com/ajax/libs/valine/1.3.4/Valine.min.js
 
   # Gitalk
@@ -1074,7 +1074,7 @@ vendors:
   # Example:
   # mermaid: //cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js
   # mermaid: //cdnjs.cloudflare.com/ajax/libs/mermaid/8.0.0/mermaid.min.js
-  mermaid: /blog/lib/mermaid/mermaid.min.js
+  mermaid: /lib/mermaid/mermaid.min.js
 
   # Internal version: 1.2.1
   # Example:
@@ -1091,8 +1091,8 @@ vendors:
   # pace: //cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.min.js
   # pace_css: //cdn.jsdelivr.net/npm/pace-js@1/themes/blue/pace-theme-minimal.css
   # pace_css: //cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/themes/blue/pace-theme-minimal.min.css
-  pace: /blog/lib/pace/pace.min.js
-  pace_css: /blog/lib/pace/pace-theme-flash.min.css
+  pace: /lib/pace/pace.min.js
+  pace_css: /lib/pace/pace-theme-flash.min.css
 
   # Internal version: 1.0.0
   # Example:
