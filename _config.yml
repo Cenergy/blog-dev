@@ -87,6 +87,7 @@ deploy:
   repo:
     github: https://github.com/Cenergy/blog.git
     coding: https://e.coding.net/aigis/blog.git
+    aigisss: root@aigisss:/root/codes/blog
   branch: master
 ## 下面是新增的
 #启动搜索功能
