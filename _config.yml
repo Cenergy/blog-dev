@@ -86,7 +86,8 @@ deploy:
   type: git
   repo:
     github: https://github.com/Cenergy/blog.git
-    coding: https://git.dev.tencent.com/AIGIS/blog.git
+    coding: https://e.coding.net/aigis/blog.git
+    aigisss: root@aigisss:/home/git/hexoBlog
   branch: master
 ## 下面是新增的
 #启动搜索功能
