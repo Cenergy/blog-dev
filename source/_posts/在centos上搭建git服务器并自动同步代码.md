@@ -5,94 +5,94 @@ date: 2020-03-22 13:41:32
 tags: 建站
 ---
 
-> 本篇内容用来讲述如何将 hexo 博客部署到腾讯云的服务器上。
+> 本篇内容用来讲述如何将 hexo 博客部署到云服务器上。
 > 只要通过三步即可成功部署：
 >
 > 1. 云服务器端 git 的配置
 > 2. Nginx 的配置
 > 3. 本地端 hexo 的设置更改
 
+<!--more-->
 
+# 云服务器端配置 git
 
-# 前言
+<div class="note danger">可以直接使用 yum install git 安装，也可以使用编译安装，如下：</div>
 
-2. # 2. 云服务器端配置 git
+1. 安装依赖库和编译工具
 
-   1. 安装依赖库和编译工具
+   - 安装依赖库：
 
-      - 安装依赖库：
+     ```
+     yum install curl-devel expat-devel gettext-devel openssl-devel zlib-devel
+     ```
 
-        ```
-        yum install curl-devel expat-devel gettext-devel openssl-devel zlib-devel
-        ```
+   - 安装编译工具：
 
-      - 安装编译工具：
+     ```
+     yum install gcc perl-ExtUtils-MakeMaker package
+     ```
 
-        ```
-        yum install gcc perl-ExtUtils-MakeMaker package
-        ```
+2. 下载 git
 
-   2. 下载 git
+   - 选择一个目录来存放下载下来的 git 安装包。这里选择了`/usr/local/src` 目录
 
-      - 选择一个目录来存放下载下来的 git 安装包。这里选择了`/usr/local/src` 目录
+     ```
+     cd /usr/local/src
+     ```
 
-        ```
-        cd /usr/local/src
-        ```
+   - 到官网找一个新版稳定的源码包下载到 `/usr/local/src` 文件夹里
 
-      - 到官网找一个新版稳定的源码包下载到 `/usr/local/src` 文件夹里
+     ```
+     wget https://www.kernel.org/pub/software/scm/git/git-2.16.2.tar.gz
+     ```
 
-        ```
-        wget https://www.kernel.org/pub/software/scm/git/git-2.16.2.tar.gz
-        ```
+3. 解压编译 git
 
-   3. 解压编译 git
+   - 在当前目录下解压 `git-2.16.2.tar.gz`
 
-      - 在当前目录下解压 `git-2.16.2.tar.gz`
+     ```
+     tar -zvxf git-2.16.2.tar.gz
+     ```
 
-        ```
-        tar -zvxf git-2.16.2.tar.gz
-        ```
+   - 进入 `git-2.16.2.tar.gz` 目录下
 
-      - 进入 `git-2.16.2.tar.gz` 目录下
+     ```
+     cd git-2.16.2
+     ```
 
-        ```
-        cd git-2.16.2
-        ```
+   - 执行编译
 
-      - 执行编译
+     ```
+     make all prefix=/usr/local/git
+     ```
 
-        ```
-        make all prefix=/usr/local/git
-        ```
+   - 安装 git 到 `/usr/local/git` 目录下
 
-      - 安装 git 到 `/usr/local/git` 目录下
+     ```
+     make install prefix=/usr/local/git
+     ```
 
-        ```
-        make install prefix=/usr/local/git
-        ```
+4. 配置 git 环境变量
 
-   4. 配置 git 环境变量
+   - 将 git 加入 PATH 目录中
 
-      - 将 git 加入 PATH 目录中
+     ```
+     echo 'export PATH=$PATH:/usr/local/git/bin' >> /etc/bashrc
+     ```
 
-        ```
-        echo 'export PATH=$PATH:/usr/local/git/bin' >> /etc/bashrc
-        ```
+   - 使 git 环境变量生效
 
-      - 使 git 环境变量生效
+     ```
+     source /etc/bashrc
+     ```
 
-        ```
-        source /etc/bashrc
-        ```
+5. 查看 git 版本
 
-   5. 查看 git 版本
+   ```
+   git --version
+   ```
 
-      ```
-      git --version
-      ```
-
-   如果此时能查看到 git 的版本号，说明我们已经安装成功了。
+如果此时能查看到 git 的版本号，说明我们已经安装成功了。
 
 1. 创建 git 仓库，用于存放博客网站资源。
 
@@ -110,7 +110,7 @@ tags: 建站
 
 ```shell
 cd /home/git/
-git init --bare hexoBlog.git
+git init --bare aigisss.git
 ```
 
 
@@ -142,7 +142,7 @@ git init --bare hexoBlog.git
 
 到这里，我们的 git 仓库算是完全搭建好了。下面进行 `Nginx `的配置。
 
-# 3. 云服务器端配置 Nginx
+# 云服务器端配置 Nginx
 
 1. 安装 Nginx
 
@@ -232,14 +232,14 @@ Saving to: ‘index.html’
 
 至此，服务器端配置就结束了。接下来，就剩下本地 `hexo` 的配置更改了。
 
-# 4. 修改 hexo 站点配置文件 git 相关设置
+# 修改 hexo 站点配置文件 git 相关设置
 
 1. 打开你本地的 hexo 博客所在文件，打开站点配置文件（不是主题配置文件），做以下修改。
 
-   ```
+   ```shell
    deploy:
        type: git
-       repo: root@CVM 你的云服务器的IP地址:/home/git/hexoBlog
+       repo: root@CVM 你的云服务器的IP地址:/home/git/aigisss
        branch: master
    ```
 
@@ -254,7 +254,7 @@ Saving to: ‘index.html’
 
 3. 打开你的公网 IP，看是不是已经部署成功了。
 
-[![img](http://qncdn.bujige.net/images/hexoBlog-deployed-server-005.png)](http://qncdn.bujige.net/images/hexoBlog-deployed-server-005.png)
+[![img](%E5%9C%A8centos%E4%B8%8A%E6%90%AD%E5%BB%BAgit%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%B9%B6%E8%87%AA%E5%8A%A8%E5%90%8C%E6%AD%A5%E4%BB%A3%E7%A0%81/hexoBlog-deployed-server-005.png)](http://qncdn.bujige.net/images/hexoBlog-deployed-server-005.png)
 
 1. 最后一步，更改域名解析。这一步不再做介绍。
 
