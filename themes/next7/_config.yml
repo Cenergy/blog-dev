@@ -124,7 +124,7 @@ scheme: Gemini
 # External url should start with http:// or https://
 menu:
   总部: http://www.aigisss.com/ || google
-  home: / || home
+  home: ./ || home
   about: /about/ || user
   tags: /tags/ || tags
   categories: /categories/ || th
