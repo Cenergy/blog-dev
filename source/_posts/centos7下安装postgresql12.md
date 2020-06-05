@@ -17,7 +17,7 @@ groupadd -g 1000 postgres
 useradd -g 1000 -u 1000 postgres
 passwd postgres
 ```
-
+<!--more-->
 ## 安装前准备
 
 ```shell
