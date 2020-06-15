@@ -27,19 +27,11 @@ cmake -version
  gmake install
 ```
 
-`postgis`还有安装其他依赖，可是不知道它的版本号，比如`GEOS`,`proj`,`GDAL`，于是打开window版的`PostGIS`的网页
-
-https://postgis.net/windows_downloads/  ，在左侧发现一点端倪！
-
-![image-20200605092404004](centos7%E4%B8%8B%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85postgis3/image-20200605092404004.png)
-
-于是我就想，按照这个版本安装，应该没错！
-
-但看到，最好是下面的的版本
+`postgis`还要安装其他依赖，比如`GEOS`,`proj`,`GDAL`，各版本需要的依赖版本，http://postgis.net/news/  ，如图。
 
 ![image-20200612124515120](centos7%E4%B8%8B%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85postgis3/image-20200612124515120.png)
 
-本文基于GEOS3.8.1,GDAL2.4.4,Proj5.2.0,JSON0.13
+本文基于GEOS 3.8.1,GDAL 3.0.4,PROJ 6.3.2,json-c 0.13.1
 
 ```shell
 wget https://download.osgeo.org/geos/geos-3.8.1.tar.bz2
@@ -71,7 +63,116 @@ https://stackoverflow.com/questions/62154342/configure-error-package-requirement
 
 ![image-20200613095115674](centos7%E4%B8%8B%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85postgis3/image-20200613095115674.png)
 
+```sh
+
+```
+
+## 安装GDAL
+
+遇到
+
 ```shell
-bash ./configure --prefix=/usr/local/gdal-3.0.4 --with-proj=/usr/local/proj-6.3.2 --with-geos=/usr/local/geos-3.8.1/bin/geos-config --with-sqlite3=/usr/local/bin/sqlite3 --with-libjson-c=/usr/local/json-c-0.13.1 --with-pg=/opt/pg12/bin/pg_config 
+collect2: error: ld returned 1 exit status
+make[1]: *** [GNUmakefile:82: gdalinfo] Error 1
+make: *** [GNUmakefile:112: apps-target] Error 2
+```
+
+解决办法可能是`make clean`,紧接着按之前的编译安装！
+
+参考文章：https://stackoverflow.com/questions/60218227/trying-to-install-gdal-3-0-4-on-red-hat-8
+
+```
+./configure --prefix=/usr/local/gdal-3.0.4 --with-proj=/usr/local/proj-6.3.2 --with-geos=/usr/local/geos-3.8.1/bin/geos-config --with-sqlite3=/usr/local/bin/sqlite3 --with-libjson-c=/usr/local/json-c-0.13.1 --with-pg=yes --with-python=/root/.virtualenvs/aigisss_py/bin/python3.6 
+```
+
+## 安装protubuf
+
+```shell
+./configure  --prefix=/usr/local/protobuf-3.11.4
+```
+
+竟然说`bash: ./configure: No such file or directory`
+
+解决方案
+
+```shell
+yum install automake
+autoreconf -i
+```
+
+参考文章：https://stackoverflow.com/questions/24054761/configure-gives-error-in-ubuntu
+
+出现编译错误
+
+```shell
+make[2]: *** [message.lo] Error 1 
+make[1]: *** [all-recursive] Error 1
+make: *** [all] Error 2
+```
+
+解决方案下载含有all的资源包
+
+![image-20200614185029679](centos7下编译安装postgis3/image-20200614185029679.png)
+
+参考文章：https://github.com/protocolbuffers/protobuf/issues/6599
+
+## 安装protobuf-c
+
+```shell
+export PKG_CONFIG_PATH=/usr/local/protobuf-3.11.4/lib/pkgconfig
+./configure  --prefix=/usr/local/protobuf-c-1.3.3
+```
+
+## 安装SFCGAL 1.3.7
+
+由于SFCGAL需要依赖Boost、CGAL、GMP、MPFR这四个软件，所以具体总共需要安装以下四个软件：
+
+1. boost-devel.x86_64
+
+2. gmp-devel.x86_64
+
+3. mpfr-devel.x86_64
+
+4. CGAL-4.14
+
+   ```shell
+   yum install boost boost-devel
+   yum install gmp-devel.x86_64
+   yum install mpfr-devel.x86_64
+   ```
+
+### 安装CGAL
+
+```sh
+xz -d CGAL-4.14.3.tar.xz
+tar -xvf  CGAL-4.14.3.tar
+cd CGAL-4.14.3
+mkdir build && cd build
+cmake ..
+make && make install
+```
+
+### 安装SFCGAL
+
+```sh
+c++: internal compiler error: Killed (program cc1plus)
+Please submit a full bug report
+```
+
+```sh
+sudo dd if=/dev/zero of=/swapfile bs=64M count=16
+#count的大小就是增加的swap空间的大小，64M是块大小，所以空间大小是bs*count=1024MB
+sudo mkswap /swapfile
+#把刚才空间格式化成swap格式
+chmod 0600 /swapfile  
+#该目录权限，不改的话，在下一步启动时会报“swapon: /swapfile: insecure permissions 0644, 0600 suggested.”错误
+sudo swapon /swapfile
+#使用刚才创建的swap空间
+```
+
+```sh
+swapoff -a
+#详细的用法可以：swapoff --help
+#查看当前内存使用情况：free -m
 ```
 
