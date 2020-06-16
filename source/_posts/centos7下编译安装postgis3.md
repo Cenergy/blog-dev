@@ -1,8 +1,15 @@
----
+
+
 title: centos7下编译安装postgis3
 abbrlink: a70e035f
 date: 2020-06-05 09:02:55
-tags:
+
+tags: postgis
+
+---
+
+
+
 ---
 
 <!--more-->
@@ -154,10 +161,14 @@ make && make install
 
 ### 安装SFCGAL
 
+遇到以下这个问题：
+
 ```sh
 c++: internal compiler error: Killed (program cc1plus)
 Please submit a full bug report
 ```
+
+解决方案：
 
 ```sh
 sudo dd if=/dev/zero of=/swapfile bs=64M count=16
@@ -170,9 +181,49 @@ sudo swapon /swapfile
 #使用刚才创建的swap空间
 ```
 
+安装编译：
+
+```shell
+wget  https://github.com/Oslandia/SFCGAL/archive/v1.3.7.tar.gz
+tar -zxvf SFCGAL-1.3.7.tar.gz
+cd SFCGAL-1.3.7  
+mkdir build && cd build 
+cmake -DCMAKE_INSTALL_PREFIX=/usr/local/sfcgal-1.3.7 ..
+make  && make install
+```
+
+装完之后释放空间：
+
 ```sh
 swapoff -a
 #详细的用法可以：swapoff --help
 #查看当前内存使用情况：free -m
+```
+
+参考文章：https://blog.csdn.net/qq_27148893/article/details/88936044
+
+```shell
+./configure --prefix=/usr/local/postgis-3.0.1 --with-gdalconfig=/usr/local/gdal-3.0.4/bin/gdal-config --with-pgconfig=/opt/pg12/bin/pg_config --with-geosconfig=/usr/local/geos-3.8.1/bin/geos-config --with-projdir=/usr/local/proj-6.3.2 --with-xml2config=/usr/local/libxml2-2.9.10/bin/xml2-config --with-jsondir=/usr/local/json-c-0.13.1 --with-protobufdir=/usr/local/protobuf-c-1.3.3 --with-sfcgal=/usr/local/sfcgal-1.3.7/bin/sfcgal-config
+```
+
+```sh
+PG_HOME=/opt/pg12
+
+LD_LIBRARY_PATH=$PG_HOME/lib:$LD_LIBRARY_PATH
+PATH=$PG_HOME/bin:$PATH
+
+PKG_CONFIG_PATH=$PG_HOME/lib/pkgconfig:$PKG_CONFIG_PATH
+
+export CMAKE_HOME=/usr/bin/cmake
+export PROTOBUF_HOME=/usr/local/protobuf-3.11.4
+
+GDAL_HOME=/usr/local/gdal-3.0.4
+GDAL_DATA=$GDAL_HOME/share/gdal
+LD_LIBRARY_PATH=$GDAL_HOME/lib:/usr/local/lib64:$JRE_HOME/lib:$LD_LIBRARY_PATH
+PATH=$GDAL_HOME/bin:$PATH
+
+export PATH=$CMAKE_HOME/bin:$PROTOBUF_HOME/bin:/usr/local/protobuf-c-1.3.3/bin:$PATH
+export PKG_CONFIG_PATH LD_LIBRARY_PATH
+export LD_LIBRARY_PATH GDAL_DATA
 ```
 
