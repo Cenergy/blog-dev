@@ -8,15 +8,18 @@ tags: postgis
 
 本文认为已安装PostgreSQL，安装步骤如 [Centos7安装PostgreSQL](https://www.jianshu.com/p/639ebb43bfb4)，最好按照前文先把pg安装好，否则，在postgis,pgrouting安装时，指定pg的安装目录，直接抄路径应该不对，读者要指向自己的安装位置等。
 
+<!--more-->
+
+## 安装前准备
+
+### 升级cmake
+
 CGAL4-11。因为4-11需要CMake3.11以上
 
 ```shell
 cmake -version
 # cmake version 2.8.12.2
 ```
-<!--more-->
-
-升级cmake
 
 ```shell
  wget https://github.com/Kitware/CMake/releases/download/v3.16.8/cmake-3.16.8.tar.gz
@@ -31,13 +34,34 @@ cmake -version
 
 ![image-20200612124515120](centos7%E4%B8%8B%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85postgis3/image-20200612124515120.png)
 
-本文基于GEOS 3.8.1,GDAL 3.0.4,PROJ 6.3.2,json-c 0.13.1
+本文基于GEOS 3.8.1，PROJ 6.3.2，GDAL 3.0.4，json-c 0.13.1，CGAL4.14.3，SFCGAL1.3.7，protobuf3.11.4，protobuf-c1.3.3，libxml2-2.9.10，pcre-8.44，PostGIS-3.0.1安装。
+
+## 安装依赖或插件
+
+### 安装GEOS-3.8.1
 
 ```shell
 wget https://download.osgeo.org/geos/geos-3.8.1.tar.bz2
+tar -jxf geos-3.8.1.tar.bz2
+cd geos-3.8.1
+./configure --prefix=/usr/local/geos-3.8.1
+make && make install
 ```
 
-:blush:  安装proj-6.3.2时，遇到
+:blush:  
+
+### 安装proj-6.3.2
+
+```sh
+wget http://download.osgeo.org/proj/proj-6.3.2.tar.gz
+tar -zxvf proj-6.3.2.tar.gz
+cd proj-6.3.2
+./configure  --prefix=/usr/local/proj-6.3.2
+# 编译时遇到下面的问题，说是sqlite版本太低！编译成功再进行下一步！
+make && make install
+```
+
+遇到如图片的问题！
 
 ![image-20200613092144891](centos7%E4%B8%8B%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85postgis3/image-20200613092144891.png)
 
@@ -63,11 +87,17 @@ https://stackoverflow.com/questions/62154342/configure-error-package-requirement
 
 ![image-20200613095115674](centos7%E4%B8%8B%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85postgis3/image-20200613095115674.png)
 
-```sh
+### 安装GDAL
 
+```shell
+wget https://download.osgeo.org/gdal/3.0.4/gdal-3.0.4.tar.gz
+tar -zxvf gdal-3.0.4.tar.gz 
+cd gdal-3.0.4 
+./configure  --prefix=/usr/local/gdal-3.0.4 --with-pg=/home/postgres/bin/pg_config
+make
+# 编译时遇到下面的问题，成功则进行下一步！
+make install
 ```
-
-## 安装GDAL
 
 遇到
 
@@ -81,11 +111,13 @@ make: *** [GNUmakefile:112: apps-target] Error 2
 
 参考文章：https://stackoverflow.com/questions/60218227/trying-to-install-gdal-3-0-4-on-red-hat-8
 
-```
+我的编译配置：
+
+```sh
 ./configure --prefix=/usr/local/gdal-3.0.4 --with-proj=/usr/local/proj-6.3.2 --with-geos=/usr/local/geos-3.8.1/bin/geos-config --with-sqlite3=/usr/local/bin/sqlite3 --with-libjson-c=/usr/local/json-c-0.13.1 --with-pg=yes --with-python=/root/.virtualenvs/aigisss_py/bin/python3.6 
 ```
 
-## 安装protubuf
+### 安装protubuf
 
 ```shell
 ./configure  --prefix=/usr/local/protobuf-3.11.4
@@ -116,14 +148,14 @@ make: *** [all] Error 2
 
 参考文章：https://github.com/protocolbuffers/protobuf/issues/6599
 
-## 安装protobuf-c
+### 安装protobuf-c
 
 ```shell
 export PKG_CONFIG_PATH=/usr/local/protobuf-3.11.4/lib/pkgconfig
 ./configure  --prefix=/usr/local/protobuf-c-1.3.3
 ```
 
-## 安装SFCGAL 1.3.7
+### 安装SFCGAL 1.3.7
 
 由于SFCGAL需要依赖Boost、CGAL、GMP、MPFR这四个软件，所以具体总共需要安装以下四个软件：
 
@@ -152,7 +184,7 @@ cmake ..
 make && make install
 ```
 
-## 安装pcre
+### 安装pcre
 
 ```sh
 wget https://ftp.pcre.org/pub/pcre/pcre-8.44.tar.gz
@@ -208,6 +240,8 @@ swapoff -a
 ```
 
 参考文章：https://blog.csdn.net/qq_27148893/article/details/88936044
+
+## 安装PostGIS
 
 ```shell
 ./configure --prefix=/usr/local/postgis-3.0.1 --with-gdalconfig=/usr/local/gdal-3.0.4/bin/gdal-config --with-pgconfig=/opt/pg12/bin/pg_config --with-geosconfig=/usr/local/geos-3.8.1/bin/geos-config --with-projdir=/usr/local/proj-6.3.2 --with-xml2config=/usr/local/libxml2-2.9.10/bin/xml2-config --with-jsondir=/usr/local/json-c-0.13.1 --with-protobufdir=/usr/local/protobuf-c-1.3.3 --with-sfcgal=/usr/local/sfcgal-1.3.7/bin/sfcgal-config --with-pcredir=/usr/local/pcre-8.44
