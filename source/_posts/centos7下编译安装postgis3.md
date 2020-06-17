@@ -1,18 +1,10 @@
-
-
+---
 title: centos7下编译安装postgis3
 abbrlink: a70e035f
 date: 2020-06-05 09:02:55
-
 tags: postgis
-
 ---
 
-
-
----
-
-<!--more-->
 
 本文认为已安装PostgreSQL，安装步骤如 [Centos7安装PostgreSQL](https://www.jianshu.com/p/639ebb43bfb4)，最好按照前文先把pg安装好，否则，在postgis,pgrouting安装时，指定pg的安装目录，直接抄路径应该不对，读者要指向自己的安装位置等。
 
@@ -22,6 +14,7 @@ CGAL4-11。因为4-11需要CMake3.11以上
 cmake -version
 # cmake version 2.8.12.2
 ```
+<!--more-->
 
 升级cmake
 
@@ -227,3 +220,8 @@ export PKG_CONFIG_PATH LD_LIBRARY_PATH
 export LD_LIBRARY_PATH GDAL_DATA
 ```
 
+>参考文章：
+>
+>- https://www.jianshu.com/p/e08dbc60a3b2
+>- https://www.jianshu.com/p/ff4cf2b59613
+>- https://www.jianshu.com/p/f9b6a498db55
