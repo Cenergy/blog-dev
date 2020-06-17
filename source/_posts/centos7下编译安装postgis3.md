@@ -152,6 +152,20 @@ cmake ..
 make && make install
 ```
 
+## 安装pcre
+
+```sh
+wget https://ftp.pcre.org/pub/pcre/pcre-8.44.tar.gz
+tar -xzvf  pcre-8.44.tar.gz
+cd pcre-8.44
+./configure --enable-utf8 --prefix=/usr/local/pcre-8.44
+make && make intall
+echo "/usr/local/pcre/lib" > /etc/ld.so.conf.d/pcre-8.44.conf
+ldconfig
+```
+
+
+
 ### 安装SFCGAL
 
 遇到以下这个问题：
@@ -196,7 +210,7 @@ swapoff -a
 参考文章：https://blog.csdn.net/qq_27148893/article/details/88936044
 
 ```shell
-./configure --prefix=/usr/local/postgis-3.0.1 --with-gdalconfig=/usr/local/gdal-3.0.4/bin/gdal-config --with-pgconfig=/opt/pg12/bin/pg_config --with-geosconfig=/usr/local/geos-3.8.1/bin/geos-config --with-projdir=/usr/local/proj-6.3.2 --with-xml2config=/usr/local/libxml2-2.9.10/bin/xml2-config --with-jsondir=/usr/local/json-c-0.13.1 --with-protobufdir=/usr/local/protobuf-c-1.3.3 --with-sfcgal=/usr/local/sfcgal-1.3.7/bin/sfcgal-config
+./configure --prefix=/usr/local/postgis-3.0.1 --with-gdalconfig=/usr/local/gdal-3.0.4/bin/gdal-config --with-pgconfig=/opt/pg12/bin/pg_config --with-geosconfig=/usr/local/geos-3.8.1/bin/geos-config --with-projdir=/usr/local/proj-6.3.2 --with-xml2config=/usr/local/libxml2-2.9.10/bin/xml2-config --with-jsondir=/usr/local/json-c-0.13.1 --with-protobufdir=/usr/local/protobuf-c-1.3.3 --with-sfcgal=/usr/local/sfcgal-1.3.7/bin/sfcgal-config --with-pcredir=/usr/local/pcre-8.44
 ```
 
 ```sh
