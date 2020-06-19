@@ -1,5 +1,5 @@
 {
-  "name": "hexo-site",
+  "name": "aigisss-blog",
   "version": "0.0.0",
   "private": true,
   "hexo": {
@@ -10,7 +10,7 @@
     "serve": "hexo clean && hexo generate && hexo server",
     "pro": "hexo clean && hexo generate && hexo deploy"
   },
-  "homepage": "https://blog.aigisss.com/",
+  "homepage": "https://www.aigisss.com/blog",
   "dependencies": {
     "hexo": "^3.9.0",
     "hexo-abbrlink": "^2.0.5",

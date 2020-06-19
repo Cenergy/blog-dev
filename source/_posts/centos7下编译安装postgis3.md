@@ -93,7 +93,8 @@ https://stackoverflow.com/questions/62154342/configure-error-package-requirement
 wget https://download.osgeo.org/gdal/3.0.4/gdal-3.0.4.tar.gz
 tar -zxvf gdal-3.0.4.tar.gz 
 cd gdal-3.0.4 
-./configure  --prefix=/usr/local/gdal-3.0.4 --with-pg=/home/postgres/bin/pg_config
+# 带pg的配置，具体需要啥可以./configure --help 查看
+./configure  --prefix=/usr/local/gdal-3.0.4 --with-pg=yes
 make
 # 编译时遇到下面的问题，成功则进行下一步！
 make install
@@ -120,7 +121,9 @@ make: *** [GNUmakefile:112: apps-target] Error 2
 ### 安装protubuf
 
 ```shell
+tar -xzvf  protobuf-cpp-3.11.4.tar.gz
 ./configure  --prefix=/usr/local/protobuf-3.11.4
+make && make install
 ```
 
 竟然说`bash: ./configure: No such file or directory`
@@ -151,8 +154,12 @@ make: *** [all] Error 2
 ### 安装protobuf-c
 
 ```shell
+wget https://github.com/protobuf-c/protobuf-c/releases/download/v1.3.3/protobuf-c-1.3.3.tar.gz
+tar -xzvf  protobuf-c-1.3.3.tar.gz
+cd protobuf-c-1.3.3
 export PKG_CONFIG_PATH=/usr/local/protobuf-3.11.4/lib/pkgconfig
 ./configure  --prefix=/usr/local/protobuf-c-1.3.3
+make && make install
 ```
 
 ### 安装SFCGAL 1.3.7
@@ -176,6 +183,7 @@ export PKG_CONFIG_PATH=/usr/local/protobuf-3.11.4/lib/pkgconfig
 ### 安装CGAL
 
 ```sh
+wget http://distfiles.macports.org/cgal/cgal-4.14.3.tar.xz
 xz -d CGAL-4.14.3.tar.xz
 tar -xvf  CGAL-4.14.3.tar
 cd CGAL-4.14.3

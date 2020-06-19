@@ -18,6 +18,25 @@ useradd -g 1000 -u 1000 postgres
 passwd postgres
 ```
 <!--more-->
+
+<div class="danger">安装完才发现有更简单的方法！</div>
+
+打开`postgresql`的官网安装教程：https://www.postgresql.org/download/linux/redhat/ ，选择一下系统
+
+![image-20200619125645752](centos7%E4%B8%8B%E5%AE%89%E8%A3%85postgresql12/image-20200619125645752.png)
+
+就会发现安装如下的命令行：
+
+```shell
+yum install https://download.postgresql.org/pub/repos/yum/reporpms/EL-7-x86_64/pgdg-redhat-repo-latest.noarch.rpm
+yum install postgresql12-server
+/usr/pgsql-12/bin/postgresql-12-setup initdb
+systemctl enable postgresql-12
+systemctl start postgresql-12
+```
+
+
+
 ## 安装前准备
 
 ```shell
@@ -47,15 +66,16 @@ vim /home/postgres/.bashrc
 编辑内容如下:
 
 ```shell
-PGHOME=/opt/pg12/
-export PGHOME
-PGDATA=$PGHOME/data
-export PGDATA
-PATH=$PATH:$HOME/.local/bin:$HOME/bin:$PGHOME/bin
-export PATH
+PG_HOME=/opt/pg12/
+
+LD_LIBRARY_PATH=$PG_HOME/lib:$LD_LIBRARY_PATH
+PATH=$PG_HOME/bin:$PATH
+
+PKG_CONFIG_PATH=$PG_HOME/lib/pkgconfig:$PKG_CONFIG_PATH
+export PKG_CONFIG_PATH LD_LIBRARY_PATH
 ```
 
-
+`source /etc/profile` 更新配置！
 
 ##  初始化数据库
 

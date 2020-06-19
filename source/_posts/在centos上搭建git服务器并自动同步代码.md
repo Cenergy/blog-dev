@@ -258,8 +258,6 @@ Saving to: ‘index.html’
 
 1. 最后一步，更改域名解析。这一步不再做介绍。
 
-   ```
+   ```sh
    cert --nginx --nginx-server-root=/usr/local/nginx/conf -d www.aigisss.com
    ```
-
-   
