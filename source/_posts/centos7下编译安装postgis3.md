@@ -276,6 +276,14 @@ export PKG_CONFIG_PATH LD_LIBRARY_PATH
 export LD_LIBRARY_PATH GDAL_DATA
 ```
 
+## 安装
+
+```
+wget  https://github.com/pgRouting/pgrouting/releases/download/v3.0.0/pgrouting-3.0.0.tar.gz
+```
+
+
+
 >参考文章：
 >
 >- https://www.jianshu.com/p/e08dbc60a3b2
