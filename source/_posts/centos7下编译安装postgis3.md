@@ -6,7 +6,7 @@ tags: postgis
 ---
 
 
-本文认为已安装PostgreSQL，安装步骤如 [Centos7安装PostgreSQL](https://www.jianshu.com/p/639ebb43bfb4)，最好按照前文先把pg安装好，否则，在postgis,pgrouting安装时，指定pg的安装目录，直接抄路径应该不对，读者要指向自己的安装位置等。
+本文认为已安装PostgreSQL12，安装步骤如 [Centos7安装PostgreSQL](https://www.jianshu.com/p/639ebb43bfb4)，最好按照前文先把pg安装好，否则，在postgis,pgrouting安装时，指定pg的安装目录，直接抄路径应该不对，读者要指向自己的安装位置等。
 
 <!--more-->
 
