@@ -27,3 +27,14 @@ page.banner_mask_alpha = theme.links.banner_mask_alpha
     </div>
   <% } %>
 </div>
+
+<hr>
+<h5>欢迎入驻！</h5>
+
+<% if(theme.post.comments.enable) { %>
+  <!-- Comments -->
+  <div class="comments" id="comments">
+    <% var type = '_partial/comments/' + theme.post.comments.type %>
+    <%- partial(type) %>
+  </div>
+<% } %>

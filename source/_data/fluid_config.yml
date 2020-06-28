@@ -36,7 +36,7 @@ fun_features: # 一些好玩的功能
     element: h1,h2,h3,h4,h5,h6
     placement: right # icon放置的位置： left | right
     visible: hover # 默认悬浮显示，可选：hover（鼠标在元素上悬浮时显示） | always（一直显示） | touch（移动端触摸显示）
-    icon: § # 可选：§ | # | ❡ 等，留空则为默认效果
+    icon: ❡ # 可选：§ | # | ❡ 等，留空则为默认效果
   mouse_click:  # 鼠标点击动效
     enable: true
     style: values # 目前设置两个值：values（价值观词汇） | love（爱心）
@@ -288,7 +288,7 @@ valine:
   enable: true
   appid: diTi74ah5rpPDNa6bjS0VjqN-gzGzoHsz # your leancloud application appid
   appkey: nHbjOKICQKYQtsVVJjeHYl0O # your leancloud application appkey
-  placeholder: 留言仅限讨论，禁止广告等行为 # 评论框占位提示符
+  placeholder: 留下您的足迹... # 评论框占位提示符
   path: window.location.pathname # 当前文章页路径，用于区分不同的文章页，以保证正确读取该文章页下的评论列表
   avatar: robohash # Gravatar 头像展示方式
   meta: ['nick', 'mail','link']  # 评论者相关属性
@@ -357,8 +357,8 @@ about:  # 以下仅为页面顶部的基本信息，更多内容请在 ./pages/a
   banner_mask_alpha: 0.3  # available: 0 - 1.0
   subtitle:  # 打字机内容
   avatar: /img/avatar.png # 头像
-  name: Fluid
-  introduce: 简洁至上 / 丰富配置 / 充满活力 # 支持 HTML
+  name: AIGISSS
+  introduce: 个人网站 / 博客日志 / 技术文档 # 支持 HTML
   icons: # 更多图标可从 https://github.com/fluid-dev/static/blob/master/hexo-theme-fluid/iconfont.png 查找，class 代表图标的 css class
     - { class: 'iconfont icon-github-fill', link: 'https://github.com/fluid-dev/hexo-theme-fluid', tip: 'GitHub' }
     - { class: 'iconfont icon-note-fill', link: 'https://hexo.fluid-dev.com/docs/', tip: '主题文档' }

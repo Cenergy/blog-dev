@@ -32,3 +32,12 @@ page.banner_mask_alpha = theme.about.banner_mask_alpha
 <div class="mt-5 markdown-body">
   <%- page.content %>
 </div>
+
+
+<% if(page.comments && theme.post.comments.enable) { %>
+  <!-- Comments -->
+  <div class="comments" id="comments">
+    <% var type = '_partial/comments/' + theme.post.comments.type %>
+    <%- partial(type) %>
+  </div>
+<% } %>
