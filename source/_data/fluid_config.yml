@@ -21,8 +21,8 @@ force_https: true  # 强制所有链接升级为 HTTPS（适用于图片等资�
 
 highlight: # 代码高亮
   enable: true
-  style: 'Gml'  # 高亮样式见：https://highlightjs.org/static/demo/  在页面挑选 style 填入
-  bg_color: false  # 是否根据 style 改变代码背景色，如果 style 是白色背景最好关闭此项
+  style: 'Dracula'  # 高亮样式见：https://highlightjs.org/static/demo/  在页面挑选 style 填入
+  bg_color: true  # 是否根据 style 改变代码背景色，如果 style 是白色背景最好关闭此项
   copy_btn: true  # 是否开启复制代码的按钮
 
 fun_features: # 一些好玩的功能
@@ -36,7 +36,7 @@ fun_features: # 一些好玩的功能
     element: h1,h2,h3,h4,h5,h6
     placement: right # icon放置的位置： left | right
     visible: hover # 默认悬浮显示，可选：hover（鼠标在元素上悬浮时显示） | always（一直显示） | touch（移动端触摸显示）
-    icon: "" # 可选：§ | # | ❡ 等，留空则为默认效果
+    icon: § # 可选：§ | # | ❡ 等，留空则为默认效果
   mouse_click:  # 鼠标点击动效
     enable: true
     style: values # 目前设置两个值：values（价值观词汇） | love（爱心）
@@ -55,8 +55,8 @@ color:  # 主题颜色配置，不一定能每一处都生效，可能会被局�
   board_color: "#fff"               # 主面板背景色
 
 font:  # 主题字体配置
-  font_size: 16px                   # 全局字号
-  font_family:                      # 全局字体
+  font_size: 18px                   # 全局字号
+  font_family: 微软雅黑                   # 全局字体
   code_font_size: 85%               # 代码的字号
 
 custom_js: [/js/custom.js,/js/test.js]  # 指定自定义 js 文件路径，路径是相对 source 目录，如 /js/custom.js，支持列表
@@ -74,9 +74,9 @@ web_analytics:  # 网页访问统计
   woyaola:  # 51.la站点统计ID，参见 https://www.51.la/user/site/index
   cnzz:  # 友盟/cnzz站点统计web_id，参见 https://web.umeng.com/main.php?c=site&a=show
   leancloud:  # LeanCloud 计数统计，可用于 PV UV 展示，如果 web_analytics.enable 没有开启，PV UV 展示只会查询，不会增加
-    app_id: LyT8mpSI2Jq9CRhOtNOgBXkE-9Nh9j0Va
-    app_key: fUOlkXhD9wcmxOTed9NdlqPH
-    server_url: https://lyt8mpsi.lc-cn-e1-shared.com  # REST API 服务器地址，国际版不填
+    app_id: diTi74ah5rpPDNa6bjS0VjqN-gzGzoHsz
+    app_key: nHbjOKICQKYQtsVVJjeHYl0O
+    server_url:   # REST API 服务器地址，国际版不填
 
 lazyload: # 对页面中的图片进行懒加载处理，可见范围外的图片不会加载
   enable: true
@@ -106,6 +106,7 @@ version:  # 版本相关
 navbar:
   blog_title:  # 导航栏左侧的标题，为空则按 hexo config.title 显示
   menu:  # 可自行增减，key 用来关联 languages/*.yml，如不存在关联则显示 key 本身的值；icon 是 css class，可以省略；增加 name 可以强制显示指定名称
+    - { key: '总部', link: 'http://www.aigisss.com', icon: 'iconfont icon-google-fill' }
     - { key: 'home', link: '/', icon: 'iconfont icon-home-fill' }
     - { key: 'archive', link: '/archives/', icon: 'iconfont icon-archive-fill' }
     - { key: 'category', link: '/categories/', icon: 'iconfont icon-category-fill' }
@@ -145,7 +146,7 @@ banner_parallax: true  # 头图滚动视差
 footer:
   statistics:  # 统计网站 PV、UV，使用的是不蒜子，显示在页脚  *不蒜子近期连接不稳定，谨慎开启
     enable: true
-    source: "leancloud"  # 统计数据来源，可选：leancloud | busuanzi   注意不蒜子会间歇抽风
+    source: "busuanzi"  # 统计数据来源，可选：leancloud | busuanzi   注意不蒜子会间歇抽风
     pv_format: "总访问量 {} 次"  # 显示的文本，{}是数字的占位符（必须包含)，下同
     uv_format: "总访客数 {} 人"
 
@@ -207,7 +208,7 @@ post:  # 部分配置同时控制自定义页面，注意备注
       words: 100  # 每分钟阅读多少字，如果是技术文章，建议降低
     views:  # 阅读次数，统计基于不蒜子  *不蒜子近期连接不稳定，谨慎开启
       enable: true
-      source: "leancloud"  # 统计数据来源，可选：leancloud | busuanzi   注意不蒜子会间歇抽风
+      source: "busuanzi"  # 统计数据来源，可选：leancloud | busuanzi   注意不蒜子会间歇抽风
       format: "{} 次"
   updated:
     enable: false
@@ -284,17 +285,18 @@ gitalk:
 # 完整文档 https://valine.js.org/configuration.html
 # 注意：下列配置项中的 true/false 不要用引号括起来
 valine:
-  appid: diTi74ah5rpPDNa6bjS0VjqN-gzGzoHsz # 从 LeanCloud 的应用中得到的 appId
-  appkey: nHbjOKICQKYQtsVVJjeHYl0O # 从 LeanCloud 的应用中得到的 APP Key
+  enable: true
+  appid: diTi74ah5rpPDNa6bjS0VjqN-gzGzoHsz # your leancloud application appid
+  appkey: nHbjOKICQKYQtsVVJjeHYl0O # your leancloud application appkey
   placeholder: 留言仅限讨论，禁止广告等行为 # 评论框占位提示符
   path: window.location.pathname # 当前文章页路径，用于区分不同的文章页，以保证正确读取该文章页下的评论列表
   avatar: robohash # Gravatar 头像展示方式
-  meta: ['nick', 'mail']  # 评论者相关属性
+  meta: ['nick', 'mail','link']  # 评论者相关属性
   pageSize: 10 # 评论列表分页，每页条数
   lang: zh-CN # zh-CN | zh-TW | en | ja
   highlight: true # 代码高亮
   recordIP: true # 是否记录评论者IP
-  serverURLs: https://lyt8mpsi.lc-cn-e1-shared.com # 该配置适用于国内自定义域名用户, 海外版本会自动检测(无需手动填写)
+  serverURLs: # 该配置适用于国内自定义域名用户, 海外版本会自动检测(无需手动填写)
 
 # 畅言
 # http://changyan.kuaizhan.com/
@@ -341,8 +343,8 @@ tag:
     min_font: 18
     max_font: 30
     unit: px  # 字号单位
-    start_color: "#BBBBEE"
-    end_color: "#337ab7"
+    start_color: "green"
+    end_color: "red"
 
 
 #---------------------------
@@ -384,20 +386,8 @@ links:
   subtitle:  # 打字机内容
   items:  # intro 与 image 可省略
     - {
-      title: 'Fluid Docs',
-      intro: '主题使用指南',
-      link: 'https://hexo.fluid-dev.com/docs/',
-      image: '/img/favicon.png'
-    }
-    - {
-      title: 'Fluid Repo',
-      intro: '主题 GitHub 仓库',
-      link: 'https://github.com/fluid-dev/hexo-theme-fluid',
-      image: '/img/favicon.png'
-    }
-    - {
-      title: 'Fluid Example',
-      intro: '主题操作示例',
-      link: 'https://hexo.fluid-dev.com/docs/example/',
-      image: '/img/favicon.png'
+      title: '最美的不是下雨天',
+      intro: '龙哥的网站',
+      link: 'http://www.qiulongwen.xyz/',
+      image: 'https://www.aigisss.com/static/images/bg.jpg'
     }

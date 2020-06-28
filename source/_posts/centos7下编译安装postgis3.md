@@ -1,5 +1,6 @@
 ---
 title: centos7下编译安装postgis3
+index_img: https://www.aigisss.com/static/images/bg.jpg
 abbrlink: a70e035f
 date: 2020-06-05 09:02:55
 tags: postgis
