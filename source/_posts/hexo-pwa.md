@@ -3,6 +3,7 @@ title: 给 Hexo 博客添加 PWA 支持
 date: 2020-04-23 14:21:33
 index_img: https://rmt.dogedoge.com/fetch/fluid/storage/hexo-pwa/cover.png?w=480&fmt=webp
 category: 功能增强
+abbrlink: 9604e2a5
 tags:
   - 用户经验
   - 花里胡哨

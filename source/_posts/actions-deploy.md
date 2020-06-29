@@ -3,6 +3,7 @@ title: 利用 GitHub Actions 自动部署 Hexo 博客
 date: 2020-05-23 19:00:00
 index_img: https://rmt.dogedoge.com/fetch/fluid/storage/actions-deploy/cover.png?w=480&fmt=webp
 category: 实用技巧
+abbrlink: 9604e2c9
 tags:
   - 部署
   - 示例

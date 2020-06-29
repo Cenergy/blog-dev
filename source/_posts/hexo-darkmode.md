@@ -8,6 +8,7 @@ tags:
   - 花里胡哨
   - Hexo
 excerpt: 大概花了一个晚上给 Fluid 搞了暗黑模式，之后陆续优化了下，目前博客已经基本上适配完成了，目前有三种方案。
+abbrlink: 9604e2c5
 ---
 
 {% note success %}

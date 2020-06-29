@@ -8,6 +8,7 @@ tags:
   - Hexo
 date: 2020-06-09 12:30:00
 excerpt: 在 Hexo 博客使用 NodePPT 插件实现演示功能
+abbrlink: 9604e2c4
 ---
 
 {% note success %}

@@ -8,6 +8,7 @@ tags:
   - Fluid
 date: 2020-06-03 23:30:00
 excerpt: 介绍如何改造在首页 Slogan 上显示一言(hitokoto)
+abbrlink: 9604e2c8
 ---
 
 {% note success %}

@@ -10,6 +10,7 @@ tags:
 excerpt: 尝试用服务器来丰富博客内容，主要包括服务器端的备份(hexo b)和Jupyter的设定
 date: 2020-05-28 14:30:00
 mathjax: true
+abbrlink: 9604e2c2
 ---
 
 {% note success %}

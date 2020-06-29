@@ -8,6 +8,7 @@ tags:
   - Fluid
 math: true
 mermaid: true
+abbrlink: 9604e2c6
 ---
 
 >欢迎体验 [Fluid](https://github.com/fluid-dev/hexo-theme-fluid) ，这是一款 Material Design 风格的 Hexo 主题，以简约的设计帮助你专注于写作，本篇文章可预览主题的样式及功能。

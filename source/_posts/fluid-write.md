@@ -8,6 +8,7 @@ tags:
   - 示例
   - Fluid
 excerpt: Fluid 是一款很优雅的主题，主要介绍从使用主题拓展和配图来写作。
+abbrlink: 9604e2c7
 ---
 
 {% note success %}

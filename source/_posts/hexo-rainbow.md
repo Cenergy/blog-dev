@@ -7,6 +7,7 @@ tags:
   - 用户经验
   - 花里胡哨
   - Hexo
+abbrlink: 9604e2c3
 ---
 
 {% note success %}
