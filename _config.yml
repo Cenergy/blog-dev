@@ -20,6 +20,12 @@ permalink: posts/:abbrlink.html
 abbrlink:
   alg: crc32  #support crc16(default) and crc32
   rep: hex    #support dec(default) and hex
+  drafts: false #(true)Process draft,(false)Do not process draft
+  # Generate categories from directory-tree
+  # depth: the max_depth of directory-tree you want to generate, should > 0
+  auto_category:
+     enable: true
+     depth: 
 
 permalink_defaults:
 pretty_urls:
@@ -65,7 +71,7 @@ index_generator:
   order_by: -date
 
 # Category & Tag
-default_category: uncategorized
+default_category: 未分类
 category_map:
 tag_map:
 
@@ -101,12 +107,19 @@ theme: fluid   # next7|fluid
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type: git
-  repo:
-    github: https://github.com/Cenergy/blog.git
-    coding: https://e.coding.net/aigis/blog.git
-    aigisss: root@aigisss:/home/git/blog
-  branch: master
+  - type: git
+    repo:
+      github: https://github.com/Cenergy/blog.git
+      coding: https://e.coding.net/aigis/blog.git
+      aigisss: root@aigisss:/home/git/blog
+    branch: master
+  - type: git
+    repo: https://e.coding.net/aigis/images/images.git
+    branch: master
+    extend_dirs: /source/_posts/
+    ignore_hidden: false
+    ignore_pattern:
+        public: .
 
 nofollow:
   enable: true
