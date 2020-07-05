@@ -113,6 +113,7 @@ deploy:
       coding: https://e.coding.net/aigis/blog.git
       aigisss: root@aigisss:/home/git/blog
     branch: master
+
   - type: git
     repo: https://e.coding.net/aigis/images/images.git
     branch: master
@@ -120,6 +121,8 @@ deploy:
     ignore_hidden: false
     ignore_pattern:
         public: .
+
+  - type: baidu_url_submitter
 
 nofollow:
   enable: true
@@ -131,6 +134,12 @@ sitemap:
   path: sitemap.xml
 baidusitemap:
   path: baidusitemap.xml
+
+baidu_url_submit:
+  count: 1000               # 提交最新的多少个链接
+  host: www.aigisss.com    # 在百度站长平台中添加的域名
+  token: ay3cXIG8GmB5KGr0      # 秘钥
+  path: baidu_urls.txt   # 文本文档的地址， 新链接会保存在此文本文档里
 
 server:
   port: 5000

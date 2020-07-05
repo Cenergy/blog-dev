@@ -9,4 +9,8 @@ tags:
 
 > Hello coding
 
-![image-20200704110320923](使用coding来作为图床的方法/image-20200704110320923.png)
+![image-20200704110320923](https://img.aigisss.com/source/_posts/使用coding来作为图床的方法/image-20200704110320923.png)
+本来是想同步hexo与csdn一起写。
+奈何csdn不支持外链。
+全部改成`<img  src="" />`的就可以
+

@@ -360,8 +360,10 @@ about:  # 以下仅为页面顶部的基本信息，更多内容请在 ./pages/a
   name: AIGISSS
   introduce: 个人网站 / 博客日志 / 技术文档 # 支持 HTML
   icons: # 更多图标可从 https://github.com/fluid-dev/static/blob/master/hexo-theme-fluid/iconfont.png 查找，class 代表图标的 css class
-    - { class: 'iconfont icon-github-fill', link: 'https://github.com/fluid-dev/hexo-theme-fluid', tip: 'GitHub' }
-    - { class: 'iconfont icon-note-fill', link: 'https://hexo.fluid-dev.com/docs/', tip: '主题文档' }
+    - { class: 'iconfont icon-github-fill', link: 'https://github.com/cenergy', tip: 'GitHub' }
+    - { class: 'iconfont icon-qq-fill', link: 'tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=673598118', tip: 'QQ' }
+    - { class: 'iconfont icon-mail', link: 'mailto:673598118@qq.com', tip: 'email' }
+    - { class: 'iconfont icon-google-fill', link: 'https://www.aigisss.com', tip: '个人网站' }
 
 
 #---------------------------
