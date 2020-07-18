@@ -1,5 +1,6 @@
 ---
 title: centos7下编译安装postgis3
+index_img: https://www.aigisss.com/static/images/bg.jpg
 abbrlink: a70e035f
 date: 2020-06-05 09:02:55
 tags: postgis
@@ -34,7 +35,7 @@ cmake -version
 
 ![image-20200612124515120](centos7%E4%B8%8B%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85postgis3/image-20200612124515120.png)
 
-本文基于GEOS 3.8.1，PROJ 6.3.2，GDAL 3.0.4，json-c 0.13.1，CGAL4.14.3，SFCGAL1.3.7，protobuf3.11.4，protobuf-c1.3.3，libxml2-2.9.10，pcre-8.44，PostGIS-3.0.1安装。
+本文基于GEOS 3.8.1，PROJ 6.3.2，GDAL 3.0.4，json-c 0.13.1，CGAL4.14.3，SFCGAL1.3.7，protobuf3.11.4，protobuf-c1.3.3，libxml2-2.9.10，pcre-8.44，PostGIS-3.0.1,pgrouting3.0.2安装。
 
 ## 安装依赖或插件
 
@@ -174,8 +175,19 @@ make && make install
 
 4. CGAL-4.14
 
+   为了安装`pgrouting3.0.2`需要安装boost`1.53`以上,使用`yum install boost boost-devel`只能安装版本`1.53`, 我使用源码安装的是`1.68`
+   
+   ```sh
+   wget https://dl.bintray.com/boostorg/release/1.68.0/source/boost_1_68_0.tar.gz
+   tar -xzvf boost_1_68_0.tar.gz
+   cd boost_1_68_0
+   ./bootstrap.sh 
+   ./b2 install --with=all
+   ```
+   
+   * 参考:https://stackoverflow.com/questions/33050113/how-to-install-boost-devel-1-59-in-centos7
+   
    ```shell
-   yum install boost boost-devel
    yum install gmp-devel.x86_64
    yum install mpfr-devel.x86_64
    ```
@@ -276,13 +288,55 @@ export PKG_CONFIG_PATH LD_LIBRARY_PATH
 export LD_LIBRARY_PATH GDAL_DATA
 ```
 
-## 安装
+##  创建postgis扩展
 
+```shell
+su - postgres
+psql
+create database gistest;
+\c gistest
+create extension postgis;
+#如果安装了sfcgal，创建扩展测试下
+create extension postgis_sfcgal;
 ```
-wget  https://github.com/pgRouting/pgrouting/releases/download/v3.0.0/pgrouting-3.0.0.tar.gz
+
+
+
+## 安装PgRouting
+
+```shell
+wget  https://github.com/pgRouting/pgrouting/releases/download/v3.0.2/pgrouting-3.0.2.tar.gz
+tar -zxvf pgrouting-3.0.2.tar.gz
+cd pgrouting-3.0.2
+mkdir build && cd build 
+#引入postgres的环境变量
+source /home/postgres/.bashrc
+cmake ..
+make
+make install
+```
+
+验证安装:
+
+```sh
+su - postgres
+psql
+create database gistest;
+\c gistest
+create extension pgrouting;
 ```
 
 
+
+验证:sql查询
+
+```sql
+SELECT ST_AsX3D(ST_Extrude(ST_Buffer(ST_GeomFromText('POINT(100 90)'), 50, 'quad_segs=2'),0,0,30));
+```
+
+![image-20200718223155807](centos7下编译安装postgis3/image-20200718223155807.png)
+
+以上就完成安装了!!
 
 >参考文章：
 >
