@@ -81,3 +81,4 @@ nginx: configuration file /usr/local/nginx/conf/nginx.conf test is successful
 /usr/local/nginx/sbin/nginx -s reload
 ```
 
+>参考:https://www.jb51.net/article/165079.htm
