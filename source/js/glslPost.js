@@ -278,12 +278,12 @@ function nextPage() {
 }
 
 window.addEventListener("load", function(){
-    window.scrollTo(0, 0);
+    // window.scrollTo(0, 0);
     styleCodeBlocks();
     loadGlslElements();
-    captionizeImages();
-    window.scrollTo(0, 0);
-    setTimeout(function () {
-         window.scrollTo(0, 0);
-    }, 500);
+    // captionizeImages();
+    // window.scrollTo(0, 0);
+    // setTimeout(function () {
+    //      window.scrollTo(0, 0);
+    // }, 500);
 });
