@@ -19,7 +19,7 @@
 }
 
 .CodeMirror-code,.ge_editor{
-    background-color: #eeeeee;
+    background-color: #e6e3d0;
 }
 .simpleFunction .ge_canvas {
     display: block;
@@ -27,8 +27,7 @@
     padding: 0;
     float: none !important;
     z-index: 200;
-    width: 100%;
-    
+    width: 100%; 
 }
 .simpleFunction .ge_editor{
     margin-top: 5px;
