@@ -18762,7 +18762,7 @@ var Helpers = (function () {
                     });
                 }
             } else if (_this.main.options.tooltips && (token.type === 'builtin' || token.type === 'variable-3')) {
-                var html = '<p>Learn more about: <a href="https://thebookofshaders.com/glossary/?search=' + token.string + '" target="_blank">' + token.string + '</a></p>';
+                var html = '<p>Learn more about: <a href="./shaderglossary.html#' + token.string + '" target="_blank">' + token.string + '</a></p>';
                 _this.activeModal = new _modalsModal2['default']('ge_tooltip', { innerHTML: html });
                 _this.activeModal.showAt(_this.main.editor);
             } else if (token.type === 'variable') {
