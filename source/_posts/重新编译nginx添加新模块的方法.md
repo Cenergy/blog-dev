@@ -37,6 +37,10 @@ cd nginx-1.18.0
 
 ## 执行make
 
+```sh
+make
+```
+
 > 千万别执行`make install`
 
 `make`完之后在当前目录下的`/objs`目录下就多了个`nginx`，这个就是新版本的程序了。
