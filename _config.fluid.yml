@@ -84,7 +84,7 @@ fun_features:
 
     # 游标字符
     # Cursor character
-    cursorChar: "_"
+    cursorChar: "✦"
 
     # 是否循环播放效果
     # If true, loop animation
@@ -721,6 +721,12 @@ links:
       intro: "主题 GitHub 仓库",
       link: "https://github.com/fluid-dev/hexo-theme-fluid",
       image: "https://hexo.fluid-dev.com/img/favicon.png"
+    }
+    - {
+      title: "吃白饭的休伯利安号",
+      intro: "一只努力的考研狗",
+      link: "https://eatrice.top/",
+      image: "https://eatrice.top/img/favcion.png"
     }
 
 #---------------------------
