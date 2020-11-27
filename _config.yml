@@ -201,7 +201,7 @@ neat_js:
     - "**/**min.js"
 # 压缩博文配置结束
 
-all_minifier: true
+all_minifier: false
 
 robotstxt:
   useragent: "*"

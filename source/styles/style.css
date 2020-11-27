@@ -15,3 +15,6 @@
 ::-webkit-scrollbar-thumb:hover {
   background-color: #576d84;
 }
+.markdown-body pre{
+  color: aliceblue;
+}
