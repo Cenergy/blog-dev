@@ -610,7 +610,7 @@ archive:
 # Categories Page
 #---------------------------
 category:
-  banner_img: https://rmt.dogedoge.com/fetch/fluid/storage/bg/sdqryn.png?w=1920&fmt=webp
+  banner_img: /images/home/6.jpg
   banner_img_height: 60 # available: 0 - 100
   banner_mask_alpha: 0.3 # available: 0 - 1.0
   subtitle: # 打字机内容
@@ -633,7 +633,7 @@ category:
 # Tags Page
 #---------------------------
 tag:
-  banner_img: https://rmt.dogedoge.com/fetch/fluid/storage/bg/n7a9bv.png?w=1920&fmt=webp
+  banner_img: /images/home/4.jpg
   banner_img_height: 80 # available: 0 - 100
   banner_mask_alpha: 0.3 # available: 0 - 1.0
   subtitle: # 打字机内容
@@ -649,7 +649,7 @@ tag:
 # About Page
 #---------------------------
 about: # 以下仅为页面顶部的基本信息，更多内容请在 ./pages/about.md 中编辑，支持 markdown 和 HTML
-  banner_img: https://rmt.dogedoge.com/fetch/fluid/storage/bg/4xvpqo.png?w=1920&fmt=webp
+  banner_img: /images/home/5.jpg
   banner_img_height: 60 # available: 0 - 100
   banner_mask_alpha: 0.3 # available: 0 - 1.0
   subtitle: # 打字机内容
@@ -693,7 +693,7 @@ page404:
 # Links Page
 #---------------------------
 links:
-  banner_img: https://rmt.dogedoge.com/fetch/fluid/storage/bg/73twhs.png?w=1920&fmt=webp
+  banner_img: /images/home/8.jpg
   banner_img_height: 60 # available: 0 - 100
   banner_mask_alpha: 0.3 # available: 0 - 1.0
   subtitle: # 打字机内容
