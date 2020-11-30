@@ -125,13 +125,13 @@ deploy:
       aigisss: root@aigisss:/home/git/blog
     branch: master
 
-  - type: git
-    repo: https://e.coding.net/aigis/images/images.git
-    branch: master
-    extend_dirs: /source/_posts/
-    ignore_hidden: false
-    ignore_pattern:
-        public: .
+  # - type: git
+  #   repo: https://e.coding.net/aigis/images/images.git
+  #   branch: master
+  #   extend_dirs: /source/_posts/
+  #   ignore_hidden: false
+  #   ignore_pattern:
+  #       public: .
 
   - type: baidu_url_submitter
 
