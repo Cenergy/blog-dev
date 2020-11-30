@@ -728,6 +728,12 @@ links:
       link: "https://eatrice.top/",
       image: "https://eatrice.top/img/favcion.png"
     }
+    - {
+      title: "GIS-HAPPY",
+      intro: "GIS寻乐 即时行乐",
+      link: "https://www.gishappy.com",
+      image: "https://www.gishappy.com/images/home/favicon.ico"
+    }
 
 #---------------------------
 # 以下是配置 JS CSS 静态资源的 URL 前缀，可以自定义成 CDN 地址，
