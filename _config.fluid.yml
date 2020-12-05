@@ -44,6 +44,9 @@ code:
   # Code highlight
   highlight:
     enable: true
+    # 代码块是否显示行号
+    # If true, the code block display line numbers
+    line_number: true
 
     # 实现高亮的库，对应下面的设置
     # Highlight library
