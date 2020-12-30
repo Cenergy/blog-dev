@@ -719,7 +719,7 @@ links:
         title: "最美的不是下雨天",
         intro: "龙哥的网站",
         link: "http://www.qiulongwen.xyz/",
-        image: "https://www.aigisss.com/static/images/bg.jpg",
+        image: "http://www.qiulongwen.xyz/upload/2020/06/74-f94f1070ef644d3c972e489822548128.jpg",
       }
     - {
       title: "Fluid Blog",
@@ -754,7 +754,7 @@ links:
     - {
       title: "Re Life",
       intro: "🌺花有重开日，人无再少年🏃",
-      link: " www.xiangshu233.cn",
+      link: " http://www.xiangshu233.cn",
       image: "https://cdn.jsdelivr.net/gh/xiangshu233/blogAssets@0.1/assets/images/avatar.jpg"
     }
 
