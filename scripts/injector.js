@@ -9,3 +9,9 @@ hexo.extend.injector.register(
   <script defer src="${siteRoot}js/glslPost.js"></script>`,
   "glsl"
 );
+// layout为photo的时候导入这些js与css
+hexo.extend.injector.register(
+  "body_end",
+  `<script defer src="${siteRoot}js/photoWall.js"></script>`,
+  "photo"
+);

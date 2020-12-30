@@ -7,6 +7,8 @@ tags: Django
 ---
 **体验地址**: https://www.aigisss.com/view/#/login
 
+<div class="note note-warning">特别注意的是,当前文章的Django版本是3.1.4</div>
+
 ## 使用social-auth-app-django
 
 ```bat

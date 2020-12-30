@@ -754,8 +754,14 @@ links:
     - {
       title: "Re Life",
       intro: "🌺花有重开日，人无再少年🏃",
-      link: " http://www.xiangshu233.cn",
+      link: "http://www.xiangshu233.cn",
       image: "https://cdn.jsdelivr.net/gh/xiangshu233/blogAssets@0.1/assets/images/avatar.jpg"
+    }
+    - {
+      title: "醉里挑灯赏猫",
+      intro: "班班的碎碎念",
+      link: "https://dlzhang.com",
+      image: "https://sdn.geekzu.org/avatar/cc763511474fe24ffcc80257fb7cb970?size=64"
     }
 
 #---------------------------
