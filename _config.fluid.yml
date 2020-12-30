@@ -751,6 +751,12 @@ links:
       link: "https://www.gishappy.com",
       image: "https://www.gishappy.com/images/home/favicon.ico"
     }
+    - {
+      title: "Re Life",
+      intro: "🌺花有重开日，人无再少年🏃",
+      link: " www.xiangshu233.cn",
+      image: "https://cdn.jsdelivr.net/gh/xiangshu233/blogAssets@0.1/assets/images/avatar.jpg"
+    }
 
 #---------------------------
 # 以下是配置 JS CSS 静态资源的 URL 前缀，可以自定义成 CDN 地址，
