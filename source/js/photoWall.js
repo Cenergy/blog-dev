@@ -1,5 +1,5 @@
-var imgDataPath = "/photos/photoslist.json"; //图片名称高宽信息json文件路径
-var imgPath = "/images/photos/"; //图片访问路径
+var imgDataPath = "/blog/photos/photoslist.json"; //图片名称高宽信息json文件路径
+var imgPath = "/blog/photos/images/"; //图片访问路径
 var imgMaxNum = 50; //图片显示数量
 
 var windowWidth =
@@ -9,7 +9,7 @@ var windowWidth =
 if (windowWidth < 768) {
   var imageWidth = 145; //图片显示宽度(手机端)
 } else {
-  var imageWidth = 215; //图片显示宽度
+  var imageWidth = 250; //图片显示宽度
 }
 
 photo = {
@@ -54,7 +54,7 @@ photo = {
         '" title="' +
         imgName +
         '">' +
-        '<img data-src="' +
+        '<img  class="lazyload" data-src="' +
         imgPath +
         imgNameWithPattern +
         ' " src="' +
