@@ -22,7 +22,7 @@ photo = {
       //that.scroll(data);
     });
   },
-  render: function (page, data) {
+  render: function (page, data=[]) {
     var begin = (page - 1) * this.offset;
     var end = page * this.offset;
     if (begin >= data.length) return;
@@ -39,31 +39,15 @@ photo = {
       imageSize = data[i].split(" ")[0];
       imageX = imageSize.split(".")[0];
       imageY = imageSize.split(".")[1];
-      li +=
-        '<div class="card" style="width:' +
-        imageWidth +
-        'px" >' +
-        '<div class="ImageInCard" style="height:' +
-        (imageWidth * imageY) / imageX +
-        'px">' +
-        '<a data-fancybox="gallery" href="' +
-        imgPath +
-        imgNameWithPattern +
-        '" data-caption="' +
-        imgName +
-        '" title="' +
-        imgName +
-        '">' +
-        '<img  class="lazyload" data-src="' +
-        imgPath +
-        imgNameWithPattern +
-        ' " src="' +
-        imgPath +
-        imgNameWithPattern +
-        ' " data-loaded="true">' +
-        "</a>" +
-        "</div>" +
-        "</div>";
+      li +=`<div class="card lozad" style="width:${imageWidth}px">
+                <div class="ImageInCard" style="height:${(imageWidth * imageY) / imageX}px">
+                  <a data-fancybox="gallery" href="${imgPath}${imgNameWithPattern}"
+                    data-caption="${imgName}" title="${imgName}">
+                      <img  class="lazyload" data-src="${imgPath}${imgNameWithPattern}"
+                      src="${imgPath}${imgNameWithPattern}">
+                  </a>
+                </div>
+            </div>`;
     }
     $(".ImageGrid").append(li);
     this.minigrid();
