@@ -461,7 +461,7 @@ post: # 部分配置同时控制自定义页面，注意备注
       source: "leancloud" # 统计数据来源，可选：leancloud | busuanzi   注意不蒜子会间歇抽风
       format: "{} 次"
   updated:
-    enable: false
+    enable: true
     content: 本文最后更新于：
     relative: true # 是否使用相对时间表示，比如："3 天前"
   # 文章右侧目录
@@ -774,6 +774,18 @@ links:
       intro: "一个初中生的博客",
       link: "https://85no1.top/",
       image: "https://cdn.jsdelivr.net/gh/Daibi-mua/jsdelivr@1.3/logo.png"
+    }
+    - {
+      title: "梦繁星",
+      intro: "不过是大梦一场空！",
+      link: "https://moeor.com/",
+      image: "https://q1.qlogo.cn/g?b=qq&nk=2502393029&s=640"
+    }
+    - {
+      title: "树寒的博客",
+      intro: "吾将上下而求索！",
+      link: "https://shuxhan.com",
+      image: "https://shuxhan.gitee.io/img/2020.12/han.png"
     }
 
 #---------------------------

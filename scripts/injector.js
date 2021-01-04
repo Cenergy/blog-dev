@@ -9,6 +9,15 @@ hexo.extend.injector.register(
   <script defer src="${siteRoot}js/glslPost.js"></script>`,
   "glsl"
 );
+// layout为links的时候导入这些js与css
+const linkHtmlElement = `<div class="container card">
+                        <strong>本站简介:</strong>
+                        <div class="link-title">名称：爱即是诗</div>
+                        <div class="link-title">简介：AI&GIS博客</div>
+                        <div class="link-title">链接：https://www.aigisss.com</div>
+                        <div class="link-title">头像：https://www.aigisss.com/blog/img/avatar.png</div>
+                        </div>`;
+hexo.extend.injector.register("body_begin", linkHtmlElement, "linksss");
 // layout为photo的时候导入这些js与css
 hexo.extend.injector.register(
   "body_end",
