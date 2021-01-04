@@ -764,6 +764,12 @@ links:
       image: "https://sdn.geekzu.org/avatar/cc763511474fe24ffcc80257fb7cb970?size=64"
     }
     - {
+      title: "Spoience",
+      intro: "记录我的碎碎念念",
+      link: "https://spoience.com/",
+      image: "https://cdn.jsdelivr.net/gh/Spoience/pic/img/avatar.jpg"
+    }
+    - {
       title: "呆逼の博客",
       intro: "一个初中生的博客",
       link: "https://85no1.top/",
