@@ -40,4 +40,10 @@ comment: true
   <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=cenergy&theme=buefy&layout=compact" />
 </a>
 
+<span class="contactMe container" style="display:block;margin-top:10px">
+  <a href="https://github.com/cenergy">
+    <img src="https://ghchart.rshah.org/409ba5/cenergy" data-lazy-src="https://ghchart.rshah.org/cenergy" alt="GitHub Coding" class="medium-zoom-image entered loaded" data-ll-status="loaded">
+  </a>
+</span>
+
 </div>
