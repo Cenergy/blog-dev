@@ -772,7 +772,7 @@ links:
     - {
       title: "呆逼の博客",
       intro: "一个初中生的博客",
-      link: "https://85no1.top/",
+      link: "https://keepdai.cn/",
       image: "https://cdn.jsdelivr.net/gh/Daibi-mua/jsdelivr@1.3/logo.png"
     }
     - {
@@ -786,6 +786,18 @@ links:
       intro: "吾将上下而求索！",
       link: "https://shuxhan.com",
       image: "https://shuxhan.gitee.io/img/2020.12/han.png"
+    }
+    - {
+      title: "modao",
+      intro: "",
+      link: "https://modao233.gitee.io/",
+      image: "https://modao233.gitee.io/img/friend.png"
+    }
+    - {
+      title: "小世炎",
+      intro: "交流编程经验",
+      link: "https://blog.xiaoshiyan.top",
+      image: "https://2239499647.rthe.net/image/header.jpg"
     }
 
 #---------------------------
