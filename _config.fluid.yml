@@ -694,6 +694,13 @@ about: # 以下仅为页面顶部的基本信息，更多内容请在 ./pages/ab
         link: "https://www.aigisss.com",
         tip: "个人网站",
       }
+    - {
+        class: "iconfont icon-google-fill",
+        link: "https://www.aigisss.com",
+        tip: "个人网站",
+      }
+
+      
 
 #---------------------------
 # 404页
@@ -798,6 +805,12 @@ links:
       intro: "交流编程经验",
       link: "https://blog.xiaoshiyan.top",
       image: "https://2239499647.rthe.net/image/header.jpg"
+    }
+    - {
+      title: "YFun's Blog",
+      intro: "探寻一切有趣的事物！",
+      link: "https://www.yfun.top/",
+      image: "https://cdn.jsdelivr.net/gh/MyBlog-GitHub/image-upload@main/uPic/1GsaSI.png"
     }
 
 #---------------------------

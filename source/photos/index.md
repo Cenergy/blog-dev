@@ -29,4 +29,5 @@ layout: photo
 }
 </style>
 
+<div id="imageTab"></div>
 <div class="ImageGrid"></div>
