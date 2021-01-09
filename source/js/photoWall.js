@@ -83,7 +83,6 @@ const photo = {
     });
     const ulHtml = `<ul class="nav nav-tabs" id="myTab" role="tablist">${liHtml}</ul><div id="helloTest"></div>`;
     const tabContent = `<div class="tab-content" id="myTabContent">${contentHtml}</div>`;
-    const composeHtml = ulHtml + tabContent;
 
     $("#imageTab").append(ulHtml);
     $(".ImageGrid").append(tabContent);
