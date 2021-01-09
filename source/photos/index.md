@@ -26,9 +26,9 @@ layout: photo
 }
 .photo-tabs{
     /* border-top: 1px solid #e4e7ed; */
-    -moz-column-gap:0.8rem; /* Firefox */
-    -webkit-column-gap:0.8rem; /* Safari 和 Chrome */
-    column-gap:0.8rem;
+    /* -moz-column-gap:0.8rem; 
+    -webkit-column-gap:0.8rem; 
+    column-gap:0.8rem; */
 }
 .photo-tab{
     white-space: nowrap;
@@ -47,6 +47,7 @@ layout: photo
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    margin-left:0.8rem;
 }
 
 .photo-tab:hover {
