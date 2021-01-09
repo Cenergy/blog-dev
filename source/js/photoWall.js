@@ -24,7 +24,6 @@ const photo = {
     });
   },
   constructHtml(options) {
-    console.log("rdapp - constructHtml - options", options)
     const {
       imageWidth,
       imageX,
@@ -66,7 +65,7 @@ const photo = {
     data.forEach((item, index) => {
       const activeClass = index === 0 ? "active" : "";
       liHtml += `<li class="nav-item" role="presentation">
-          <a class="nav-link ${activeClass}" id="home-tab" photo-uuid="${item.name}" data-toggle="tab" href="#${item.name}"  role="tab" aria-controls="${item.name}" aria-selected="true">${item.name}</a>
+          <a class="nav-link ${activeClass} photo-tab" id="home-tab" photo-uuid="${item.name}" data-toggle="tab" href="#${item.name}"  role="tab" aria-controls="${item.name}" aria-selected="true">${item.name}</a>
         </li>`;
     });
     const [initData = {}] = data;
@@ -90,7 +89,7 @@ const photo = {
     });
     contentHtml += ` <div class="tab-pane fade show active"  role="tabpanel" aria-labelledby="home-tab">${li}</div>`;
 
-    const ulHtml = `<ul class="nav nav-tabs" id="myTab" role="tablist">${liHtml}</ul><div id="helloTest"></div>`;
+    const ulHtml = `<ul class="nav nav-pills mb-3 photo-tabs" id="pills-tab" role="tablist">${liHtml}</ul><div id="helloTest"></div>`;
     const tabContent = `<div class="tab-content" id="myTabContent">${contentHtml}</div>`;
 
     $("#imageTab").append(ulHtml);
