@@ -695,11 +695,6 @@ about: # 以下仅为页面顶部的基本信息，更多内容请在 ./pages/ab
         link: "https://www.aigisss.com",
         tip: "个人网站",
       }
-    - {
-        class: "iconfont icon-google-fill",
-        link: "https://www.aigisss.com",
-        tip: "个人网站",
-      }
 
       
 
