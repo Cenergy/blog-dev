@@ -1,5 +1,5 @@
 var imgDataPath = "/blog/photos/photos.json"; //图片名称高宽信息json文件路径
-var imgPath = "https://cdn.jsdelivr.net/gh/Cenergy/images-bed/images/"; //图片访问路径
+var imgPath = "https://cdn.jsdelivr.net/gh/Cenergy/images/gallery/"; //图片访问路径
 var imgMaxNum = 50; //图片显示数量
 
 var windowWidth =
@@ -24,14 +24,23 @@ const photo = {
     });
   },
   constructHtml(options) {
-    const { imageWidth, imageX, imageY, imgPath,imgName, imgNameWithPattern } = options;
+    console.log("rdapp - constructHtml - options", options)
+    const {
+      imageWidth,
+      imageX,
+      imageY,
+      name,
+      imgPath,
+      imgName,
+      imgNameWithPattern,
+    } = options;
     const htmlEle = `<div class="card lozad" style="width:${imageWidth}px">
                   <div class="ImageInCard" style="height:${
                     (imageWidth * imageY) / imageX
                   }px">
-                    <a data-fancybox="gallery" href="${imgPath}${imgNameWithPattern}"
+                    <a data-fancybox="gallery" href="${imgPath}${name}/${imgNameWithPattern}"
                           data-caption="${imgName}" title="${imgName}">
-                            <img  class="lazyload" data-src="${imgPath}${imgNameWithPattern}"
+                            <img  class="lazyload" data-src="${imgPath}${name}/${imgNameWithPattern}"
                             src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
                             onload="lzld(this)"
                             lazyload="auto">
@@ -42,9 +51,7 @@ const photo = {
   },
   render: function (page, data = []) {
     this.data = data;
-    var begin = (page - 1) * this.offset;
-    var end = page * this.offset;
-    if (begin >= data.length) return;
+    if (!data.length) return;
     var html,
       imgNameWithPattern,
       imgName,
@@ -57,30 +64,32 @@ const photo = {
     let contentHtml = "";
 
     data.forEach((item, index) => {
-      const { children = [] } = item;
       const activeClass = index === 0 ? "active" : "";
-      const contentActiveClass = index === 0 ? "show active" : "";
       liHtml += `<li class="nav-item" role="presentation">
           <a class="nav-link ${activeClass}" id="home-tab" photo-uuid="${item.name}" data-toggle="tab" href="#${item.name}"  role="tab" aria-controls="${item.name}" aria-selected="true">${item.name}</a>
         </li>`;
-      for (var i = begin; i < end && i < children.length; i++) {
-        imgNameWithPattern = children[i].split(" ")[1];
-        imgName = imgNameWithPattern.split(".")[0];
-        imageSize = children[i].split(" ")[0];
-        imageX = imageSize.split(".")[0];
-        imageY = imageSize.split(".")[1];
-        let imgOptions = {
-          imageWidth,
-          imageX,
-          imageY,
-          imgPath,
-          imgName,
-          imgNameWithPattern,
-        };
-        li += this.constructHtml(imgOptions);
-      }
-      contentHtml += ` <div class="tab-pane fade ${contentActiveClass}" id="${item.name}" role="tabpanel" aria-labelledby="home-tab">${li}</div>`;
     });
+    const [initData = {}] = data;
+    const { children = [],name } = initData;
+    children.forEach((item, index) => {
+      imgNameWithPattern = item.split(" ")[1];
+      imgName = imgNameWithPattern.split(".")[0];
+      imageSize = item.split(" ")[0];
+      imageX = imageSize.split(".")[0];
+      imageY = imageSize.split(".")[1];
+      let imgOptions = {
+        imageWidth,
+        imageX,
+        imageY,
+        name,
+        imgName,
+        imgPath,
+        imgNameWithPattern,
+      };
+      li += this.constructHtml(imgOptions);
+    });
+    contentHtml += ` <div class="tab-pane fade show active"  role="tabpanel" aria-labelledby="home-tab">${li}</div>`;
+
     const ulHtml = `<ul class="nav nav-tabs" id="myTab" role="tablist">${liHtml}</ul><div id="helloTest"></div>`;
     const tabContent = `<div class="tab-content" id="myTabContent">${contentHtml}</div>`;
 
@@ -101,7 +110,7 @@ const photo = {
       $(".ImageGrid").empty();
       const selectId = $(e.target).attr("photo-uuid");
       const selectedData = data.find((data) => data.name === selectId) || {};
-      const { children } = selectedData;
+      const { children,name } = selectedData;
       let li = "";
       children.forEach((item, index) => {
         imgNameWithPattern = item.split(" ")[1];
@@ -113,6 +122,7 @@ const photo = {
           imageWidth,
           imageX,
           imageY,
+          name,
           imgName,
           imgPath,
           imgNameWithPattern,
