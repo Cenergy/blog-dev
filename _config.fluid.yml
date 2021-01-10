@@ -301,6 +301,7 @@ navbar:
       ]
     }
     - { key: "相册", link: "/photos/", icon: "iconfont icon-image" }
+    - { key: "说说", link: "/talks/", icon: "iconfont icon-kakao-talk-fill" }
     - { key: "about", link: "/about/", icon: "iconfont icon-user-fill" }
     - { key: "links", link: "/links/", icon: "iconfont icon-link-fill" }
     # - {
