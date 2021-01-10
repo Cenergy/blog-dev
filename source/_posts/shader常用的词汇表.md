@@ -1,6 +1,6 @@
 ---
 title: shader常用的词汇表
-index_img: 'https://www.aigisss.com/static/images/bg.jpg'
+index_img: /images/pages/glossary.png
 abbrlink: shaderglossary
 categories: 着色器
 date: 2020-09-16 19:01:26

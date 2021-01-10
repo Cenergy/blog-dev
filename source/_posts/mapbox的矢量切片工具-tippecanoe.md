@@ -1,6 +1,6 @@
 ---
 title: 'mapbox的矢量切片工具:tippecanoe'
-index_img: 'https://www.aigisss.com/static/images/bg.jpg'
+index_img: /images/pages/logo-mapbox-tippecanoe.png
 abbrlink: 4ef7fe51
 categories: mapbox
 date: 2020-09-20 21:49:46
@@ -106,21 +106,7 @@ tippecanoe 切片有很多选项，但是大部分情况下你并不想要使用
 
 - `-L name:file.json` 或 `--named-layer=name:file.json`：定义每个文件的对应的图层名
 
-- ```bash
-  -L{layer-json}
-  ```
-
-   
-
-  或
-
-   
-
-  ```bash
-  --named-layer={layer-json}
-  ```
-
-  : 通过 json 对象定义图层。示例：
+- `-L{layer-json} `或 `--named-layer={layer-json}`: 通过 json 对象定义图层。示例：
 
   ```bash
   tippecanoe -z5 -o world.mbtiles -L'{"file":"ne_10m_admin_0_countries.json", "layer":"countries", "description":"Natural Earth countries"}'
