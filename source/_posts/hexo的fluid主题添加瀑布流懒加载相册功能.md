@@ -7,61 +7,6 @@ tags: [hexo,fluid]
 ---
 <div class="note note-warning">相册演示地址:<a style="color:red" href="https://www.aigisss.com/blog/photos/">https://www.aigisss.com/blog/photos/</a> ,当前演示环境基于hexo===5.2.0 , fluid===1.8.7,很大程度上参考了醉里挑灯赏猫的<a href="https://blog.dlzhang.com/posts/31/" style="color:red">Hexo NexT 博客增加瀑布流相册页面</a>这篇博客!在此感谢班班提供的帮助!!</div>
 
-## 处理图片信息
-
-在博客根目录的 `/scripts/` 文件夹下新建一个 `photohandle.js` 文件，内容如下。主要功能是使用`image-size`( `npm i -S image-size`安装)访问照片文件夹，获取每张照片的大小和文件名，并生成对应的 `json` 文件：
-
-```JavaScript
-"use strict";
-const fs = require("fs");
-const sizeOf = require('image-size'); 
-//本地照片所在目录
-const path = "source/photos/images"; 
-//要放置生成的照片信息文件目录，建议直接放在 source/photos/ 文件夹下
-const output = "source/photos/photoslist.json";
-var dimensions;
-fs.readdir(path, function (err, files) {
-    if (err) {
-        return;
-    }
-    let arr = [];
-    (function iterator(index) {
-        if (index == files.length) {
-            fs.writeFileSync(output, JSON.stringify(arr, null, "\t"));
-            return;
-        }
-        fs.stat(path + "/" + files[index], function (err, stats) {
-            if (err) {
-                return;
-            }
-            if (stats.isFile()) {
-                dimensions = sizeOf(path + "/" + files[index]);
-                console.log(dimensions.width, dimensions.height);
-                arr.push(dimensions.width + '.' + dimensions.height + ' ' + files[index]);
-            }
-            iterator(index + 1);
-        })
-    }(0));
-});
-```
-
-创建好并把照片放在目录后，执行以下命令：
-
-```js
-node scripts/photohandle.js
-```
-
-`node scripts/phototool.js` 这个步骤以后可以不用手动执行，每次 `hexo s` 或者 `hexo deploy` 时候会被自动执行。如果报错，请注意检查保存本地照片的文件夹里有没有非图片类文件，特别是要删除如 `.DS_Store` 这样的隐藏文件。`json` 文件样例如下：
-
-```json
-[
-      "1080.1440 广州塔顶夜晚景色.jpg",
-      "1080.1440 广州塔顶夜晚景色2.jpg",
-      "1080.1440 晚上广州塔.jpg",
-      "1080.1443 白天广州塔.jpg"
-]
-```
-
 ## 创建相册页面
 
 新建相册页 `hexo new page photos`,编辑 `/source/photos/index.md`，输入以下内容：
@@ -98,19 +43,64 @@ layout: photo
 }
 </style>
 
+<div id="imageTab"></div>
 <div class="ImageGrid"></div>
 
 ```
 
+## 处理图片信息
 
+为了加快图片的加载速度,我使用`GitHub` +` jsDelivr`的方式，**网上有许多的教程，此处不再演示。**文件夹结构如图:
+
+![image-20210110205814315](hexo%E7%9A%84fluid%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0%E7%80%91%E5%B8%83%E6%B5%81%E6%87%92%E5%8A%A0%E8%BD%BD%E7%9B%B8%E5%86%8C%E5%8A%9F%E8%83%BD/image-20210110205814315.png)
+
+主要功能是使用`image-size`( `npm i -S image-size`安装)访问照片文件夹，获取每张照片的大小和文件名，并生成对应的 `json` 文件：
+
+`cnpm i `安装之后,把照片放在目录后，执行以下命令：
+
+```js
+node gallery/create.js
+```
+
+如果报错，请注意检查保存本地照片的文件夹里有没有非图片类文件，特别是要删除如 `.DS_Store` 这样的隐藏文件。`json` 文件样例如下：
+
+```json
+[
+  {
+    "name": "广州一游",
+    "children": [
+      "1080.1440 圣心大教堂.jpg",
+      "1080.1440 广州塔顶夜晚景色.jpg",
+      "1080.1440 广州塔顶夜晚景色2.jpg",
+      "1080.1440 晚上广州塔.jpg",
+      "1080.1443 白天广州塔.jpg"
+    ]
+  },
+  {
+    "name": "澳门游玩",
+    "children": [
+      "1080.1443 夜晚澳门巴黎铁塔.jpg",
+      "1443.1080 微信图片_20210108213615.jpg",
+      "1443.1080 微信图片_20210108213635.jpg",
+      "1443.1080 微信图片_20210108213645.jpg",
+      "1443.1080 微信图片_20210108213707.jpg",
+      "1080.1443 白天澳门巴黎铁塔.jpg"
+    ]
+  }
+]
+```
+
+将`photos.json`拷贝到博客目录下的`photos`
+
+![image-20210110210639345](hexo%E7%9A%84fluid%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0%E7%80%91%E5%B8%83%E6%B5%81%E6%87%92%E5%8A%A0%E8%BD%BD%E7%9B%B8%E5%86%8C%E5%8A%9F%E8%83%BD/image-20210110210639345.png)
 
 ## 加载 js和css文件
 
 在 `/source/js/` 目录下创建 `photoWall.js`：
 
 ```js
-var imgDataPath = "/blog/photos/photoslist.json"; //图片名称高宽信息json文件路径
-var imgPath = "/blog/photos/images/"; //图片访问路径
+var imgDataPath = "/blog/photos/photos.json"; //图片名称高宽信息json文件路径
+var imgPath = "https://cdn.jsdelivr.net/gh/Cenergy/images/gallery/"; //图片访问路径
 var imgMaxNum = 50; //图片显示数量
 
 var windowWidth =
@@ -123,7 +113,7 @@ if (windowWidth < 768) {
   var imageWidth = 250; //图片显示宽度
 }
 
-photo = {
+const photo = {
   page: 1,
   offset: imgMaxNum,
   init: function () {
@@ -131,12 +121,37 @@ photo = {
     $.getJSON(imgDataPath, function (data) {
       that.render(that.page, data);
       //that.scroll(data);
+      that.eventListen(data);
     });
   },
-  render: function (page, data=[]) {
-    var begin = (page - 1) * this.offset;
-    var end = page * this.offset;
-    if (begin >= data.length) return;
+  constructHtml(options) {
+    const {
+      imageWidth,
+      imageX,
+      imageY,
+      name,
+      imgPath,
+      imgName,
+      imgNameWithPattern,
+    } = options;
+    const htmlEle = `<div class="card lozad" style="width:${imageWidth}px">
+                  <div class="ImageInCard" style="height:${
+                    (imageWidth * imageY) / imageX
+                  }px">
+                    <a data-fancybox="gallery" href="${imgPath}${name}/${imgNameWithPattern}"
+                          data-caption="${imgName}" title="${imgName}">
+                            <img  class="lazyload" data-src="${imgPath}${name}/${imgNameWithPattern}"
+                            src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                            onload="lzld(this)"
+                            lazyload="auto">
+                        </a>
+                  </div>
+                </div>`;
+    return htmlEle;
+  },
+  render: function (page, data = []) {
+    this.data = data;
+    if (!data.length) return;
     var html,
       imgNameWithPattern,
       imgName,
@@ -144,27 +159,79 @@ photo = {
       imageX,
       imageY,
       li = "";
-    for (var i = begin; i < end && i < data.length; i++) {
-      imgNameWithPattern = data[i].split(" ")[1];
+
+    let liHtml = "";
+    let contentHtml = "";
+
+    data.forEach((item, index) => {
+      const activeClass = index === 0 ? "active" : "";
+      liHtml += `<li class="nav-item" role="presentation">
+          <a class="nav-link ${activeClass} photo-tab" id="home-tab" photo-uuid="${item.name}" data-toggle="tab" href="#${item.name}"  role="tab" aria-controls="${item.name}" aria-selected="true">${item.name}</a>
+        </li>`;
+    });
+    const [initData = {}] = data;
+    const { children = [],name } = initData;
+    children.forEach((item, index) => {
+      imgNameWithPattern = item.split(" ")[1];
       imgName = imgNameWithPattern.split(".")[0];
-      imageSize = data[i].split(" ")[0];
+      imageSize = item.split(" ")[0];
       imageX = imageSize.split(".")[0];
       imageY = imageSize.split(".")[1];
-      li +=`<div class="card lozad" style="width:${imageWidth}px">
-                <div class="ImageInCard" style="height:${(imageWidth * imageY) / imageX}px">
-                  <a data-fancybox="gallery" href="${imgPath}${imgNameWithPattern}"
-                    data-caption="${imgName}" title="${imgName}">
-                         <img  class="lazyload" data-src="${imgPath}${imgNameWithPattern}"
-                          src="${imgPath}${imgNameWithPattern}">
-                          src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                          onload="lzld(this)"
-                          lazyload="auto">
-                  </a>
-                </div>
-            </div>`;
-    }
-    $(".ImageGrid").append(li);
+      let imgOptions = {
+        imageWidth,
+        imageX,
+        imageY,
+        name,
+        imgName,
+        imgPath,
+        imgNameWithPattern,
+      };
+      li += this.constructHtml(imgOptions);
+    });
+    contentHtml += ` <div class="tab-pane fade show active"  role="tabpanel" aria-labelledby="home-tab">${li}</div>`;
+
+    const ulHtml = `<ul class="nav nav-tabs" id="myTab" role="tablist">${liHtml}</ul>`;
+    const tabContent = `<div class="tab-content" id="myTabContent">${contentHtml}</div>`;
+
+    $("#imageTab").append(ulHtml);
+    $(".ImageGrid").append(tabContent);
     this.minigrid();
+  },
+  eventListen: function (data) {
+    let self = this;
+    var html,
+      imgNameWithPattern,
+      imgName,
+      imageSize,
+      imageX,
+      imageY,
+      li = "";
+    $('a[data-toggle="tab"]').on("shown.bs.tab", function (e) {
+      $(".ImageGrid").empty();
+      const selectId = $(e.target).attr("photo-uuid");
+      const selectedData = data.find((data) => data.name === selectId) || {};
+      const { children,name } = selectedData;
+      let li = "";
+      children.forEach((item, index) => {
+        imgNameWithPattern = item.split(" ")[1];
+        imgName = imgNameWithPattern.split(".")[0];
+        imageSize = item.split(" ")[0];
+        imageX = imageSize.split(".")[0];
+        imageY = imageSize.split(".")[1];
+        let imgOptions = {
+          imageWidth,
+          imageX,
+          imageY,
+          name,
+          imgName,
+          imgPath,
+          imgNameWithPattern,
+        };
+        li += self.constructHtml(imgOptions);
+      });
+      $(".ImageGrid").append(li);
+      self.minigrid();
+    });
   },
   minigrid: function () {
     var grid = new Minigrid({
@@ -179,6 +246,7 @@ photo = {
   },
 };
 photo.init();
+
 ```
 
 然后使用注册器将需要的`js`,`css`注入,在`scripts/injector.js`(如没有,则创建)中输入以下内容:
