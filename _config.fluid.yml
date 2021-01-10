@@ -730,7 +730,7 @@ links:
         title: "最美的不是下雨天",
         intro: "龙哥的网站",
         link: "http://www.qiulongwen.xyz/",
-        image: "http://www.qiulongwen.xyz/upload/2020/06/74-f94f1070ef644d3c972e489822548128.jpg",
+        image: "https://www.aigisss.com/blog/img/avatar.png",
       }
     - {
       title: "Fluid Blog",
@@ -796,7 +796,7 @@ links:
       title: "树寒的博客",
       intro: "吾将上下而求索！",
       link: "https://shuxhan.com",
-      image: "https://shuxhan.gitee.io/img/2020.12/han.png"
+      image: "https://shuxhan-imgbed.oss-cn-hangzhou.aliyuncs.com/img/20210108164434.jpg"
     }
     - {
       title: "modao",
@@ -815,6 +815,12 @@ links:
       intro: "探寻一切有趣的事物！",
       link: "https://www.yfun.top/",
       image: "https://cdn.jsdelivr.net/gh/MyBlog-GitHub/image-upload@main/uPic/1GsaSI.png"
+    }
+    - {
+      title: "Dezheng Guo",
+      intro: "Physics Student",
+      link: "https://gdz5366.github.io/",
+      image: "https://gdz5366.github.io/asset/images/avatar.png"
     }
 
 #---------------------------
