@@ -5,6 +5,9 @@ layout: photo
 ---
 
 <style>
+#imageTab{
+  margin-top:-1.5rem;
+}
 .ImageGrid {
   width: 100%;
   max-width: 1040px;
@@ -35,6 +38,7 @@ layout: photo
     overflow: hidden;
     text-overflow: ellipsis;
     background: #e1eaf7;
+    /* background: background: linear-gradient(118deg,rgba(50,100,200,1),rgba(50,100,200,.7))!important; */
     border-radius: 50%;
     text-align: center;
     cursor: pointer;
@@ -47,7 +51,8 @@ layout: photo
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    margin-left:0.8rem;
+    margin-right:0.8rem;
+    margin-top:0.8rem;
 }
 
 .photo-tab:hover {
