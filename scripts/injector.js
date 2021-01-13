@@ -33,7 +33,7 @@ hexo.extend.injector.register(
 hexo.extend.injector.register(
   "body_end",
   `<link defer rel="stylesheet" href="${siteRoot}styles/artitalk.css" />
-  <script type="text/javascript" src="${siteRoot}js/artitalk.js"></script>
+  <script type="text/javascript" src="https://unpkg.com/artitalk"></script>
   <script defer src="${siteRoot}js/talkShow.js"></script>`,
   "talk"
 );

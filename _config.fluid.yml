@@ -822,6 +822,24 @@ links:
       link: "https://gdz5366.github.io/",
       image: "https://gdz5366.github.io/asset/images/avatar.png"
     }
+    - {
+      title: "moliam",
+      intro: "一个嵌入式菜鸡",
+      link: "https://moliam.space/",
+      image: "https://backgroundimg.oss-cn-shenzhen.aliyuncs.com/9_ball3_4k.jpg"
+    }
+    - {
+      title: "Benjamin",
+      intro: "Developer",
+      link: "https://wnllb.cn/",
+      image: "https://cdn.jsdelivr.net/gh/benjamin603/homepages@master/img/avatar01.png"
+    }
+    - {
+      title: "leader755 Blogs",
+      intro: "分享web前端相关的技术文章，会记录日常生活中的琐事和大家一起分享。",
+      link: "https://www.leader755.com/",
+      image: "https://gitee.com/leader755/imagehost/raw/master/blog/wx_avatar.png"
+    }
 
 #---------------------------
 # 以下是配置 JS CSS 静态资源的 URL 前缀，可以自定义成 CDN 地址，
