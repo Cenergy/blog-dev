@@ -524,7 +524,7 @@ post: # 部分配置同时控制自定义页面，注意备注
     options: { theme: 'default' }
   
   comments: # 评论
-    enable: true # 开启评论
+    enable: false # 开启评论
     type: valine # 指定使用的评论模块  available: disqus | valine | gitalk | utterances | changyan | livere  推荐 utterances
 
 #---------------------------
@@ -839,6 +839,12 @@ links:
       intro: "分享web前端相关的技术文章，会记录日常生活中的琐事和大家一起分享。",
       link: "https://www.leader755.com/",
       image: "https://gitee.com/leader755/imagehost/raw/master/blog/wx_avatar.png"
+    }
+    - {
+      title: "小背影",
+      intro: "过于个性-没有签名",
+      link: "http://xbying.com/",
+      image: "https://pic.4nmb.com/images/2021/01/15/about-HJ.jpg"
     }
 
 #---------------------------
