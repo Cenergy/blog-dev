@@ -2,6 +2,6 @@ console.log("rdapp - window", window)
 new Waline({
   el: "#waline",
   path: location.pathname,
-  serverURL: "https://weline.vercel.app/",
-  placeholder: "您的意见或建议是我的动力!!",
+  serverURL: "https://waline.aigisss.com/",
+  placeholder: "留下您的意见或建议...(审核后可见)!",
 });

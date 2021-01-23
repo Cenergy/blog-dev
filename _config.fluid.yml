@@ -808,7 +808,7 @@ links:
       title: "小世炎",
       intro: "交流编程经验",
       link: "https://blog.xiaoshiyan.top",
-      image: "https://2239499647.rthe.net/image/header.jpg"
+      image: "https://blog.xiaoshiyan.top/wp-content/uploads/2020/12/header.jpg"
     }
     - {
       title: "YFun's Blog",
@@ -844,7 +844,49 @@ links:
       title: "小背影",
       intro: "过于个性-没有签名",
       link: "http://xbying.com/",
-      image: "https://pic.4nmb.com/images/2021/01/15/about-HJ.jpg"
+      image: "https://cdn.jsdelivr.net/gh/xbying/xbying.github.io@master/images/about-HJ.66yi7walf600.jpg"
+    }
+    - {
+      title: "灯火不休时",
+      intro: "所爱隔山海，山海皆可平；所念隔星河，星河不可及。",
+      link: "https://dhbxs.club",
+      image: "https://cdn.jsdelivr.net/gh/zhao-v/blog-img/img/20201020000120.jpg"
+    }
+    - {
+      title: "GOOPHER's Blog",
+      intro: ' ',
+      link: 'https://goopher97-github-io.vercel.app',
+      image: 'https://gitee.com/goopher998/tuchuang/raw/master/img/IMG_2199.JPG'
+    }
+    - {
+      title: "AmorSpem",
+      intro: '一切皆有可能~',
+      link: 'https://3ddd.site/',
+      image: 'https://3ddd.site/img/me.webp'
+    }
+    - {
+      title: "猫のレインボー島",
+      intro: "分享|创新|博爱",
+      link: "https://annko.cn",
+      image: "https://cdn.jsdelivr.net/gh/annkoxx/img_annko@main/20210121/annko.png"
+    }
+    - {
+      title: "爱技术Blog",
+      intro: "一只游走在学校的混子",
+      link: "http://www.aijishu.pro/",
+      image: "https://tu.shijieheping.cn/img/121"
+    }
+    - {
+      title: "小茶猫-有缘即相见",
+      intro: "随笔记录 知识科普",
+      link: "https://www.xiaochamao.com/",
+      image: "https://www.xiaochamao.com/tx.png"
+    }
+    - {
+      title: "XingYu 'blog",
+      intro: "记录与回顾。",
+      link: "https://www.itxy.tech",
+      image: "http://tc.itxy.tech/2021/01/14/tx.png"
     }
 
 #---------------------------
