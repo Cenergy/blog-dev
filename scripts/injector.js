@@ -37,11 +37,17 @@ hexo.extend.injector.register(
   <script defer src="${siteRoot}js/talkShow.js"></script>`,
   "talk"
 );
-// layout为talk的时候导入这些js与css
+// 导入这些js与css
 hexo.extend.injector.register(
   "body_end",
   `<script src='//cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js'></script>
   <script src="${siteRoot}js/comment.js"></script>
   <script defer src="${siteRoot}js/comment2.js"></script>
+  `,
+);
+// 导入这些js与css
+hexo.extend.injector.register(
+  "body_end",
+  `<script src="${siteRoot}js/clicklove.js"></script>
   `,
 );
