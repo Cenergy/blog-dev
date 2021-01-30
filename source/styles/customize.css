@@ -1,0 +1,26 @@
+.index-card {
+  border-bottom: 1px #ebeef5 solid;
+  margin-bottom: 1.5rem !important;
+  padding-bottom: 1.5rem !important;
+}
+.index-info {
+  padding-top: 0rem !important;
+  padding-bottom: 0rem !important;
+}
+/* .index-card:hover {
+  background-color: burlywood;
+} */
+
+/* .index-card:hover::after { */
+  /* content: "⭐";
+  position: relative;
+  top: -10rem;
+  left: 30%;
+  width: max-content;
+  border-radius: 2px; */
+  /* -webkit-transform: scaleY(0);
+  transform: scaleY(0);
+  transition: -webkit-transform 0.35s;
+  transition: transform 0.35s;
+  transition: transform 0.35s, -webkit-transform 0.35s; */
+/* } */

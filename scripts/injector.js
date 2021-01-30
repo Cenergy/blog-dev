@@ -15,7 +15,7 @@ const linkHtmlElement = `<div class="container card">
                         <div class="link-title">名称：爱即是诗</div>
                         <div class="link-title">简介：AI&GIS博客</div>
                         <div class="link-title">链接：https://www.aigisss.com</div>
-                        <div class="link-title">头像：https://www.aigisss.com/blog/img/avatar.png</div>
+                        <div class="link-title">头像：https://www.aigisss.com/blog/images/profile/avatar.jpg</div>
                         </div>`;
 hexo.extend.injector.register("body_begin", linkHtmlElement, "linksss");
 // layout为photo的时候导入这些js与css
@@ -49,5 +49,11 @@ hexo.extend.injector.register(
 hexo.extend.injector.register(
   "body_end",
   `<script src="${siteRoot}js/clicklove.js"></script>
+  `,
+);
+// 导入这些js与css
+hexo.extend.injector.register(
+  "body_end",
+  `<link defer rel="stylesheet" href="${siteRoot}styles/customize.css" />
   `,
 );

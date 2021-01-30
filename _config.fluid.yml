@@ -382,7 +382,7 @@ footer:
 # Index Page
 #---------------------------
 index:
-  banner_img: /images/home/3.jpg # 首页 Banner 头图，以下相同
+  banner_img: https://cdn.jsdelivr.net/gh/Cenergy/images/blog/images/home/4.jpg # 首页 Banner 头图，以下相同
   banner_img_height: 100 # 头图高度，屏幕百分比，available: 0 - 100
   banner_mask_alpha: 0.3 # 头图黑色蒙版的透明度，available: 0 - 1.0， 0 是完全透明（无蒙版），1 是完全不透明
   slogan: # 首页副标题的独立设置
@@ -626,7 +626,7 @@ twikoo:
 # Archive Page
 #---------------------------
 archive:
-  banner_img: /images/home/2.jpg
+  banner_img: https://cdn.jsdelivr.net/gh/Cenergy/images/blog/images/home/2.jpg
   banner_img_height: 60 # available: 0 - 100
   banner_mask_alpha: 0.3 # available: 0 - 1.0
   subtitle: # 打字机内容
@@ -636,7 +636,7 @@ archive:
 # Categories Page
 #---------------------------
 category:
-  banner_img: /images/home/6.jpg
+  banner_img: https://cdn.jsdelivr.net/gh/Cenergy/images/blog/images/home/6.jpg
   banner_img_height: 60 # available: 0 - 100
   banner_mask_alpha: 0.3 # available: 0 - 1.0
   subtitle: # 打字机内容
@@ -659,7 +659,7 @@ category:
 # Tags Page
 #---------------------------
 tag:
-  banner_img: /images/home/4.jpg
+  banner_img: https://cdn.jsdelivr.net/gh/Cenergy/images/blog/images/home/4.jpg
   banner_img_height: 80 # available: 0 - 100
   banner_mask_alpha: 0.3 # available: 0 - 1.0
   subtitle: # 打字机内容
@@ -675,11 +675,11 @@ tag:
 # About Page
 #---------------------------
 about: # 以下仅为页面顶部的基本信息，更多内容请在 ./pages/about.md 中编辑，支持 markdown 和 HTML
-  banner_img: /images/home/5.jpg
+  banner_img: https://cdn.jsdelivr.net/gh/Cenergy/images/blog/images/home/5.jpg
   banner_img_height: 60 # available: 0 - 100
   banner_mask_alpha: 0.3 # available: 0 - 1.0
   subtitle: # 打字机内容
-  avatar: /img/avatar.png # 头像
+  avatar: /images/profile/avatar.jpg # 头像
   name: AIGISSS
   introduce: 个人网站 / 博客日志 / 技术文档 # 支持 HTML
   icons: # 更多图标可从 https://github.com/fluid-dev/static/blob/master/hexo-theme-fluid/iconfont.png 查找，class 代表图标的 css class
@@ -721,7 +721,7 @@ page404:
 # Links Page
 #---------------------------
 links:
-  banner_img: /images/home/9.jpg
+  banner_img: https://cdn.jsdelivr.net/gh/Cenergy/images/blog/images/home/9.jpg
   banner_img_height: 60 # available: 0 - 100
   banner_mask_alpha: 0.3 # available: 0 - 1.0
   subtitle: # 打字机内容
@@ -760,7 +760,7 @@ links:
       title: "GIS-HAPPY",
       intro: "GIS寻乐 即时行乐",
       link: "https://www.gishappy.com",
-      image: "https://www.gishappy.com/images/home/favicon.ico"
+      image: "https://www.gishappy.comhttps://cdn.jsdelivr.net/gh/Cenergy/images/blog/images/home/favicon.ico"
     }
     - {
       title: "Re Life",
@@ -813,7 +813,7 @@ links:
     - {
       title: "YFun's Blog",
       intro: "探寻一切有趣的事物！",
-      link: "https://www.yfun.top/",
+      link: "https://blog.yfun.top",
       image: "https://cdn.jsdelivr.net/gh/MyBlog-GitHub/image-upload@main/uPic/1GsaSI.png"
     }
     - {
@@ -887,6 +887,12 @@ links:
       intro: "记录与回顾。",
       link: "https://www.itxy.tech",
       image: "http://tc.itxy.tech/2021/01/14/tx.png"
+    }
+    - {
+      title: 'pxxyyz',
+      intro: '秃头怪的自娱自乐',
+      link: 'https://pxxyyz.com',
+      image: 'https://cdn.jsdelivr.net/gh/pxxyyz/blog-file/photo/logo.png'
     }
 
 #---------------------------
