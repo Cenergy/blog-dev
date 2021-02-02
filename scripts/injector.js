@@ -43,17 +43,26 @@ hexo.extend.injector.register(
   `<script src='//cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js'></script>
   <script src="${siteRoot}js/comment.js"></script>
   <script defer src="${siteRoot}js/comment2.js"></script>
-  `,
+  `
 );
 // 导入这些js与css
 hexo.extend.injector.register(
   "body_end",
   `<script src="${siteRoot}js/clicklove.js"></script>
-  `,
+  `
 );
 // 导入这些js与css
 hexo.extend.injector.register(
   "body_end",
   `<link defer rel="stylesheet" href="${siteRoot}styles/customize.css" />
-  `,
+  `
+);
+// 导入这些js与css
+hexo.extend.injector.register("body_begin", `<div id="web_bg"></div>`);
+
+hexo.extend.injector.register(
+  "body_end",
+  `<script src="${siteRoot}js/test2.js"></script>
+  <link defer rel="stylesheet" href="${siteRoot}styles/test.css" />
+  `
 );
