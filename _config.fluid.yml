@@ -894,6 +894,12 @@ links:
       link: 'https://pxxyyz.com',
       image: 'https://cdn.jsdelivr.net/gh/pxxyyz/blog-file/photo/logo.png'
     }
+    - {
+      title: '青春永不落幕',
+      intro: '一位网页设计和收集Windows平台软件的爱好者。',
+      link: 'https://qcyblm.gitee.io/',
+      image: 'https://qcyblm.gitee.io/favicon.ico'
+    }
 
 #---------------------------
 # 以下是配置 JS CSS 静态资源的 URL 前缀，可以自定义成 CDN 地址，

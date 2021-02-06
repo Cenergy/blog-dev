@@ -62,7 +62,7 @@ hexo.extend.injector.register("body_begin", `<div id="web_bg"></div>`);
 
 hexo.extend.injector.register(
   "body_end",
-  `<script src="${siteRoot}js/test2.js"></script>
-  <link defer rel="stylesheet" href="${siteRoot}styles/test.css" />
+  `<script src="${siteRoot}js/backgroundize.js"></script>
+  <link defer rel="stylesheet" href="${siteRoot}styles/backgroundize.css" />
   `
 );
