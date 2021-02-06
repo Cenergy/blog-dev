@@ -113,7 +113,7 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: fluid   # next7|fluid
+theme: next   # next|fluid
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
