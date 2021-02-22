@@ -1,10 +1,9 @@
 const bannerContainer = $("#banner");
-const realBanner = $("#web_bg");
+const viewBg = $("#web_bg");
 const bannerMask = $("#banner .mask");
-console.log("rdapp - bannerMask", bannerMask);
-const aa = $(bannerContainer).css("background-image");
-$(realBanner).css("background-image", aa);
+const bg = $(bannerContainer).css("background-image");
+$(viewBg).css("background-image", bg);
 $(bannerContainer).css("background-image", "");
 const color = $(bannerMask).css("background-color");
 $(bannerMask).css("background-color", `rgba(0,0,0,0)`);
-$(realBanner).css("background-color", color);
+$(viewBg).css("background-color", color);

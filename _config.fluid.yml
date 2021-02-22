@@ -301,7 +301,7 @@ navbar:
       ]
     }
     - { key: "相册", link: "/photos/", icon: "iconfont icon-image" }
-    - { key: "说说", link: "/talks/", icon: "iconfont icon-kakao-talk-fill" }
+    # - { key: "说说", link: "/talks/", icon: "iconfont icon-kakao-talk-fill" }
     - { key: "about", link: "/about/", icon: "iconfont icon-user-fill" }
     - { key: "links", link: "/links/", icon: "iconfont icon-link-fill" }
     # - {
@@ -721,18 +721,12 @@ page404:
 # Links Page
 #---------------------------
 links:
-  banner_img: https://cdn.jsdelivr.net/gh/Cenergy/images/blog/images/home/9.jpg
-  banner_img_height: 60 # available: 0 - 100
+  banner_img: https://cdn.jsdelivr.net/gh/muzihuaner/huancdn/img/20210219231949.png
+  banner_img_height: 80 # available: 0 - 100
   banner_mask_alpha: 0.3 # available: 0 - 1.0
   subtitle: # 打字机内容
   default_avatar: https://api.btstu.cn/sjtx/api.php?lx=c1&format=images  #随机动漫头像
   items: # intro 与 image 可省略
-    - {
-        title: "最美的不是下雨天",
-        intro: "龙哥的网站",
-        link: "http://www.qiulongwen.xyz/",
-        image: "https://www.aigisss.com/blog/img/avatar.png",
-      }
     - {
       title: "Fluid Blog",
       intro: "主题博客",
@@ -752,10 +746,52 @@ links:
       image: "https://hexo.fluid-dev.com/img/favicon.png"
     }
     - {
+        title: "最美的不是下雨天",
+        intro: "龙哥的网站",
+        link: "http://www.qiulongwen.xyz/",
+        image: "https://www.aigisss.com/blog/img/avatar.png",
+    }
+    - {
+      title: "小小的诗",
+      intro: "波哥的网站",
+      link: "https://ouyangresume.github.io/",
+      image: "https://ouyangresume.github.io/images/girl.jpg"
+    }
+    - {
+      title: "3NICE",
+      intro: "老汪，一个不务正业的GISer",
+      link: "https://3nice.cc",
+      image: "https://gis.3nice.cc/assets/images/logo-3nice@2x.png"
+    }
+    - {
+      title: "剑胆琴心",
+      intro: "侠之大者，为国为民",
+      link: "https://www.xpshuai.cn/",
+      image: "https://www.xpshuai.cn/medias/logo.png"
+    }
+    - {
+      title: "Elaiza",
+      intro: "島崎小姐姐",
+      link: "https://elaiza.pro",
+      image: "https://elaiza.pro/blog/avatar/Murphie.png"
+    }
+    - {
+      title: "henshin的Blog",
+      intro: "zenshin's blog",
+      link: "http://zlh.giserhub.com/",
+      image: "https://zlh.giserhub.com/img/avatar.png"
+    }
+    - {
       title: "吃白饭的休伯利安号",
       intro: "一只努力的考研狗",
       link: "https://eatrice.top/",
       image: "https://eatrice.top/img/favcion.png"
+    }
+    - {
+      title: "X北辰北",
+      intro: "WebGIS开发者",
+      link: "http://www.xbeichenbei.com/",
+      image: "http://www.xbeichenbei.com/images/avatar.png"
     }
     - {
       title: "GIS-HAPPY",
@@ -900,6 +936,18 @@ links:
       intro: '一位网页设计和收集Windows平台软件的爱好者。',
       link: 'https://qcyblm.gitee.io/',
       image: 'https://qcyblm.gitee.io/favicon.ico'
+    }
+    - {
+      title: "ZhuZhouyue's Blog",
+      intro: "一名学习者",
+      link: "https://blog.zhuzhouyue.cn",
+      image: "https://cdn.jsdelivr.net/gh/zhuzhouyue123/images/avatar.png"
+    }
+    - {
+      title: '木子欢儿',
+      intro: '你知道的越多，你不知道的越多。',
+      link: 'https://blog.quickso.cn/',
+      image: 'https://gitee.com/muzihuaner/huangeimages/raw/master/img/QQ%E5%9B%BE%E7%89%8720200313211336.jpg'
     }
 
 #---------------------------
