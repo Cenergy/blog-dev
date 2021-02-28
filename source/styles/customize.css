@@ -30,3 +30,8 @@
   transition: transform 0.35s;
   transition: transform 0.35s, -webkit-transform 0.35s; */
 /* } */
+
+/* override */
+.markdown-body code {
+  color: #3794d1 !important;
+}
