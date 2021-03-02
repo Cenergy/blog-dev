@@ -29,6 +29,17 @@ hexo.extend.injector.register(
   <script defer src="${siteRoot}js/photoWall.js"></script>`,
   "photo"
 );
+// layout为about的时候导入这些js与css
+hexo.extend.injector.register(
+  "body_end",
+  `
+  <script src="${siteRoot}js/voronoi/underscore.js"></script>
+  <script src="${siteRoot}js/voronoi/voronoi.min.js"></script>
+  <script src="${siteRoot}js/voronoi/d3.min.js"></script>
+  <script src="${siteRoot}js/voronoi/helpers.js"></script>
+  <script src="${siteRoot}js/voronoi/application.js"></script>`,
+  "about"
+);
 // layout为talk的时候导入这些js与css
 hexo.extend.injector.register(
   "body_end",

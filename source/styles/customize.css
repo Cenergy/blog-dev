@@ -35,3 +35,9 @@
 .markdown-body code {
   color: #3794d1 !important;
 }
+.post-meta>i{
+  color: #d81e06 !important;
+}
+.hover-with-bg {
+  padding: .45rem 0.5rem 0.45rem 0.1rem !important;
+}

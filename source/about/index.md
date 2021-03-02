@@ -5,6 +5,7 @@ index_img: /img/example.jpg
 date: 2019-10-10 10:00:00
 comment: true
 ---
+<div id="voronoi"></div>
 
 ### Hi 👋 欢迎光临
 
@@ -22,6 +23,7 @@ comment: true
 <img src="http://img.shields.io/badge/-Github-000000?style=flat&logo=github&logoColor=FFFFFF">
 <img src="http://img.shields.io/badge/-VS%20Code-007ACC?style=flat&logo=visual%20studio%20code&logoColor=white">
 <img src="https://img.shields.io/badge/-Python-black?style=flat&logo=python&logoColor=white">
+
 
 <h2> 🤝🏻 联系我</h2>
 <div class="contactMe">
@@ -46,5 +48,23 @@ comment: true
   </a>
 </span>
 <br>
-<div id="waline"></div>
 </div>
+
+<style>
+svg {
+  display: block;
+}
+
+path {
+  fill:#F0F1EB;
+  stroke: #000;
+  stroke-width: .5px;
+}
+
+circle {
+  fill: #ccc;
+  stroke: #000;
+  display: none;
+  pointer-events: none;
+}
+</style>
