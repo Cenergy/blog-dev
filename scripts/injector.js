@@ -77,3 +77,11 @@ hexo.extend.injector.register(
   <link defer rel="stylesheet" href="${siteRoot}styles/backgroundize.css" />
   `
 );
+
+// 导入这些js与css
+hexo.extend.injector.register("body_begin", `<div id="animation-banner"></div>`,"about");
+hexo.extend.injector.register(
+  "body_end",
+  `<script src="${siteRoot}js/linksize.js" defer></script>`,
+  "about"
+);
