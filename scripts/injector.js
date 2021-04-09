@@ -77,3 +77,9 @@ hexo.extend.injector.register(
   <link defer rel="stylesheet" href="${siteRoot}styles/backgroundize.css" />
   `
 );
+hexo.extend.injector.register(
+  "body_end",
+  `<script src="${siteRoot}js/banner.js"></script>
+  <link defer rel="stylesheet" href="${siteRoot}styles/banner.css" />
+  `
+);

@@ -1,0 +1,80 @@
+/* .container {
+  pointer-events: none;
+}
+.navbar-brand,
+.nav-link {
+  pointer-events: auto;
+} */
+
+.bannerContainer {
+  display: none;
+}
+@media (min-width: 992px) {
+  .bannerContainer {
+    min-width: 999px;
+    position: absolute;
+    height: 150px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    user-select: none;
+    z-index: -1;
+    pointer-events: auto;
+    background-color: white;
+    font-size: 0.875rem;
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+    -webkit-box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%),
+      0 2px 10px 0 rgb(0 0 0 / 12%);
+  }
+}
+@media (min-width: 992px) {
+  .navbar-dark:hover .bannerContainer {
+    display: flex;
+    height: 150px;
+  }
+}
+
+@media (min-width: 992px) {
+  .top-nav-collapse .bannerContainer {
+    display: flex;
+    height: 55px;
+  }
+}
+
+.bannerContainer .banner {
+  --height: 155px;
+  width: 100vw;
+  height: var(--height);
+}
+
+.bannerContainer .animated {
+  width: 100vw;
+  position: relative;
+  height: var(--height);
+}
+
+.bannerContainer .animated .layer {
+  top: 0;
+  left: 50%;
+  width: auto;
+  position: absolute;
+  height: var(--height);
+  transform: translateX(-50%);
+}
+
+.bannerContainer .animated .layer > img,
+.bannerContainer .animated .layer > video {
+  height: 100%;
+  display: block;
+  line-height: 0;
+}
+
+.bannerContainer .animated.css-animated {
+  transition: all 0.3s ease;
+}
+
+.bannerContainer .animated.css-animated .layer {
+  transition: all 0.3s ease;
+}

@@ -136,7 +136,7 @@ color:
   # 顶部菜单字体色
   # Color of navigation bar text
   navbar_text_color: "#fff"
-  navbar_text_color_dark: "#d0d0d0"
+  navbar_text_color_dark: "#fff"
 
   # 全局字体色
   # Color of global text
@@ -386,12 +386,12 @@ footer:
 # Index Page
 #---------------------------
 index:
-  banner_img: https://tva3.sinaimg.cn/large/9bd9b167gy1g2rluccsxpj21hc0u0avk.jpg # 首页 Banner 头图，以下相同
+  banner_img: https://csdnimg.cn/release/blogv2/dist/pc/themesSkin/skin-blue/images/bg.jpg?v20200831 # 首页 Banner 头图，以下相同
   banner_img_height: 100 # 头图高度，屏幕百分比，available: 0 - 100
   banner_mask_alpha: 0.3 # 头图黑色蒙版的透明度，available: 0 - 1.0， 0 是完全透明（无蒙版），1 是完全不透明
   slogan: # 首页副标题的独立设置
     enable: true # 为 false 则不显示任何内容
-    text: "<span class='blogTitle'>爱即是诗的博客</span>" # 为空则按 hexo config.subtitle 显示
+    text: "爱即是诗的博客" # 为空则按 hexo config.subtitle 显示
     # 通过 API 接口作为首页副标题的内容，必须返回的是 JSON 格式，如果请求失败则按 text 字段显示，该功能必须先开启 typing 打字机功能
     # Subtitle of the homepage through the API, must be returned a JSON. If the request fails, it will be displayed in `text` value. This feature must first enable the typing animation
     api:
@@ -437,7 +437,7 @@ index:
 # 通过 hexo new page 命令创建的页面
 # Custom Page
 page:
-  banner_img: https://rmt.dogedoge.com/fetch/fluid/storage/post.png?w=1920&fmt=webp
+  banner_img: 
   banner_img_height: 60 # available: 0 - 100
   banner_mask_alpha: 0.3 # available: 0 - 1.0
 
@@ -446,7 +446,7 @@ page:
 # Post Page
 #---------------------------
 post: # 部分配置同时控制自定义页面，注意备注
-  banner_img: https://rmt.dogedoge.com/fetch/fluid/storage/bg/dojm2h.png?w=1920&q=100&fmt=webp
+  banner_img: 
   banner_img_height: 70
   banner_mask_alpha: 0.3
 
@@ -657,7 +657,7 @@ twikoo:
 # Archive Page
 #---------------------------
 archive:
-  banner_img: https://cdn.jsdelivr.net/gh/Cenergy/images/blog/images/home/2.jpg
+  banner_img: 
   banner_img_height: 60 # available: 0 - 100
   banner_mask_alpha: 0.3 # available: 0 - 1.0
   subtitle: # 打字机内容
@@ -667,7 +667,7 @@ archive:
 # Categories Page
 #---------------------------
 category:
-  banner_img: https://cdn.jsdelivr.net/gh/Cenergy/images/blog/images/home/6.jpg
+  banner_img: 
   banner_img_height: 60 # available: 0 - 100
   banner_mask_alpha: 0.3 # available: 0 - 1.0
   subtitle: # 打字机内容
@@ -697,7 +697,7 @@ category:
 # Tags Page
 #---------------------------
 tag:
-  banner_img: https://cdn.jsdelivr.net/gh/Cenergy/images/blog/images/home/4.jpg
+  banner_img: 
   banner_img_height: 80 # available: 0 - 100
   banner_mask_alpha: 0.3 # available: 0 - 1.0
   subtitle: # 打字机内容
@@ -713,7 +713,7 @@ tag:
 # About Page
 #---------------------------
 about: # 以下仅为页面顶部的基本信息，更多内容请在 ./pages/about.md 中编辑，支持 markdown 和 HTML
-  banner_img: https://cdn.jsdelivr.net/gh/Cenergy/images/blog/images/home/5.jpg
+  banner_img: 
   banner_img_height: 60 # available: 0 - 100
   banner_mask_alpha: 0.3 # available: 0 - 1.0
   subtitle: # 打字机内容
@@ -759,7 +759,7 @@ page404:
 # Links Page
 #---------------------------
 links:
-  banner_img: https://cdn.jsdelivr.net/gh/muzihuaner/huancdn/img/20210219231949.png
+  banner_img: 
   banner_img_height: 80 # available: 0 - 100
   banner_mask_alpha: 0.3 # available: 0 - 1.0
   subtitle: # 打字机内容
