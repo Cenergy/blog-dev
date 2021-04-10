@@ -33,6 +33,9 @@
   .navbar-dark:hover .bannerContainer {
     display: flex;
     height: 150px;
+    -webkit-animation: slide-in-fwd-top 0.5s
+      cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    animation: slide-in-fwd-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   }
 }
 

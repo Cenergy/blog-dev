@@ -5,9 +5,9 @@
   height: 100%;
   background-attachment: local;
   background-position: center;
-  /* -webkit-background-size: cover;
+  -webkit-background-size: cover;
   -moz-background-size: cover;
-  background-size: cover; */
+  background-size: cover;
   background-repeat: repeat;
 }
 /* #toc {
