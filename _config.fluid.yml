@@ -386,7 +386,7 @@ footer:
 # Index Page
 #---------------------------
 index:
-  banner_img: https://csdnimg.cn/release/blogv2/dist/pc/themesSkin/skin-blue/images/bg.jpg?v20200831 # 首页 Banner 头图，以下相同
+  banner_img: ./images/home/bg.svg # 首页 Banner 头图，以下相同
   banner_img_height: 100 # 头图高度，屏幕百分比，available: 0 - 100
   banner_mask_alpha: 0.3 # 头图黑色蒙版的透明度，available: 0 - 1.0， 0 是完全透明（无蒙版），1 是完全不透明
   slogan: # 首页副标题的独立设置
