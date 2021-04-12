@@ -57,11 +57,11 @@ hexo.extend.injector.register(
 //   `
 // );
 // 导入这些js与css
-hexo.extend.injector.register(
-  "body_end",
-  `<script src="${siteRoot}js/clicklove.js"></script>
-  `
-);
+// hexo.extend.injector.register(
+//   "body_end",
+//   `<script src="${siteRoot}js/clicklove.js"></script>
+//   `
+// );
 // 导入这些js与css
 hexo.extend.injector.register(
   "body_end",
