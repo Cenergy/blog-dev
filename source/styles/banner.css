@@ -30,7 +30,7 @@
   }
 }
 @media (min-width: 992px) {
-  .navbar-dark:hover .bannerContainer {
+  #navbar:hover .bannerContainer {
     display: flex;
     height: 150px;
     -webkit-animation: slide-in-fwd-top 0.5s
@@ -39,12 +39,12 @@
   }
 }
 
-@media (min-width: 992px) {
+/* @media (min-width: 992px) {
   .top-nav-collapse .bannerContainer {
     display: none;
     height: 55px;
   }
-}
+} */
 
 .bannerContainer .banner {
   --height: 155px;
