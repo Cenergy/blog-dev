@@ -1008,6 +1008,18 @@ links:
       link: 'https://blog.quickso.cn/',
       avatar: 'https://gitee.com/muzihuaner/huangeimages/raw/master/img/QQ%E5%9B%BE%E7%89%8720200313211336.jpg'
     }
+    - {
+      title: '夜雨闻曦',
+      intro: '所行即所愿,应为即愿',
+      link: 'https://yeyuwenxi.xyz/',
+      avatar: 'https://yeyuwenxi.xyz/images.github.io/wangye.jpg'
+    }
+    - {
+      title: '江卮可乐',
+      intro: 'There is only one heroism in the world , to see the world as it is and to love it.|',
+      link: 'https://blog.jannns.com/',
+      avatar: 'https://blog.jannns.com/img/jan.jpg'
+    }
 
 #---------------------------
 # 以下是配置 JS CSS 静态资源的 URL 前缀，可以自定义成 CDN 地址，
