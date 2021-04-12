@@ -1,6 +1,7 @@
 const banner = document.querySelector("#navbar");
 const insertDom = document.createElement("div");
 insertDom.className = "bannerContainer";
+insertDom.id = "bannerContainer";
 const { location: currentLocal = {} } = window;
 const { pathname: currentPath } = currentLocal;
 console.log("rdapp - currentPath", currentPath);

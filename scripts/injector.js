@@ -80,6 +80,7 @@ hexo.extend.injector.register(
 hexo.extend.injector.register(
   "body_end",
   `<script src="${siteRoot}js/banner.js"></script>
+    <script src="${siteRoot}js/snow.js"></script>
   <link defer rel="stylesheet" href="${siteRoot}styles/banner.css" />
   `
 );
