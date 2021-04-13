@@ -30,16 +30,16 @@ hexo.extend.injector.register(
   "photo"
 );
 // layout为about的时候导入这些js与css
-hexo.extend.injector.register(
-  "body_end",
-  `
-  <script src="${siteRoot}js/voronoi/underscore.js"></script>
-  <script src="${siteRoot}js/voronoi/voronoi.min.js"></script>
-  <script src="${siteRoot}js/voronoi/d3.min.js"></script>
-  <script src="${siteRoot}js/voronoi/helpers.js"></script>
-  <script src="${siteRoot}js/voronoi/application.js"></script>`,
-  "about"
-);
+// hexo.extend.injector.register(
+//   "body_end",
+//   `
+//   <script src="${siteRoot}js/voronoi/underscore.js"></script>
+//   <script src="${siteRoot}js/voronoi/voronoi.min.js"></script>
+//   <script src="${siteRoot}js/voronoi/d3.min.js"></script>
+//   <script src="${siteRoot}js/voronoi/helpers.js"></script>
+//   <script src="${siteRoot}js/voronoi/application.js"></script>`,
+//   "about"
+// );
 // layout为talk的时候导入这些js与css
 hexo.extend.injector.register(
   "body_end",
@@ -77,6 +77,8 @@ hexo.extend.injector.register(
   <link defer rel="stylesheet" href="${siteRoot}styles/backgroundize.css" />
   `
 );
+
+
 hexo.extend.injector.register(
   "body_end",
   `<script src="${siteRoot}js/banner.js"></script>

@@ -93,7 +93,10 @@ const onLeave = () => {
   }, 300);
 };
 // 绑定方法
-mainLayer.addEventListener("mousemove", onMove);
-mainLayer.addEventListener("mouseenter", onEnter);
-mainLayer.addEventListener("mouseleave", onLeave);
-console.log("rdapp - mainLayer", mainLayer);
+
+const navbarDoms = $("#navbar");
+if (navbarDoms && navbarDoms.length) {
+  navbarDoms[0].addEventListener("mousemove", onMove);
+  navbarDoms[0].addEventListener("mouseenter", onEnter);
+  navbarDoms[0].addEventListener("mouseleave", onLeave);
+}

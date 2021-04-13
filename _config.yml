@@ -120,7 +120,7 @@ theme: fluid   # next7|fluid
 deploy:
   - type: git
     repo:
-      # github: https://github.com/Cenergy/blog.git
+      github: https://github.com/Cenergy/blog.git
       coding: https://e.coding.net/aigis/blog.git
       aigisss: root@aigisss:/home/git/blog
     branch: master
