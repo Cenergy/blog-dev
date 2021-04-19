@@ -713,7 +713,7 @@ tag:
 # About Page
 #---------------------------
 about: # 以下仅为页面顶部的基本信息，更多内容请在 ./pages/about.md 中编辑，支持 markdown 和 HTML
-  banner_img: 
+  banner_img: https://cdn.jsdelivr.net/gh/Cenergy/images/blog/images/home/about.webp
   banner_img_height: 60 # available: 0 - 100
   banner_mask_alpha: 0.3 # available: 0 - 1.0
   subtitle: # 打字机内容
@@ -1019,6 +1019,12 @@ links:
       intro: 'There is only one heroism in the world , to see the world as it is and to love it.|',
       link: 'https://blog.jannns.com/',
       avatar: 'https://blog.jannns.com/img/jan.jpg'
+    }
+    - {
+      title: '橘子味雪糕',
+      intro: '竟然选择了远方，便只顾风雨兼程',
+      link: 'https://liuxianl.com',
+      avatar: 'https://tvax4.sinaimg.cn/large/006djwNZgy1gpi5ffzh1fj30pl0pldm9.jpg'
     }
 
 #---------------------------

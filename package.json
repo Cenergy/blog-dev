@@ -14,7 +14,7 @@
   "dependencies": {
     "hexo": "^5.2.0",
     "hexo-abbrlink": "^2.0.5",
-    "hexo-all-minifier": "^0.5.5",
+    "hexo-all-minifier": "^0.5.7",
     "hexo-baidu-url-submit": "^0.0.6",
     "hexo-deployer-git": "^2.1.0",
     "hexo-filter-nofollow": "^2.0.2",
@@ -31,6 +31,7 @@
     "hexo-renderer-stylus": "^1.1.0",
     "hexo-server": "^1.0.0",
     "hexo-tag-echarts": "^1.0.0",
-    "hexo-theme-fluid": "^1.8.9"
+    "hexo-theme-fluid": "^1.8.9",
+    "hexo-yam": "^4.2.0"
   }
 }

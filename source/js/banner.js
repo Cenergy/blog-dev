@@ -4,16 +4,15 @@ insertDom.className = "bannerContainer";
 insertDom.id = "bannerContainer";
 const { location: currentLocal = {} } = window;
 const { pathname: currentPath } = currentLocal;
-console.log("rdapp - currentPath", currentPath);
 
 const bannerImageURL = `https://cdn.jsdelivr.net/gh/Cenergy/images/blog/images/banner/`;
 const innerHTML = `
             <div class="animated" style="transform: translateX(0);">
                 <div class="layer" style="opacity: 0;">
-                    <img src="${bannerImageURL}001.jpg" alt="001"/>
+                    <img src="${bannerImageURL}001.webp" alt="001"/>
                 </div>
                 <div class="layer" style="opacity: 1;">
-                    <img src="${bannerImageURL}002.jpg" alt="002"/>
+                    <img src="${bannerImageURL}002.webp" alt="002"/>
                 </div>
                 <div class="layer" style="opacity: 0;">
                     <video loop autoplay muted src="${bannerImageURL}003.webm"></video>
@@ -42,9 +41,7 @@ banner.append(insertDom);
 // 动画逻辑end
 
 const mainLayers = $(".bannerContainer");
-console.log("rdapp - mainLayers", mainLayers[0]);
 const [mainLayer, ..._] = mainLayers;
-console.log("rdapp - mainLayer", mainLayer);
 const animatedLayers = $(".animated");
 const animatedLayer = animatedLayers[0];
 const [leftLayer, theLayer, rightLayer] = $(".layer");

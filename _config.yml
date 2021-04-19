@@ -120,7 +120,7 @@ theme: fluid   # next7|fluid
 deploy:
   - type: git
     repo:
-      # github: https://github.com/Cenergy/blog.git
+      github: https://github.com/Cenergy/blog.git
       coding: https://e.coding.net/aigis/blog.git
       aigisss: root@aigisss:/home/git/blog
     branch: master
@@ -169,61 +169,52 @@ encrypt:
 
 
 # 博文压缩
-neat_enable: true
 # 压缩html
-neat_html:
-  enable: true
-  exclude:
-    - "google078dd53431bb11ee.html"
-# 压缩css
-neat_css:
-  enable: true
-  exclude:
-    - "**/*.min.css"
-# 压缩js
-neat_js:
-  enable: true
-  mangle: true
-  output:
-  compress:
-  exclude:
-    - "**/*.min.js"
-    - "**/jquery.fancybox.pack.js"
-    - "**/algolia-search.js"
-    - "**/local-search.js"
-    - "**/pisces.js"
-    - "**/bookmark.js"
-    - "**/next-boot.js"
-    - "**/utils.js"
-    - "**/muse.js"
-    - "**/index.js"
-    - "**/love.js"
-    - "**/**min.js"
-# 压缩博文配置结束
-
 all_minifier: true
 html_minifier:
   enable: true
-  ignore_error: false
-  exclude:
+  silent: true
+  exclude: 
+
 css_minifier:
   enable: true
-  exclude:
+  silent: true
+  exclude: 
     - '*.min.css'
+
 js_minifier:
   enable: true
   mangle: true
+  silent: true
   output:
-  compress:
-  exclude:
+  exclude: 
     - '*.min.js'
 image_minifier:
-  enable: false
+  enable: true
   interlaced: false
   multipass: false
   optimizationLevel: 2
   pngquant: false
   progressive: false
+  silent: true
+
+
+minify:
+  gzip:
+    enable: true
+    include:
+      - '*.html'
+      - '*.css'
+      - '*.js'
+      - '*.txt'
+      - '*.ttf'
+      - '*.atom'
+      - '*.stl'
+      - '*.xml'
+      - '*.svg'
+      - '*.eot'
+      - '*.json'
+# 压缩博文配置结束
 
 robotstxt:
   useragent: "*"
