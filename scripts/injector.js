@@ -41,13 +41,13 @@ hexo.extend.injector.register(
 //   "about"
 // );
 // layout为talk的时候导入这些js与css
-hexo.extend.injector.register(
-  "body_end",
-  `<link defer rel="stylesheet" href="${siteRoot}styles/artitalk.css" />
-  <script type="text/javascript" src="https://unpkg.com/artitalk"></script>
-  <script defer src="${siteRoot}js/talkShow.js"></script>`,
-  "talk"
-);
+// hexo.extend.injector.register(
+//   "body_end",
+//   `<link defer rel="stylesheet" href="${siteRoot}styles/artitalk.css" />
+//   <script type="text/javascript" src="https://unpkg.com/artitalk"></script>
+//   <script defer src="${siteRoot}js/talkShow.js"></script>`,
+//   "talk"
+// );
 // // 导入这些js与css
 // hexo.extend.injector.register(
 //   "body_end",
