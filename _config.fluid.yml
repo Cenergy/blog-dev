@@ -741,7 +741,7 @@ about: # 以下仅为页面顶部的基本信息，更多内容请在 ./pages/ab
         link: "https://aigisss.com",
         tip: "个人网站",
       }
-    - { class: "iconfont icon-wechat-fill", qrcode: "/img/favicon.png" }
+    # - { class: "iconfont icon-wechat-fill", qrcode: "/img/favicon.png" }
 
       
 
