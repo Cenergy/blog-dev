@@ -8,9 +8,9 @@
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
-  background-repeat: no-repeat;
+  background-repeat: repeat;
 }
-#toc {
+/* #toc {
   color: white;
 }
 .tocbot-link {
@@ -24,18 +24,4 @@ footer{
 }
 footer a{
   color: white !important;
-}
-
-#animation-banner{
-  min-width: 999px;
-  height: 180px;
-  position: absolute;
-  top: 68.25px;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  display: flex;
-  overflow: hidden;
-  user-select: none;
-  background-color: green;
-}
+} */

@@ -5,7 +5,16 @@ index_img: /img/example.jpg
 date: 2019-10-10 10:00:00
 comment: true
 ---
-<div id="voronoi"></div>
+
+
+<div name="我是墙" id="recent-posts">
+  <!-- id=>type  recent-posts=>name    -->
+  <div name="我是画框">
+    <div name="我是纸">
+      <!--这里通过js挂载githubcalendar，也就是画画-->
+    </div>
+  </div>
+</div>
 
 ### Hi 👋 欢迎光临
 
@@ -24,7 +33,6 @@ comment: true
 <img src="http://img.shields.io/badge/-VS%20Code-007ACC?style=flat&logo=visual%20studio%20code&logoColor=white">
 <img src="https://img.shields.io/badge/-Python-black?style=flat&logo=python&logoColor=white">
 
-
 <h2> 🤝🏻 联系我</h2>
 <div class="contactMe">
 <a href="https://www.aigisss.com/">
@@ -42,12 +50,12 @@ comment: true
   <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=cenergy&theme=buefy&layout=compact" />
 </a>
 
-<span class="contactMe container" style="display:block;margin-top:10px">
+<!-- <span class="contactMe container" style="display:block;margin-top:10px">
   <a href="https://github.com/cenergy">
     <img src="https://ghchart.rshah.org/409ba5/cenergy" data-lazy-src="https://ghchart.rshah.org/cenergy" alt="GitHub Coding" class="medium-zoom-image entered loaded" data-ll-status="loaded">
   </a>
 </span>
-<br>
+<br> -->
 </div>
 
 <style>

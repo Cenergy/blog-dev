@@ -30,24 +30,24 @@ hexo.extend.injector.register(
   "photo"
 );
 // layout为about的时候导入这些js与css
-hexo.extend.injector.register(
-  "body_end",
-  `
-  <script src="${siteRoot}js/voronoi/underscore.js"></script>
-  <script src="${siteRoot}js/voronoi/voronoi.min.js"></script>
-  <script src="${siteRoot}js/voronoi/d3.min.js"></script>
-  <script src="${siteRoot}js/voronoi/helpers.js"></script>
-  <script src="${siteRoot}js/voronoi/application.js"></script>`,
-  "about"
-);
+// hexo.extend.injector.register(
+//   "body_end",
+//   `
+//   <script src="${siteRoot}js/voronoi/underscore.js"></script>
+//   <script src="${siteRoot}js/voronoi/voronoi.min.js"></script>
+//   <script src="${siteRoot}js/voronoi/d3.min.js"></script>
+//   <script src="${siteRoot}js/voronoi/helpers.js"></script>
+//   <script src="${siteRoot}js/voronoi/application.js"></script>`,
+//   "about"
+// );
 // layout为talk的时候导入这些js与css
-hexo.extend.injector.register(
-  "body_end",
-  `<link defer rel="stylesheet" href="${siteRoot}styles/artitalk.css" />
-  <script type="text/javascript" src="https://unpkg.com/artitalk"></script>
-  <script defer src="${siteRoot}js/talkShow.js"></script>`,
-  "talk"
-);
+// hexo.extend.injector.register(
+//   "body_end",
+//   `<link defer rel="stylesheet" href="${siteRoot}styles/artitalk.css" />
+//   <script type="text/javascript" src="https://unpkg.com/artitalk"></script>
+//   <script defer src="${siteRoot}js/talkShow.js"></script>`,
+//   "talk"
+// );
 // // 导入这些js与css
 // hexo.extend.injector.register(
 //   "body_end",
@@ -57,11 +57,11 @@ hexo.extend.injector.register(
 //   `
 // );
 // 导入这些js与css
-hexo.extend.injector.register(
-  "body_end",
-  `<script src="${siteRoot}js/clicklove.js"></script>
-  `
-);
+// hexo.extend.injector.register(
+//   "body_end",
+//   `<script src="${siteRoot}js/clicklove.js"></script>
+//   `
+// );
 // 导入这些js与css
 hexo.extend.injector.register(
   "body_end",
@@ -78,10 +78,11 @@ hexo.extend.injector.register(
   `
 );
 
-// 导入这些js与css
-hexo.extend.injector.register("body_begin", `<div id="animation-banner"></div>`,"about");
+
 hexo.extend.injector.register(
   "body_end",
-  `<script src="${siteRoot}js/linksize.js" defer></script>`,
-  "about"
+  `<script src="${siteRoot}js/banner.js"></script>
+    <script src="${siteRoot}js/snow.js"></script>
+  <link defer rel="stylesheet" href="${siteRoot}styles/banner.css" />
+  `
 );
