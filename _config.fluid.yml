@@ -1027,6 +1027,18 @@ links:
       link: 'https://liuxianl.com',
       avatar: 'https://tvax4.sinaimg.cn/large/006djwNZgy1gpi5ffzh1fj30pl0pldm9.jpg'
     }
+    - {
+      title: '辣椒手记',
+      intro: '技术分享',
+      link: 'https://peppernotes.top',
+      avatar: 'https://peppernotes.top/img/icon.png'
+    }
+    - {
+      title: '雾雨霜星',
+      intro: '雾间觉雨，霜空望星',
+      link: 'http://www.shuangxing.top',
+      avatar: 'http://marisa-kirisame.gitee.io/phw/Avatar.jpg'
+    }
 
 #---------------------------
 # 以下是配置 JS CSS 静态资源的 URL 前缀，可以自定义成 CDN 地址，

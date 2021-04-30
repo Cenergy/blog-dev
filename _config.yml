@@ -170,7 +170,7 @@ encrypt:
 
 # 博文压缩
 # 压缩html
-all_minifier: true
+all_minifier: false
 html_minifier:
   enable: true
   silent: true
@@ -198,22 +198,6 @@ image_minifier:
   progressive: false
   silent: true
 
-
-minify:
-  gzip:
-    enable: true
-    include:
-      - '*.html'
-      - '*.css'
-      - '*.js'
-      - '*.txt'
-      - '*.ttf'
-      - '*.atom'
-      - '*.stl'
-      - '*.xml'
-      - '*.svg'
-      - '*.eot'
-      - '*.json'
 # 压缩博文配置结束
 
 robotstxt:
