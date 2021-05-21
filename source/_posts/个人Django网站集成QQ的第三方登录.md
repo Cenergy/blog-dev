@@ -37,9 +37,9 @@ SOCIAL_AUTH_URL_NAMESPACE = 'social' # 新增
 SOCIAL_AUTH_QQ_KEY = '123456'
 SOCIAL_AUTH_QQ_SECRET = 'd34c96123456789'
 SOCIAL_AUTH_QQ_USE_OPENID_AS_USERNAME = True
+# 登陆成功后的回调路由
 SOCIAL_AUTH_LOGIN_REDIRECT_URL = '/'  # 登陆成功之后的路由
-SOCIAL_AUTH_SANITIZE_REDIRECTS = True 
-SOCIAL_AUTH_REDIRECT_IS_HTTPS = True # https时的配置
+SOCIAL_AUTH_TRAILING_SLASH = False
 
 TEMPLATES = [
     {
@@ -75,9 +75,7 @@ qq比较特别,其余的按照网上说明配置即可成功,下面着重说明Q
 
 **填写回调的时候需要注意**
 
-![image-20201215094152264](%E4%B8%AA%E4%BA%BADjango%E7%BD%91%E7%AB%99%E9%9B%86%E6%88%90QQ%E7%9A%84%E7%AC%AC%E4%B8%89%E6%96%B9%E7%99%BB%E5%BD%95/image-20201215094152264.png)
-
-需要填写一个不带斜杠的地址,不然通过不了,说是`回调地址不合法：须为http或https开头的子目录。如http://qq.com/mycb`
+需要填写不带斜杠的地址,不然通过不了,说是`回调地址不合法：须为http或https开头的子目录。如http://qq.com/mycb`
 
 >特别感谢[子钦加油](https://www.cnblogs.com/zmdComeOn/)
 >
