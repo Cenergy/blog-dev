@@ -56,6 +56,7 @@ After=network.target
 
 [Service]
 Type=forking
+# 第一个参数必须是可执行文件的绝对路径，不接受替代
 ExecStart=/usr/local/python3/bin/supervisord -c /etc/supervisor/supervisord.conf
 ExecStop=/usr/local/python3/bin/supervisorctl $OPTIONS shutdown
 ExecReload=/usr/local/python3/bin/supervisorctl $OPTIONS reload
