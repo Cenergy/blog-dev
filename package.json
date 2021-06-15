@@ -30,7 +30,7 @@
     "hexo-renderer-stylus": "^1.1.0",
     "hexo-server": "^2.0.0",
     "hexo-tag-echarts": "^1.0.0",
-    "hexo-theme-fluid": "^1.8.10",
+    "hexo-theme-fluid": "^1.8.11",
     "hexo-yam": "^5.0.0"
   }
 }
