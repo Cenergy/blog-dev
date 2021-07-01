@@ -18,11 +18,11 @@
 
 # 用于浏览器标签的图标
 # Icon for browser tab
-favicon: /img/favicon.png
+favicon: https://aigisss.com/media/icons/favicon.png
 
 # 用于苹果设备的图标
 # Icon for Apple touch
-apple_touch_icon: /img/favicon.png
+apple_touch_icon: https://aigisss.com/media/icons/favicon.png
 
 # 浏览器标签页中的标题分隔符，效果： 文章名 - 站点名
 # Title separator in browser tab, eg: article - site
@@ -599,7 +599,11 @@ valine:
   lang: zh-CN # zh-CN | zh-TW | en | ja
   highlight: true # 代码高亮
   recordIP: true # 是否记录评论者IP
-  serverURLs: # 该配置适用于国内自定义域名用户, 海外版本会自动检测(无需手动填写)
+  serverURLs: '' # 该配置适用于国内自定义域名用户, 海外版本会自动检测(无需手动填写)
+  emojiCDN:
+  emojiMaps:
+  enableQQ: false
+  requiredFields: []
 
 # Waline
 # 一款从 Valine 衍生的带后端的评论插件
@@ -614,12 +618,12 @@ waline:
   pageSize: 10
   lang: zh-CN
   highlight: true
-  avatarCDN:
+  avatarCDN: ''
   avatarForce: false
   requiredFields: []
-  emojiCDN: ''
-  emojiMaps: {}
-  anonymous: 
+  emojiCDN:
+  emojiMaps:
+  anonymous:
 
 # 畅言
 # http://changyan.kuaizhan.com/
@@ -647,10 +651,18 @@ remark42:
 # Based on Tencent CloudBase
 # See: https://twikoo.js.org
 twikoo:
-  env_id:
   envId:
   region: ap-shanghai
   path: window.location.pathname
+
+# Cusdis
+# 基于第三方服务或自托管服务
+# Based on third-party or self-hosted service
+# See https://cusdis.com
+cusdis:
+  host:
+  app_id:
+  lang: zh-cn
 
 #---------------------------
 # 归档页
@@ -713,6 +725,7 @@ tag:
 # About Page
 #---------------------------
 about: # 以下仅为页面顶部的基本信息，更多内容请在 ./pages/about.md 中编辑，支持 markdown 和 HTML
+  enable: true
   banner_img: https://cdn.jsdelivr.net/gh/Cenergy/images/blog/images/home/about.webp
   banner_img_height: 60 # available: 0 - 100
   banner_mask_alpha: 0.3 # available: 0 - 1.0
@@ -1051,6 +1064,12 @@ links:
       link: 'https://www.wujunchao.top',
       avatar: 'https://www.wujunchao.top/wp-content/uploads/2021/04/IU.jpg'
     }
+    - {
+      title: 'Xiao‘Blog',
+      intro: '一个买不起苹果的苹果用户',
+      link: 'https://xiaoheixu.top/',
+      avatar: 'https://www.helloimg.com/images/2021/06/14/CCG4xn.th.jpg'
+    }
 #---------------------------
 # 以下是配置 JS CSS 静态资源的 URL 前缀，可以自定义成 CDN 地址，
 # 默认的 staticfile CDN 可能在部分地区无法访问，如果需要修改，最好使用与默认配置相同的版本，以避免潜在的问题，
@@ -1073,44 +1092,44 @@ static_prefix:
   # Icon library, which includes many social icons, does not include those theme dependent, so your can modify link by yourself. See: https://hexo.fluid-dev.com/docs/en/icon/
   iconfont: //at.alicdn.com/t/font_1736178_kmeydafke9r.css
 
-  anchor: https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/
+  anchor: https://cdn.jsdelivr.net/npm/anchor-js@4.3.1/
 
   github_markdown: https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/
 
-  jquery: https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/
+  jquery: https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/
 
-  bootstrap: https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/
+  bootstrap: https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/
 
-  highlightjs: https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/
+  highlightjs: https://cdn.jsdelivr.net/npm/highlight.js@10.7.2/
 
-  prismjs: https://cdn.jsdelivr.net/npm/prismjs@1.22.0/
+  prismjs: https://cdn.jsdelivr.net/npm/prismjs@1.23.0/
 
-  tocbot: https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/
+  tocbot: https://cdn.jsdelivr.net/npm/tocbot@4.12.3/dist/
 
-  typed: https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/
+  typed: https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/
 
   fancybox: https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/
 
   nprogress: https://cdn.jsdelivr.net/npm/nprogress@0.2.0/
 
-  mathjax: https://cdn.jsdelivr.net/npm/mathjax@3.1.2/es5/
+  mathjax: https://cdn.jsdelivr.net/npm/mathjax@3.1.4/es5/
 
-  katex: https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/
+  katex: https://cdn.jsdelivr.net/npm/katex@0.13.10/dist/
 
   busuanzi: https://busuanzi.ibruce.info/busuanzi/2.3/
 
-  clipboard: https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/
+  clipboard: https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/
 
-  mermaid: https://cdn.jsdelivr.net/npm/mermaid@8.8.3/dist/
+  mermaid: https://cdn.jsdelivr.net/npm/mermaid@8.10.1/dist/
 
   valine: https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/
 
-  waline: https://cdn.jsdelivr.net/npm/@waline/client@0.14.8/dist/
+  waline: https://cdn.jsdelivr.net/npm/@waline/client@0.16.2/dist/
 
-  gitalk: https://cdn.jsdelivr.net/npm/gitalk@1.7.0/dist/
+  gitalk: https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/
 
-  disqusjs: https://cdn.jsdelivr.net/npm/disqusjs@1.0/dist/
+  disqusjs: https://cdn.jsdelivr.net/npm/disqusjs@1.3.0/dist/
 
-  twikoo: https://cdn.jsdelivr.net/npm/twikoo@0.1.15/dist/
+  twikoo: https://cdn.jsdelivr.net/npm/twikoo@1.3.1/dist/
 
   hint: /lib/hint/

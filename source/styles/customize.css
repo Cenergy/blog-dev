@@ -35,7 +35,7 @@
   -o-transition: box-shadow 0.3s;
   -ms-transition: box-shadow 0.3s;
   transition: box-shadow 0.3s;
-  background: #fff;
+  background: var(--board-bg-color);
   margin-left: -1rem;
 }
 /* .index-card:hover {
