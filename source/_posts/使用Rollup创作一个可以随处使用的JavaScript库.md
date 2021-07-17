@@ -615,8 +615,6 @@ console.log(a, b);
 export default () => {
   return a + b;
 };
-
-复制代码
 ```
 
 然后修改`rollup.config.js`配置文件：
@@ -634,8 +632,6 @@ export default {
   plugins: [resolve(), commonjs()],
   external: ["the-answer"],
 };
-
-复制代码
 ```
 
 执行打包，可以看到`dist/esBundle.js`文件内容如下：
@@ -653,12 +649,8 @@ export default {
   var es6 = () => {
     return a + b;
   };
-
   return es6;
-
 })));
-
-复制代码
 ```
 
 可以看到箭头函数被保留下来，这样的代码在不支持`ES6`的环境下将无法运行。我们期望在`rollup.js`打包的过程中就能使用`babel`完成代码转换，因此我们需要`babel`插件。
@@ -669,7 +661,6 @@ export default {
 
 ```js
 npm i -D @rollup/plugin-babel
-复制代码
 ```
 
 同样修改配置文件`rollup.config.js`：
@@ -689,15 +680,12 @@ export default {
   plugins: [resolve(), commonjs(), babel()],
   external: ["the-answer"],
 };
-
-复制代码
 ```
 
 然后打包，发现会出现报错： ![img](https:////p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c664d97500e84fba8a6c3e5e23b589fd~tplv-k3u1fbpfcp-zoom-1.image) 提示我们缺少`@babel/core`，因为`@babel/core`是`babel`的核心。我们来进行安装：
 
 ```js
 npm i @babel/core
-复制代码
 ```
 
 再次执行打包，发现这次没有报错了，但是我们尝试打开`dist/esBundle.js`：
@@ -715,12 +703,8 @@ npm i @babel/core
   var es6 = (() => {
     return a + b;
   });
-
   return es6;
-
 })));
-
-复制代码
 ```
 
 可以发现箭头函数仍然存在，显然这是不正确的，说明我们的`babel`插件没有起到作用。这是为什么呢？
@@ -739,14 +723,12 @@ npm i @babel/core
     ]
   ]
 }
-复制代码
 ```
 
 我们看`.babelrc`配置了`preset env`，所以先安装这个插件：
 
 ```js
 npm i @babel/preset-env
-复制代码
 ```
 
 这次再次执行打包，我们打开`dist/esBundle.js`文件：
@@ -757,19 +739,14 @@ npm i @babel/preset-env
   typeof define === 'function' && define.amd ? define(factory) :
   (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.experience = factory());
 }(this, (function () { 'use strict';
-
   var a = 1;
   var b = 2;
   console.log(a, b);
   var es6 = (function () {
     return a + b;
   });
-
   return es6;
-
 })));
-
-复制代码
 ```
 
 可以看到箭头函数被转换为了`function`，说明`babel`插件正常工作。
@@ -783,7 +760,6 @@ npm i @babel/preset-env
 ```js
 import json from "../package.json";
 console.log(json.author);
-复制代码
 ```
 
 内容很简单，就是引入`package.json`，然后去打印`author`字段。
@@ -805,11 +781,11 @@ export default {
   plugins: [resolve(), commonjs(), babel()],
   external: ["the-answer"],
 };
-
-复制代码
 ```
 
-执行打包，发现会发生如下报错： ![img](https:////p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/20c6782fd3d34c3b93c1178fbfa69338~tplv-k3u1fbpfcp-zoom-1.image) 提示我们缺少`@rollup/plugin-json`插件来支持`json`文件。
+执行打包，发现会发生如下报错： 
+
+![img](https:////p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/20c6782fd3d34c3b93c1178fbfa69338~tplv-k3u1fbpfcp-zoom-1.image) 提示我们缺少`@rollup/plugin-json`插件来支持`json`文件。
 
 #### `json`插件的使用
 
@@ -817,7 +793,6 @@ export default {
 
 ```js
 npm i -D @rollup/plugin-json
-复制代码
 ```
 
 同样修改下配置文件，将插件加入`plugins`数组即可。
@@ -866,12 +841,8 @@ npm i -D @rollup/plugin-json
   	dependencies: dependencies,
   	devDependencies: devDependencies
   };
-
   console.log(json.author);
-
 })));
-
-复制代码
 ```
 
 完美！！
@@ -886,8 +857,6 @@ import answer from "the-answer";
 export default function () {
   console.log("the answer is " + answer);
 }
-
-复制代码
 ```
 
 修改上述文件：
@@ -898,9 +867,6 @@ const b = 2;
 export default function () {
   console.log(a + b);
 }
-
-
-复制代码
 ```
 
 执行打包。打开`dist/bundle.js`文件：
@@ -917,12 +883,8 @@ export default function () {
   function index () {
     console.log(a + b);
   }
-
   return index;
-
 })));
-
-复制代码
 ```
 
 再次修改`src/index.js`文件：
@@ -933,8 +895,6 @@ const b = 2;
 export default function () {
   console.log(a);
 }
-
-复制代码
 ```
 
 再次执行打包，打开打包文件：
@@ -950,24 +910,16 @@ export default function () {
   function index () {
     console.log(a);
   }
-
   return index;
-
 })));
-
-复制代码
 ```
 
 发现了什么？
 
 我们发现关于变量`b`的定义没有了，因为源码中并没有用到这个变量。这就是`ES`模块著名的`tree-shaking`机制，它动态地清除没有被使用过的代码，使得代码更加精简，从而可以使得我们的类库获得更快的加载速度。
 
-
-作者：前端森林
-链接：https://juejin.cn/post/6869551115420041229
-来源：掘金
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
-
 希望这会有所帮助，如果您有任何疑问，请在评论中告诉我！
 
 >   https://www.jianshu.com/p/6a7413481bd2
+>
+>   https://juejin.cn/post/6869551115420041229#heading-1
