@@ -321,7 +321,7 @@ navbar:
 
 search: # 搜索栏
   enable: true
-  path: /local-search.xml # 文件引用地址，默认是下方生成位置，也可以将生成后的 local-search.xml 上传到其它位置引用，如：https://www.example.com/local-search.xml
+  path: /blog/local-search.xml # 文件引用地址，默认是下方生成位置，也可以将生成后的 local-search.xml 上传到其它位置引用，如：https://www.example.com/local-search.xml
   generate_path: /local-search.xml # 文件生成位置，必须为相对位置
   # 搜索的范围
   # Search field
@@ -386,7 +386,7 @@ footer:
 # Index Page
 #---------------------------
 index:
-  banner_img: https://static.zcool.cn/v1.1.92/passport4.0/images/login-ground.jpg # 首页 Banner 头图，以下相同
+  banner_img: https://static.zcool.cn/passport4.0/images/login-tommyp.jpg # 首页 Banner 头图，以下相同
   banner_img_height: 100 # 头图高度，屏幕百分比，available: 0 - 100
   banner_mask_alpha: 0.3 # 头图黑色蒙版的透明度，available: 0 - 1.0， 0 是完全透明（无蒙版），1 是完全不透明
   slogan: # 首页副标题的独立设置
@@ -1069,6 +1069,12 @@ links:
       intro: '一个买不起苹果的苹果用户',
       link: 'https://xiaoheixu.top/',
       avatar: 'https://www.helloimg.com/images/2021/06/14/CCG4xn.th.jpg'
+    }
+    - {
+      title: 'iceH',
+      intro: '咸鱼一条，啥也不是',
+      link: 'https://www.secice.cn/',
+      avatar: 'https://gitee.com/sec-pengyy/sec-pengyy/raw/master/img/avatar.jpg'
     }
 #---------------------------
 # 以下是配置 JS CSS 静态资源的 URL 前缀，可以自定义成 CDN 地址，

@@ -84,5 +84,11 @@ nginx: configuration file /usr/local/nginx/conf/nginx.conf test is successful
 ## 启动
 /usr/local/nginx/sbin/nginx -s reload
 ```
+### 我新增的模块
+```
+--with-http_ssl_module  --with-http_gzip_static_module --with-http_v2_module
+```
+
+
 
 >参考:https://www.jb51.net/article/165079.htm
