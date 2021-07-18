@@ -459,7 +459,6 @@ export default function () {
   console.log("the answer is " + answer);
 }
 
-复制代码
 ```
 
 执行`npm run build`。
@@ -472,7 +471,6 @@ export default function () {
 
 ```js
 npm i -D @rollup/plugin-node-resolve
-复制代码
 ```
 
 修改配置文件`rollup.config.js`：
@@ -490,7 +488,6 @@ export default {
   plugins: [resolve()],
 };
 
-复制代码
 ```
 
 这时再次执行`npm run build`，可以发现报错已经没有了： ![img](https:////p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/4712a288683f44f2a871b2c518b02ab5~tplv-k3u1fbpfcp-zoom-1.image)
@@ -514,7 +511,6 @@ export default {
 
 })));
 
-复制代码
 ```
 
 打包文件`bundle.js`中已经包含了引用的模块。
@@ -539,7 +535,6 @@ export default {
   external: ["the-answer"],
 };
 
-复制代码
 ```
 
 重新打包，打开`dist/bundle.js`文件：
@@ -563,7 +558,6 @@ export default {
 
 })));
 
-复制代码
 ```
 
 这时我们看到`the-answer`已经是做为外部库被引入了。
@@ -582,7 +576,6 @@ export default {
 
 ```js
 npm i -D @rollup/plugin-commonjs
-复制代码
 ```
 
 然后修改`rollup.config.js`文件：
@@ -601,7 +594,6 @@ export default {
   external: ["the-answer"],
 };
 
-复制代码
 ```
 
 ### `babel`插件
