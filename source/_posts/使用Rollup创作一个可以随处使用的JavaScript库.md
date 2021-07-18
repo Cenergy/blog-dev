@@ -6,7 +6,7 @@ date: 2021-07-17 10:59:25
 tag: [rollup]
 ---
 
-### 前言
+## 前言
 
 在本文中，我们的目标是创建和发布一个无需更改代码即可在客户端和服务器端应用程序中使用的库。
 
@@ -14,8 +14,8 @@ tag: [rollup]
 
 1. 该库是用 ES6+ 编写的，使用 import 和 export 关键字
 2. 该库可以与 `<script> `标签一起使用
-3. 该库可用于使用现代捆绑器的 Web 应用程序。
-4. 该库可用于节点应用程序。
+3. 该库可用于使用现代打包器的 Web 应用程序。
+4. 该库可用于Node应用程序。
 
 从技术上讲，这意味着库需要在以下上下文中工作：
 
@@ -66,7 +66,7 @@ helloWorld();
 
 为了实现这一切，我们将使用[rollup.js](https://rollupjs.org/)。主要原因是 Rollup 非常快（[虽然不是最快的](https://github.com/evanw/esbuild)），需要最少的配置，并通过其方便的插件系统支持我们需要的一切。
 
-### 什么是`rollup`？
+## 什么是`rollup`？
 
 系统的了解`rollup`之前，我们先来简单了解下`What is rollup？`
 
@@ -74,11 +74,11 @@ helloWorld();
 
 > Rollup 是一个 JavaScript 模块打包器，可以将小块代码编译成大块复杂的代码，例如 library 或应用程序。
 
-与`Webpack`偏向于应用打包的定位不同，`rollup.js`更专注于`Javascript`类库打包。
+**`Webpack`偏向于应用打包的定位不同，`rollup.js`更专注于`Javascript`类库打包。**
 
 我们熟知的`Vue`、`React`等诸多知名框架或类库都是通过`rollup.js`进行打包。
 
-### 为什么是`rollup`
+## 为什么是`rollup`
 
 `webpack`我相信做前端的同学大家都用过，那么为什么有些场景还要使用`rollup`呢？这里我简单对`webpack`和`rollup`做一个比较：
 
@@ -88,13 +88,13 @@ helloWorld();
 
 其实`webpack`从`2.0`开始就已经支持`Tree-shaking`，并在使用`babel-loader`的情况下还可以支持`es6 module`的打包。实际上，`rollup`已经在渐渐地失去了当初的优势了。但是它并没有被抛弃，反而因其简单的`API`、使用方式被许多库开发者青睐，如`React`、`Vue`等，都是使用`rollup`作为构建工具的。
 
-### 使用rollup
+## 使用rollup
 
 编写完我们的库后，我们将使用 Rollup 将代码导出为以下三种格式：
 
 1. UMD（通用模块定义）：这将支持使用脚本标签和 RequireJS。由于使用应用程序不会自己转译或打包代码，我们需要提供一个版本的库，该版本经过缩小和转译以获得广泛的浏览器支持。
-2. ESM（ES2015 模块）：这将允许打包器导入我们的应用程序，消除死代码并将其转换为他们选择的级别。我们仍在编译代码，但只是以方便消费者的格式提供它，让他们决定下一步做什么。这将允许`import`关键字工作。
-3. CJS (CommonJS)：[Node.js](https://nodejs.org/)的首选格式。这里不需要摇树，因为代码大小无关紧要，这种格式允许`require`在节点应用程序中使用关键字。
+2. ESM（ES2015 模块）：这将允许打包器导入我们的应用程序，消除死代码并将其转换为他们选择的级别。我们仍编译代码，但只是以方便调用者的格式，让他们决定下一步做什么。这将允许`import`关键字工作。
+3. CJS (CommonJS)：[Node.js](https://nodejs.org/)的首选格式。这里不需要`Tree-shaking`，因为代码大小无关紧要，这种格式允许`require`在节点应用程序中使用关键字。
 
 对于这些格式中的每一种，我们还将提供一个源映射，以便调用时可以在需要时调试库。
 
@@ -150,7 +150,7 @@ $ npm install @rollup/plugin-node-resolve --save-dev
 
 ```json
 $ mkdir src 
-$ touch .babelrc.json 
+$ touch .babelrc.json // 或者新建.babelrc文件，二者选其一
 $ touch rollup.config.js
 ```
 
@@ -202,7 +202,7 @@ import pkg from "./package.json";
 },
 ```
 
-对于 CJS/ESM：获取代码，对其进行处理，然后将其导出为 ESM 模块和 CJS 模块。请记住，在这种情况下，我们不需要转译或缩小。Node 不需要它，而对于 ESM，消费者会这样做。
+对于 CJS/ESM：获取代码，对其进行处理，然后将其导出为 ESM 模块和 CJS 模块。请记住，在这种情况下，我们不需要转译或缩小。Node 不需要它，而对于 ESM，调用者会这样做。
 
 ```js
 {
@@ -227,7 +227,7 @@ import pkg from "./package.json";
 
 然而，在所有情况下，我们都会生成一个源映射。
 
-注意`exports: "named"`所有配置中的选项，[在 rollup 的文档中有更长的解释](https://rollupjs.org/guide/en/#outputexports)，基本上这告诉 rollup 我们使用命名导出而不是默认导出。长话短说，这允许尽可能广泛的兼容性，并使摇树发生。如果您使用 linter，请确保将其配置为支持命名导出而不是默认导出（这不适用于应用程序，仅适用于库，使用默认导出甚至混合应用程序的默认/命名导出完全没问题）。
+注意`exports: "named"`所有配置中的选项，[在 rollup 的文档中有更好的解释](https://rollupjs.org/guide/en/#outputexports)，基本上这告诉 rollup 我们使用命名导出而不是默认导出。长话短说，这允许尽可能广泛的兼容性，并使`Tree-shaking`发生。如果您使用 linter，请确保将其配置为支持命名导出而不是默认导出（这不适用于应用程序，仅适用于库，使用默认导出甚至混合应用程序的默认/命名导出完全没问题）。
 
 完整的汇总文件如下所示。由于名称取自 package.json，您实际上几乎可以按原样使用此文件，只要入口点是，`src/index.js`并且`name`在 UMD 模块的输出中进行了相应设置。
 
@@ -323,7 +323,7 @@ export default function goodbye() {
 },
 ```
 
-最后，我们需要描述应用程序是如何导出的，既可以让 npmjs 使用，也可以让消费者使用。
+最后，我们需要描述应用程序是如何导出的，既可以让 npmjs 使用，也可以让调用者使用。
 
 我们将在 package.json 中定义三个值：
 
@@ -344,7 +344,7 @@ files: [
 
 要构建库，只需运行`npm run build`，在开发过程中，您可以使用`npm run dev`. 可以使用导出来测试`npm pack`
 
-### 测试库
+## 测试
 
 **使用 script 标签**，只需创建一个 HTML 文件，然后在浏览器中打开它。您将在控制台中看到“hello”这个词。
 
@@ -438,13 +438,15 @@ hello();
 
 下面介绍`rollup`中的几种常用的插件以及`external`属性、`tree-shaking`机制。
 
+## 补充说明
+
 ### `resolve`插件
 
 #### 为什么要使用`resolve`插件
 
 在上面的入门案例中，我们打包的对象是本地的`js`代码和库，但实际开发中，不太可能所有的库都位于本地，我们大多会通过`npm`下载远程的库。
 
-与`webpack`和`browserify`这样的其他捆绑包不同，`rollup`不知道如何打破常规去处理这些依赖。因此我们需要添加一些配置。
+与`webpack`和`browserify`这样的其他打包器包不同，`rollup`不知道如何打破常规去处理这些依赖。因此我们需要添加一些配置。
 
 #### `resolve`插件使用
 
