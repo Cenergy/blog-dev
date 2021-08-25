@@ -821,8 +821,8 @@ links:
     - {
       title: "最美的不是下雨天",
       intro: "龙哥的网站",
-      link: "http://www.qiulongwen.xyz/",
-      avatar: "https://aigisss.com/blog/img/avatar.png",
+      link: "https://www.nuyoah-me.top/",
+      avatar: "https://www.nuyoah-me.top/upload/2021/07/avatar-5fb29b58c13c45d4a50d0b40ea02ae98.jpg",
     }
     - {
       title: "小小的诗",
@@ -1030,9 +1030,9 @@ links:
     }
     - {
       title: '江卮可乐',
-      intro: 'There is only one heroism in the world , to see the world as it is and to love it.|',
-      link: 'https://blog.jannns.com/',
-      avatar: 'https://blog.jannns.com/img/jan.jpg'
+      intro: '江的三言两语',
+      link: 'https://blog.ijann.com',
+      avatar: 'https://blog.ijann.com/img/jan.webp'
     }
     - {
       title: '橘子味雪糕',
@@ -1075,6 +1075,18 @@ links:
       intro: '咸鱼一条，啥也不是',
       link: 'https://www.secice.cn/',
       avatar: 'https://gitee.com/sec-pengyy/sec-pengyy/raw/master/img/avatar.jpg'
+    }
+    - {
+      title: 'Unlasting的博客',
+      intro: '程序员小秦的狗窝',
+      link: 'https://unlasting-q.github.io/',
+      avatar: 'https://unlasting-q.github.io/img/favicon.png'
+    }
+    - {
+      title: '灰鸿的空间',
+      intro: '一名科技爱好者的空间',
+      link: 'https://space.greyh.cn',
+      avatar: 'https://gitee.com/huihongyhy/imgbed/raw/master/img/avatar.png'
     }
 #---------------------------
 # 以下是配置 JS CSS 静态资源的 URL 前缀，可以自定义成 CDN 地址，
