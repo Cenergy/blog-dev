@@ -120,7 +120,7 @@ theme: fluid   # next7|fluid
 deploy:
   - type: git
     repo:
-      # github: https://github.com/Cenergy/blog.git
+      github: https://github.com/Cenergy/blog.git
       coding: https://e.coding.net/aigis/blog.git
       aigisss: root@aigisss:/home/git/blog
     branch: master
@@ -219,7 +219,7 @@ githubcalendar:
   pc_minheight: 280px
   mobile_minheight: 0px
   color: "['#ebedf0', '#fdcdec', '#fc9bd9', '#fa6ac5', '#f838b2', '#f5089f', '#c4067e', '#92055e', '#540336', '#48022f', '#30021f']"
-  api: https://python-github-calendar-api.vercel.app/api
+  api: https://api.aigisss.com/api/github/cenergy
   # api: https://python-gitee-calendar-api.vercel.app/api
   calendar_js: https://cdn.jsdelivr.net/gh/Zfour/hexo-github-calendar@1.21/hexo_githubcalendar.js
   plus_style: ""
