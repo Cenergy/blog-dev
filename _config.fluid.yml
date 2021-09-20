@@ -386,7 +386,7 @@ footer:
 # Index Page
 #---------------------------
 index:
-  banner_img: https://static.zcool.cn/passport4.0/images/login-tommyp.jpg # 首页 Banner 头图，以下相同
+  banner_img: https://static.zcool.cn/passport4.0/images/login-tn.jpg # 首页 Banner 头图，以下相同
   banner_img_height: 100 # 头图高度，屏幕百分比，available: 0 - 100
   banner_mask_alpha: 0.3 # 头图黑色蒙版的透明度，available: 0 - 1.0， 0 是完全透明（无蒙版），1 是完全不透明
   slogan: # 首页副标题的独立设置
@@ -610,7 +610,7 @@ valine:
 # A comment plugin with backend derived from Valine
 # See: https://waline.js.org/
 waline:
-  serverURL: 'https://weline.aigisss.com'
+  serverURL: 'https://waline.aigisss.com'
   placeholder: '说点什么'
   path: window.location.pathname
   avatar: retro
@@ -1087,6 +1087,12 @@ links:
       intro: '一名科技爱好者的空间',
       link: 'https://space.greyh.cn',
       avatar: 'https://gitee.com/huihongyhy/imgbed/raw/master/img/avatar.png'
+    }
+    - {
+      title: 'atoooms',
+      intro: '万物归于原子',
+      link: 'https://atoooms.gitee.io',
+      avatar: 'https://z3.ax1x.com/2021/08/05/feTaGj.png'
     }
 #---------------------------
 # 以下是配置 JS CSS 静态资源的 URL 前缀，可以自定义成 CDN 地址，
