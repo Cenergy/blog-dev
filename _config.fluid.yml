@@ -180,10 +180,11 @@ color:
 
 # 主题字体配置
 # Font
-font: # 主题字体配置
+font:
   font_size: 18px # 全局字号
   font_family: 微软雅黑 # 全局字体
-  code_font_size: 85% # 代码的字号
+  letter_spacing: 0.02em
+  code_font_size: 85%
 # 指定自定义 .js 文件路径，支持列表；路径是相对 source 目录，如 /js/custom.js 对应存放目录 source/js/custom.js
 # Specify the path of your custom js file, support list. The path is relative to the source directory, such as `/js/custom.js` corresponding to the directory `source/js/custom.js`
 custom_js: [
@@ -218,6 +219,9 @@ web_analytics: # 网页访问统计
     app_id: diTi74ah5rpPDNa6bjS0VjqN-gzGzoHsz
     app_key: nHbjOKICQKYQtsVVJjeHYl0O
     server_url: https://diti74ah.lc-cn-n1-shared.com # REST API 服务器地址，国际版不填
+    # 统计页面时获取路径的属性
+    # Get the attribute of the page path during statistics
+    path: window.location.pathname
 
 # 对页面中的图片进行懒加载处理，可见范围外的图片不会加载
 # Lazy loading of images on the page
@@ -352,8 +356,15 @@ scroll_down_arrow: # 向下滚动的箭头
 scroll_top_arrow:
   enable: true
 
-
-
+# Open Graph metadata
+# See: https://hexo.io/docs/helpers.html#open-graph
+open_graph:
+  twitter_card: summary_large_image
+  twitter_id:
+  twitter_site:
+  google_plus:
+  fb_admins:
+  fb_app_id:
 
 #---------------------------
 # 页脚
@@ -465,10 +476,15 @@ post: # 部分配置同时控制自定义页面，注意备注
     wordcount: # 字数统计
       enable: true
       format: "{} 字" # 显示的文本，{}是数字的占位符（必须包含)，下同
-    min2read: # 阅读时间
+    min2read:
       enable: true
       format: "{} 分钟"
-      words: 100 # 每分钟阅读多少字，如果是技术文章，建议降低
+      # 每个字词的长度，建议：中文≈2，英文≈5
+      # Average word length (chars count in word), ZH ≈ 2, EN ≈ 5
+      awl: 2
+      # 每分钟阅读字数
+      # Words per minute
+      wpm: 160
     views: # 阅读次数，统计基于不蒜子  *不蒜子近期连接不稳定，谨慎开启
       enable: true
       source: "leancloud" # 统计数据来源，可选：leancloud | busuanzi   注意不蒜子会间歇抽风
