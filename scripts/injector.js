@@ -86,3 +86,10 @@ hexo.extend.injector.register(
   <link defer rel="stylesheet" href="${siteRoot}styles/banner.css" />
   `
 );
+
+// layout为link的时候导入这些js与css
+hexo.extend.injector.register(
+  "body_end",
+  `<script defer src="${siteRoot}js/linksShow.js"></script>`,
+  "links"
+);
