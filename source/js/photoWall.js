@@ -1,5 +1,5 @@
-var imgDataPath = "https://api.aigisss.com/resources/galleries"; //图片名称高宽信息json文件路径
-var imgPath = "https://api.aigisss.com/media"; //图片访问路径
+var imgDataPath = "/apis/resources/galleries/"; //图片名称高宽信息json文件路径
+var imgPath = "/media"; //图片访问路径
 var imgMaxNum = 50; //图片显示数量
 
 var windowWidth =
