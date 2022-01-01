@@ -22,3 +22,5 @@ tags: vscode
 结果能登录上去了，如图：
 
 ![image-20200325225717977](win系统下使用vscode中的remote-SSH插件连接就出错/image-20200325225717977.png)
+
+> 另外可以参考[个人电脑配置免密登陆SSH](https://zhuanlan.zhihu.com/p/143146239)

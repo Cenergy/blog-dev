@@ -222,6 +222,10 @@ web_analytics: # 网页访问统计
     # 统计页面时获取路径的属性
     # Get the attribute of the page path during statistics
     path: window.location.pathname
+    # 开启后不统计本地路径( localhost 与 127.0.0.1 )
+    # If ture, ignore localhost & 127.0.0.1
+    ignore_local: false
+
 
 # 对页面中的图片进行懒加载处理，可见范围外的图片不会加载
 # Lazy loading of images on the page
@@ -359,6 +363,7 @@ scroll_top_arrow:
 # Open Graph metadata
 # See: https://hexo.io/docs/helpers.html#open-graph
 open_graph:
+  enable: true
   twitter_card: summary_large_image
   twitter_id:
   twitter_site:
@@ -841,13 +846,13 @@ static_prefix:
 
   anchor: https://unpkg.zhimg.com/anchor-js@4.3.1/
 
-  github_markdown: https://unpkg.zhimg.com/github-markdown-css@4.0.0/
+  github_markdown: /lib/github-markdown/
 
   jquery: https://unpkg.zhimg.com/jquery@3.6.0/dist/
 
   bootstrap: https://unpkg.zhimg.com/bootstrap@4.6.0/dist/
 
-  highlightjs: https://unpkg.zhimg.com/highlight.js@10.7.2/
+  highlightjs: /lib/highlight/
 
   prismjs: https://unpkg.zhimg.com/prismjs@1.23.0/
 

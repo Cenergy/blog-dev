@@ -1,6 +1,7 @@
 ---
 title: JavaScript整理之从原型到原型链
 index_img: /posts/ba2c7364/prototype.png
+og_img: /posts/ba2c7364/prototype.png
 abbrlink: ba2c7364
 date: 2021-09-05 11:07:08
 tags: JavaScript
