@@ -5,7 +5,7 @@ insertDom.id = "bannerContainer";
 const { location: currentLocal = {} } = window;
 const { pathname: currentPath } = currentLocal;
 
-const bannerImageURL = `https://cdn.jsdelivr.net/gh/Cenergy/images/blog/images/banner/`;
+const bannerImageURL = `${window.location.origin}/blog/images/banner/`;
 const innerHTML = `
             <div class="animated" style="transform: translateX(0);">
                 <div class="layer" style="opacity: 0;">
