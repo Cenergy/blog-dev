@@ -178,6 +178,13 @@ color:
   board_color: "#fff"
   board_color_dark: "#252d38"
 
+  # 滚动条颜色
+  # Color of scrollbar
+  scrollbar_color: "#c4c6c9"
+  scrollbar_color_dark: "#687582"
+  scrollbar_hover_color: "#a6a6a6"
+  scrollbar_hover_color_dark: "#9da8b3"
+
 # 主题字体配置
 # Font
 font:
