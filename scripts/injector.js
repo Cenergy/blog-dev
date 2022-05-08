@@ -93,3 +93,13 @@ hexo.extend.injector.register(
   `<script defer src="${siteRoot}js/linksShow.js"></script>`,
   "links"
 );
+
+// layout为home的时候导入这些滑动动画
+hexo.extend.injector.register(
+  "body_end",
+  `
+  <script defer src="${siteRoot}js/scrollAnimation.js"></script>
+  <link defer rel="stylesheet" href="${siteRoot}styles/scrollAnimation.css" />
+  `,
+  "home"
+);
