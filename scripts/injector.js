@@ -23,8 +23,8 @@ hexo.extend.injector.register(
   "body_end",
   `
   <link rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css">
-  <script src="//cdn.jsdelivr.net/npm/minigrid@3.1.1/dist/minigrid.min.js"></script>
-  <script src="https://cdn.bootcdn.net/ajax/libs/lazyloadjs/3.2.2/lazyload.js"></script>
+  <script src="https://unpkg.com/minigrid@3.1.1/dist/minigrid.min.js"></script>
+  <script src="https://cdn.staticfile.org/lazyloadjs/3.2.2/lazyload.js"></script>
   <script src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js"></script>
   <script defer src="${siteRoot}js/photoWall.js"></script>`,
   "photo"
@@ -51,7 +51,7 @@ hexo.extend.injector.register(
 // // 导入这些js与css
 // hexo.extend.injector.register(
 //   "body_end",
-//   `<script src='//cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js'></script>
+//   `<script src='https://unpkg.com/@waline/client@v2/dist/waline.js'></script>
 //   <script src="${siteRoot}js/comment.js"></script>
 //   <script defer src="${siteRoot}js/comment2.js"></script>
 //   `

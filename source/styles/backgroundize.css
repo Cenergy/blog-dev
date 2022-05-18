@@ -12,7 +12,15 @@
 }
 
 #vedit {
-  background-image: url(https://cdn.jsdelivr.net/gh/drew233/cdn/20200409110727.webp);
+  background-image: url(https://api.aigisss.com/media/images/20200409110727.webp);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right;
+  background-color: rgba(255, 255, 255, 0);
+  resize: vertical;
+}
+#wl-edit {
+  background-image: url(https://api.aigisss.com/media/images/20200409110727.webp);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: right;
@@ -20,6 +28,10 @@
   resize: vertical;
 }
 #vedit:focus {
+  background-position-y: 200px;
+  transition: all 0.2s ease-in-out 0s;
+}
+#wl-edit:focus {
   background-position-y: 200px;
   transition: all 0.2s ease-in-out 0s;
 }
