@@ -1,10 +1,17 @@
-.blogTitle{
-  background-image: -webkit-linear-gradient(right,#effe08,#ffdab2,#f94d4d);
+.blogTitle {
+  background-image: -webkit-linear-gradient(right, #effe08, #ffdab2, #f94d4d);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.index-card {
+
+html[data-user-color-scheme="dark"] .index-card {
+  border-bottom: 1px #1d1616 solid;
+  margin-bottom: 1.5rem !important;
+  padding-bottom: 1.5rem !important;
+}
+
+html[data-user-color-scheme="light"] .index-card {
   border-bottom: 1px #ebeef5 solid;
   margin-bottom: 1.5rem !important;
   padding-bottom: 1.5rem !important;
@@ -160,7 +167,7 @@ figure.highlight::before {
   background: #fc625d;
   border-radius: 50%;
   box-shadow: 20px 0 #fdbc40, 40px 0 #35cd4b;
-  content: ' ';
+  content: " ";
   height: 12px;
   left: 12px;
   margin-top: -20px;
