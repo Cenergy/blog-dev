@@ -19,7 +19,7 @@
   background-color: rgba(255, 255, 255, 0);
   resize: vertical;
 }
-#wl-edit {
+html[data-user-color-scheme="light"] #wl-edit {
   background-image: url(https://api.aigisss.com/media/images/20200409110727.webp);
   background-size: contain;
   background-repeat: no-repeat;

@@ -1,5 +1,13 @@
 const banner = document.querySelector("#navbar");
-const insertDom = document.createElement("div");
+window.initBannerAnimation=false
+if(banner){
+banner.addEventListener('mouseenter',()=>{
+  if(window.initBannerAnimation) return;
+  var w=window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+  if(w<992) return;
+
+  window.initBannerAnimation=true;
+  const insertDom = document.createElement("div");
 insertDom.className = "bannerContainer";
 insertDom.id = "bannerContainer";
 const { location: currentLocal = {} } = window;
@@ -96,4 +104,10 @@ if (navbarDoms && navbarDoms.length) {
   navbarDoms[0].addEventListener("mousemove", onMove);
   navbarDoms[0].addEventListener("mouseenter", onEnter);
   navbarDoms[0].addEventListener("mouseleave", onLeave);
+  /* 调用及控制方法 */
+  var snow = new snowFall({ maxFlake: 100 });
+  snow.start();
 }
+
+})
+} 

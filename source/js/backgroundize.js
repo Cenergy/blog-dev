@@ -2,7 +2,6 @@ const bannerContainer = $("#banner");
 const viewBg = $("#web_bg");
 const bannerMask = $("#banner .mask");
 const bg = $(bannerContainer).css("background-image");
-console.log("rdapp - bg", bg)
 $(viewBg).css("background-image", bg);
 $(bannerContainer).css("background-image", "url()");
 const color = $(bannerMask).css("background-color");

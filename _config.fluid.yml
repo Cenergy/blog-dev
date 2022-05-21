@@ -922,7 +922,7 @@ links:
   custom:
     enable: true
     content: '<hr><p>在下方留言申请加入我的友链，按如下格式提供信息：</p>
-              <ul class="card"><li>名称：爱即是诗的博客</li>
+              <ul class="card note note-info"><li>名称：爱即是诗的博客</li>
               <li>简介：一个关于GIS的博客</li>
               <li>链接：https://aigisss.com/blog/</li>
               <li>头像：https://aigisss.com/blog/images/profile/avatar.jpg</li></ul>'

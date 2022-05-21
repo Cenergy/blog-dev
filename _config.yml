@@ -152,7 +152,7 @@ baidu_url_submit:
   path: baidu_urls.txt   # 文本文档的地址， 新链接会保存在此文本文档里
 
 server:
-  port: 5001
+  port: 5002
   compress: true
   header: true
 

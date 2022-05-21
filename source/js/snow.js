@@ -157,6 +157,3 @@ function drawSnow() {
     drawSnow.apply(that);
   });
 }
-/* 调用及控制方法 */
-var snow = new snowFall({ maxFlake: 100 });
-snow.start();
