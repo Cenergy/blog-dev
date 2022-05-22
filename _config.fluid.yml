@@ -282,6 +282,10 @@ lazyload:
   loading_img: /img/loading.gif
   onlypost: false
 
+# 图标库，包含了大量社交类图标，主题依赖的不包含在内，因此可自行修改，详见 https://hexo.fluid-dev.com/docs/icon/
+# Icon library, which includes many social icons, does not include those theme dependent, so your can modify link by yourself. See: https://hexo.fluid-dev.com/docs/en/icon/
+iconfont: //at.alicdn.com/t/font_1736178_lbnruvf0jn.css
+
 # 主题版本相关
 # Theme version
 version:
@@ -423,7 +427,7 @@ footer:
   # HTML of the first line of the footer, it is recommended to keep the Fluid link to promote this theme to more people
   content: '
     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
-    <i class="iconfont icon-love"></i>
+    💗
     <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a>
   '
   statistics: # 统计网站 PV、UV，使用的是不蒜子，显示在页脚  *不蒜子近期连接不稳定，谨慎开启
@@ -858,7 +862,7 @@ tag:
 #---------------------------
 about: # 以下仅为页面顶部的基本信息，更多内容请在 ./pages/about.md 中编辑，支持 markdown 和 HTML
   enable: true
-  banner_img: https://cdn.jsdelivr.net/gh/Cenergy/images/blog/images/home/about.webp
+  banner_img: https://api.aigisss.com/media/images/webp/about.webp
   banner_img_height: 60 # available: 0 - 100
   banner_mask_alpha: 0.3 # available: 0 - 1.0
   subtitle: # 打字机内容
@@ -954,10 +958,6 @@ static_prefix:
   internal_js: /js
   internal_css: /css
   internal_img: /img
-
-  # 图标库，包含了大量社交类图标，主题依赖的不包含在内，因此可自行修改，详见 https://hexo.fluid-dev.com/docs/icon/
-  # Icon library, which includes many social icons, does not include those theme dependent, so your can modify link by yourself. See: https://hexo.fluid-dev.com/docs/en/icon/
-  iconfont: //at.alicdn.com/t/font_1736178_kmeydafke9r.css
 
   anchor: https://unpkg.com/anchor-js@4.3.1/
 
