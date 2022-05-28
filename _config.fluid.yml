@@ -427,7 +427,7 @@ footer:
   # HTML of the first line of the footer, it is recommended to keep the Fluid link to promote this theme to more people
   content: '
     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
-    💗
+    ❤️
     <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a>
   '
   statistics: # 统计网站 PV、UV，使用的是不蒜子，显示在页脚  *不蒜子近期连接不稳定，谨慎开启
@@ -959,46 +959,46 @@ static_prefix:
   internal_css: /css
   internal_img: /img
 
-  anchor: https://unpkg.com/anchor-js@4.3.1/
+  anchor: https://lib.baomitu.com/anchor-js/4.3.1/
 
   github_markdown: /lib/github-markdown/
 
-  jquery: https://unpkg.com/jquery@3.6.0/dist/
+  jquery: https://lib.baomitu.com/jquery/3.6.0/
 
-  bootstrap: https://unpkg.com/bootstrap@4.6.0/dist/
+  bootstrap: https://lib.baomitu.com/twitter-bootstrap/4.6.1/
 
   highlightjs: /lib/highlight/
 
-  prismjs: https://unpkg.com/prismjs@1.23.0/
+  prismjs: https://lib.baomitu.com/prism/1.26.0/
 
-  tocbot: https://unpkg.com/tocbot@4.12.3/dist/
+  tocbot: https://lib.baomitu.com/tocbot/4.12.3/
 
-  typed: https://unpkg.com/typed.js@2.0.12/lib/
+  typed: https://lib.baomitu.com/typed.js/2.0.12/
 
-  fancybox: https://unpkg.com/@fancyapps/fancybox@3.5.7/dist/
+  fancybox: https://lib.baomitu.com/fancybox/3.5.7/
 
   nprogress: /lib/nprogress/
 
-  mathjax: https://unpkg.com/mathjax@3.1.4/es5/
+  mathjax: https://lib.baomitu.com/mathjax/3.2.0/
 
-  katex: https://unpkg.com/katex@0.13.10/dist/
+  katex: https://lib.baomitu.com/KaTeX/0.15.2/
 
   busuanzi: https://busuanzi.ibruce.info/busuanzi/2.3/
 
-  clipboard: https://unpkg.com/clipboard@2.0.8/dist/
+  clipboard: https://lib.baomitu.com/clipboard.js/2.0.10/
 
-  mermaid: https://unpkg.com/mermaid@8.10.1/dist/
+  mermaid: https://lib.baomitu.com/mermaid/8.13.10/
 
-  valine: https://unpkg.com/valine@1.4.14/dist/
+  valine: https://lib.baomitu.com/valine/1.4.16/
 
-  waline: https://lib.baomitu.com/waline/2.4.2/
+  waline: https://lib.baomitu.com/waline/2.3.2/
 
-  gitalk: https://unpkg.com/gitalk@1.7.2/dist/
+  gitalk: https://lib.baomitu.com/gitalk/1.7.2/
 
-  disqusjs: https://unpkg.com/disqusjs@1.3.0/dist/
+  disqusjs: https://lib.baomitu.com/disqusjs/1.3.0/
 
-  twikoo: https://unpkg.com/twikoo@1.3.1/dist/
+  twikoo: https://lib.baomitu.com/twikoo/1.4.17/
 
-  hint: /lib/hint/
+  hint: https://lib.baomitu.com/hint.css/2.7.0/
   
   # git remote set-url --add aigisss root@aigisss:/home/git/doggo

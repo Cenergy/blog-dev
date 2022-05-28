@@ -33,9 +33,9 @@ $ npm install hexo-tag-echarts --save
 
 ```markdown
 // 通过jsDelivr的CDN引入echarts
-<script src="https://cdn.jsdelivr.net/npm/echarts@4.8.0/dist/echarts.min.js"></script>
+<script src="https://lib.baomitu.com/echarts/4.8.0/echarts.min.js"></script>
 // 使用GL里的各种组件时需要添加，否则可不需要
-<script src="https://cdn.jsdelivr.net/npm/echarts-gl@1.1.1/dist/echarts-gl.min.js"></script>
+<script src="https://lib.baomitu.com/echarts-gl/1.1.1/echarts-gl.min.js"></script>
 ```
 
 - 在markdown文件下添加echarts，格式如下
@@ -74,7 +74,7 @@ $ npm install hexo-tag-echarts --save
 - 在html绘图ECharts的格式如下：
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/echarts@4.8.0/dist/echarts.min.js"></script>
+<script src="https://lib.baomitu.com/echarts/4.8.0/echarts.min.js"></script>
 <!-- 为 ECharts 准备一个具备大小（宽高）的 DOM -->
 <div id="main" style="width: 600px;height:400px;"></div>
 <script type="text/javascript">
@@ -101,9 +101,9 @@ $ npm install hexo-tag-echarts --save
 <script type="text/javascript" src="https://api.map.baidu.com/getscript?v=2.0&ak=FAKE_AK"></script>
 ```
 
-<script src="https://cdn.jsdelivr.net/npm/echarts@4.8.0/dist/echarts.min.js"></script>
+<script src="https://lib.baomitu.com/echarts/4.8.0/echarts.min.js"></script>
 <script src="https://api.map.baidu.com/getscript?v=2.0&ak=84y4lPUPCHIrwRUQPc61uBewdYZ1pHM2"></script>
-<script src="https://cdn.jsdelivr.net/npm/echarts-gl@1.1.1/dist/echarts-gl.min.js"></script>
+<script src="https://lib.baomitu.com/echarts-gl/1.1.1/echarts-gl.min.js"></script>
 
 ## 实例
 

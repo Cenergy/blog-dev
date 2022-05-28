@@ -12,10 +12,10 @@
 }
 
 html[data-user-color-scheme="light"] .footer-inner {
-  color: #765bff;
+  color: #dfdaf7;
 }
 html[data-user-color-scheme="light"] .footer-inner a{
-  color: #765bff;
+  color: #dfdaf7;
 }
 
 #vedit {
