@@ -2,7 +2,7 @@
 title: VSCode中python代码输出中文乱码解决方法
 abbrlink: 87ed0839
 date: 2019-09-12 10:10:35
-tags: [python,vscode]
+tags: [Python,Vscode]
 categories: 技术
 ---
 

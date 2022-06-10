@@ -3,7 +3,7 @@ title: 使用Rollup创作一个可以随处使用的JavaScript库
 index_img: /posts/90da98cf/rollup-1626491194567.jpg
 abbrlink: 90da98cf
 date: 2021-07-17 10:59:25
-tag: [rollup]
+tag: [Rollup]
 ---
 
 ## 前言
