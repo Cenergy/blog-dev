@@ -1,6 +1,6 @@
 ---
 title: gitlab-ci自动化部署
-tags: gitlab
+tags: Gitlab
 abbrlink: 9604e2a7
 date: 2019-12-10 11:09:30
 ---

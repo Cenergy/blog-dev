@@ -4,7 +4,7 @@ index_img: /images/pages/logo-mapbox-tippecanoe.png
 abbrlink: 4ef7fe51
 categories: mapbox
 date: 2020-09-20 21:49:46
-tags: mapbox
+tags: Mapbox
 ---
 # 矢量切片工具：tippecanoe
 

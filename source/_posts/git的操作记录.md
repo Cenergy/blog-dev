@@ -2,7 +2,7 @@
 title: git的操作记录
 abbrlink: d5d49586
 date: 2019-09-07 08:41:08
-tags: git
+tags: Git
 categories:
   - 编程
   - 更新中

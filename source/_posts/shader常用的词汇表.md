@@ -4,7 +4,7 @@ index_img: /images/pages/glossary.png
 abbrlink: shaderglossary
 categories: 着色器
 date: 2020-09-16 19:01:26
-tags:
+tags: 着色器之书
 ---
 ## 类型
 

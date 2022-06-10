@@ -2,7 +2,7 @@
 title: 安装node-sass的几个方法
 index_img: /posts/b6b80389/node-sass.png
 tags:
-  - node-sass
+  - Node-sass
 abbrlink: b6b80389
 date: 2021-07-05 09:12:51
 ---

@@ -1,6 +1,6 @@
 ---
 title: Mapbox加载空白地图
-tags: mapboxgl
+tags: Mapboxgl
 abbrlink: e1a3a842
 date: 2019-10-16 20:37:23
 ---

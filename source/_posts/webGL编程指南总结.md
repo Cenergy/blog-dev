@@ -3,7 +3,7 @@ title: webGL编程指南总结
 index_img: /posts/3a1238a0/webgl.png
 abbrlink: 3a1238a0
 date: 2021-12-05 11:05:12
-tags: webGL
+tags: WebGL
 ---
 
 个人计算机上使用最广泛的两种三维图形渲染技术是**Direct3D**和**OpenGL**。

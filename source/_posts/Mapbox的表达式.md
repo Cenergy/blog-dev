@@ -1,6 +1,6 @@
 ---
 title: Mapbox的表达式
-tags: mapboxgl
+tags: Mapboxgl
 abbrlink: 9c1bf78f
 date: 2019-10-18 09:52:50
 ---

@@ -2,7 +2,7 @@
 title: vue-cli-service-build报错
 abbrlink: 26a3b371
 date: 2020-01-15 23:36:31
-tags:
+tags: Vue
 ---
 
 `vue-cli-service-build报错No module factory available for dependency type: CssDependency`

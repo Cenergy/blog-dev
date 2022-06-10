@@ -1,8 +1,8 @@
 ---
 title: 使用vscode在leetcode上提交代码
 tags:
-  - vscode
-  - leetcode
+  - Vscode
+  - Leetcode
 abbrlink: 64ddb0a
 date: 2019-10-28 23:05:58
 ---

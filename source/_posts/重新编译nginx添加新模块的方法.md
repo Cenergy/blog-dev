@@ -4,7 +4,7 @@ index_img: 'https://www.aigisss.com/static/images/bg.jpg'
 abbrlink: 2b8963ab
 categories: 未分类
 date: 2020-07-20 23:58:09
-tags: nginx
+tags: Nginx
 ---
 
 111

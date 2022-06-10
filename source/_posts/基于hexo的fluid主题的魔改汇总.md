@@ -2,8 +2,8 @@
 title: 基于hexo的fluid主题的魔改汇总
 index_img: /posts/1563abd8/fluid.png
 tags:
-  - hexo
-  - fluid
+  - Hexo
+  - Fluid
 abbrlink: 1563abd8
 date: 2021-04-24 22:16:5
 ---

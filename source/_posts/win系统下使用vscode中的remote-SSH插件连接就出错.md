@@ -2,7 +2,7 @@
 title: win系统下使用vscode中的remote-SSH插件连接就出错
 abbrlink: fa7b679e
 date: 2020-03-25 20:31:43
-tags: vscode
+tags: Vscode
 ---
 
 有了自己的云服务器，就想把自己的网站往上迁移。听闻 vscode 中`remote-SSH`的插件很好用，于是安装使用一下，木有想到的是，第一步就出错了——连接不上，报`Bad owner or permissions`的错！！

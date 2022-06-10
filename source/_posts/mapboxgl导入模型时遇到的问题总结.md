@@ -2,7 +2,7 @@
 title: mapboxgl导入模型时遇到的问题总结
 abbrlink: cb3db6e0
 date: 2020-05-16 09:02:38
-tags: mapboxgl
+tags: Mapboxgl
 ---
 
 > 前言：使用mapboxgl导入模型时，经常导不进去场景里面 会出很多差错，这里给大家分享一些心得。此文来源我同事小阮！

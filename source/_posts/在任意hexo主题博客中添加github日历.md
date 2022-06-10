@@ -3,7 +3,7 @@ title: 在任意hexo主题博客中添加github日历
 index_img: /posts/91dc324b/image-20210418160637890.png
 abbrlink: 91dc324b
 date: 2021-04-18 15:56:02
-tags: hexo
+tags: Hexo
 
 ---
 

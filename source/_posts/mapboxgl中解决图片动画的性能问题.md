@@ -2,7 +2,7 @@
 title: mapboxgl中解决图片动画的性能问题
 abbrlink: 5796179d
 date: 2020-04-02 20:45:16
-tags: mapboxgl
+tags: Mapboxgl
 ---
 
 `mapbox-gl`中的动画图片是不断请求服务器得来的，详情请看[地址](https://docs.mapbox.com/mapbox-gl-js/example/animate-images/)，虽然是实现了，但一直请求不是好的解决办法，特别还是`mapbox-gl`这种追求性能极致的来说。我们可以有多种解决方法。

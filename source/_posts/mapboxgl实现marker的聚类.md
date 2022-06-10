@@ -1,6 +1,6 @@
 ---
 title: mapboxgl实现marker的聚类
-tags: mapboxgl
+tags: Mapboxgl
 abbrlink: a2d9d205
 date: 2019-09-17 13:08:43
 ---

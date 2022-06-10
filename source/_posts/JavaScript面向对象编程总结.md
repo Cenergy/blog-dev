@@ -2,7 +2,7 @@
 title: JavaScript面向对象编程总结
 abbrlink: 9364fbab
 date: 2019-09-19 12:35:34
-tags: javascript
+tags: JavaScript
 ---
 
 ## What is Object-oriented Programming

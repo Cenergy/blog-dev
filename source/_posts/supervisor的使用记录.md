@@ -3,7 +3,7 @@ title: supervisor的使用记录
 index_img: /posts/8479a1a4/supervisor.jpg
 abbrlink: 8479a1a4
 date: 2021-06-12 16:08:44
-tags: supervisor
+tags: Supervisor
 ---
 
 ## 前言

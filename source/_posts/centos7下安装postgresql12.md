@@ -2,7 +2,7 @@
 title: centos7.7下安装postgresql12.3
 abbrlink: 27e03ac5
 date: 2020-05-26 09:12:24
-tags: postgres
+tags: Postgres
 ---
 ##  安装依赖
 
