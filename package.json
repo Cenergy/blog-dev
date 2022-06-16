@@ -7,7 +7,7 @@
     "server": "hexo clean && hexo server"
   },
   "hexo": {
-    "version": "5.4.0"
+    "version": "5.4.1"
   },
   "dependencies": {
     "hexo": "^5.2.0",
@@ -28,7 +28,7 @@
     "hexo-renderer-stylus": "^1.1.0",
     "hexo-server": "^2.0.0",
     "hexo-tag-echarts": "^1.0.0",
-    "hexo-theme-fluid": "^1.9.1",
+    "hexo-theme-fluid": "^1.9.2",
     "hexo-yam": "^5.0.0"
   }
 }
