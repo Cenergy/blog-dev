@@ -65,7 +65,7 @@ code:
       # Select a style in the link
       # See: https://highlightjs.org/static/demo/
       style: "Github"
-      style_dark: "Tomorrow Night"
+      style_dark: "Base16/Google Dark"
 
 
     prismjs:
