@@ -258,6 +258,7 @@ minify:
       - '*.svg'
       - '*.eot'
       - '*.json'
+      - '!config.json'
   brotli:
     enable: false
   xml:
@@ -266,3 +267,17 @@ minify:
     enable: false
 
 # 压缩博文配置结束
+
+
+reward_button:
+  enable: true
+  btn_icon: iconfont icon-love
+  btn_text: 赞赏
+  comment: ''
+  qrcodes:
+    - src: /blog/images/zhifubao_pay.jpg
+      caption: 支付宝
+      title: 支付宝赞赏码
+    - src: /blog/images/we_pay.jpg
+      caption: 微信
+      title: 微信赞赏码

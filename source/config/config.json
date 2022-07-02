@@ -1,0 +1,16 @@
+{
+  "on": false,
+  "config": {
+    "home": {
+      "content": {
+        "background": "rgb(150,167,185)"
+      }
+    },
+    "posts": {
+      "content": {
+        "background-image": "url(https://api.aigisss.com/resources/images/1)",
+        "background-size": "cover"
+      }
+    }
+  }
+}

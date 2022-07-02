@@ -78,7 +78,6 @@ hexo.extend.injector.register(
   `
 );
 
-
 hexo.extend.injector.register(
   "body_end",
   `<script src="${siteRoot}js/banner.js"></script>

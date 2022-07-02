@@ -5,10 +5,10 @@
   height: 100%;
   background-attachment: local;
   background-position: center;
-  -webkit-background-size: cover;
+  /* -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
-  background-repeat: repeat;
+  background-repeat: repeat; */
 }
 
 html[data-user-color-scheme="light"] .footer-inner {
@@ -67,9 +67,20 @@ footer a{
 } */
 
 .post-metas > :not(.mr-3) a {
-  background-color: #FF9800;
+  background-color: #ff9800;
   opacity: 0.8;
-  color: #FFF;
+  color: #fff;
   border-radius: 4px;
   padding: 2px 5px;
+}
+
+.markdown-body {
+  background-image: linear-gradient(
+      90deg,
+      rgba(50, 0, 0, 0.05) 3%,
+      rgba(0, 0, 0, 0) 3%
+    ),
+    linear-gradient(360deg, rgba(50, 0, 0, 0.05) 3%, rgba(0, 0, 0, 0) 3%);
+  background-size: 20px 20px;
+  background-position: center center;
 }
