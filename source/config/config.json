@@ -3,7 +3,8 @@
   "config": {
     "home": {
       "content": {
-        "background": "rgb(150,167,185)"
+        "background-image": "url(https://api.aigisss.com/media/images/webp/bg.webp)",
+        "background-repeat": "repeat"
       }
     },
     "posts": {
