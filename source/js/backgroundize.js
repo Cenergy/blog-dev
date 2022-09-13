@@ -34,9 +34,7 @@
       }
 
       const { content: homeContent = {} } = res.config.home;
-      window.onload = () => {
-        $(viewBg).css(homeContent);
-      };
+      $(viewBg).css(homeContent);
     })
     .catch(function () {
       const bannerContainer = $("#banner");
