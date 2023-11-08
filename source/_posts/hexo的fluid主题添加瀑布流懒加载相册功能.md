@@ -5,7 +5,7 @@ abbrlink: 798ba833
 date: 2021-01-10 16:57:10
 tags: [Hexo,Fluid]
 ---
-<div class="note note-warning">相册演示地址:<a style="color:red" href="https://www.aigisss.com/blog/photos/">https://www.aigisss.com/blog/photos/</a> ,当前演示环境基于hexo===5.2.0 , fluid===1.8.7,很大程度上参考了醉里挑灯赏猫的<a href="https://blog.dlzhang.com/posts/31/" style="color:red">Hexo NexT 博客增加瀑布流相册页面</a>这篇博客!在此感谢班班提供的帮助!!</div>
+<div class="note note-warning">相册演示地址:<a style="color:red" href="https://www.gishai.top/blog/photos/">https://www.gishai.top/blog/photos/</a> ,当前演示环境基于hexo===5.2.0 , fluid===1.8.7,很大程度上参考了醉里挑灯赏猫的<a href="https://blog.dlzhang.com/posts/31/" style="color:red">Hexo NexT 博客增加瀑布流相册页面</a>这篇博客!在此感谢班班提供的帮助!!</div>
 
 ## 创建相册页面
 

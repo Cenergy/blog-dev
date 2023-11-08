@@ -14,8 +14,8 @@ const linkHtmlElement = `<div class="container card">
                         <strong>本站简介:</strong>
                         <div class="link-title">名称：爱即是诗</div>
                         <div class="link-title">简介：AI&GIS博客</div>
-                        <div class="link-title">链接：https://www.aigisss.com</div>
-                        <div class="link-title">头像：https://www.aigisss.com/blog/images/profile/avatar.jpg</div>
+                        <div class="link-title">链接：https://www.gishai.top</div>
+                        <div class="link-title">头像：https://www.gishai.top/blog/images/profile/avatar.jpg</div>
                         </div>`;
 hexo.extend.injector.register("body_begin", linkHtmlElement, "linksss");
 // layout为photo的时候导入这些js与css
