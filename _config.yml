@@ -121,7 +121,7 @@ deploy:
   - type: git
     repo:
       # github: https://github.com/Cenergy/blog.git
-      aigisss: root@122.51.49.230:/home/git/blog
+      aigisss: root@gishai:/home/git/blog
     branch: master
 
   # - type: git

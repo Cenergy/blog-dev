@@ -1,6 +1,6 @@
 var frindLinkDoms = document.querySelector(".links");
 console.log("rdapp - frindLinkDoms", frindLinkDoms);
-const onerror_avatar='https://api.btstu.cn/sjtx/api.php?lx=c1&format=images'
+const onerror_avatar='https://api.vvhan.com/api/acgimg'
 fetch("https://api.gishai.top/comments/friends/")
   .then((res) => res.json())
   .then((item) => {
