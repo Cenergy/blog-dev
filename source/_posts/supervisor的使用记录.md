@@ -8,7 +8,7 @@ tags: Supervisor
 
 ## 前言
 
-为啥使用supervisor，因为最近给我的[API服务](https://api.aigisss.com/)增加了一个定时任务，需要后台一直运行一条命令行，当关掉这个命令行时任务就不会跑了，各种搜索，定位到supervisor能解决这个问题。于是了解了一下，发现Supervisor还能解决Django项目不能自动启动的问题。Supervisor是用Python开发的一套通用的进程管理程序，能将一个普通的命令行进程变为后台daemon，并监控进程状态，异常退出时能自动重启。它是通过fork/exec的方式把这些被管理的进程当作supervisor的子进程来启动，这样只要在supervisor的配置文件中，把要管理的进程的可执行文件的路径写进去即可。也实现当子进程挂掉的时候，父进程可以准确获取子进程挂掉的信息的，可以选择是否自己启动和报警。supervisor还提供了一个功能，可以为supervisord或者每个子进程，设置一个非root的user，这个user就可以管理它对应的进程。
+为啥使用supervisor，因为最近给我的[API服务](https://api.gishai.top/)增加了一个定时任务，需要后台一直运行一条命令行，当关掉这个命令行时任务就不会跑了，各种搜索，定位到supervisor能解决这个问题。于是了解了一下，发现Supervisor还能解决Django项目不能自动启动的问题。Supervisor是用Python开发的一套通用的进程管理程序，能将一个普通的命令行进程变为后台daemon，并监控进程状态，异常退出时能自动重启。它是通过fork/exec的方式把这些被管理的进程当作supervisor的子进程来启动，这样只要在supervisor的配置文件中，把要管理的进程的可执行文件的路径写进去即可。也实现当子进程挂掉的时候，父进程可以准确获取子进程挂掉的信息的，可以选择是否自己启动和报警。supervisor还提供了一个功能，可以为supervisord或者每个子进程，设置一个非root的user，这个user就可以管理它对应的进程。
 
 ## supervisor安装
 centos7 系统yum安装的supervisor是3.*.*版本，需要使用python的pip安装最新版本(4.2.3)

@@ -1,6 +1,6 @@
 ---
 title: geoserver发布矢量切片说明
-index_img: 'https://www.aigisss.com/static/images/bg.jpg'
+index_img: 'https://www.gishai.top/static/images/bg.jpg'
 date: 2020-07-02 18:16:07
 abbrlink: 9604abcd
 tags:

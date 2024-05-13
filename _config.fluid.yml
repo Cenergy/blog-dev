@@ -18,11 +18,11 @@
 
 # 用于浏览器标签的图标
 # Icon for browser tab
-favicon: https://aigisss.com/media/icons/favicon.png
+favicon: https://gishai.top/media/icons/favicon.png
 
 # 用于苹果设备的图标
 # Icon for Apple touch
-apple_touch_icon: https://aigisss.com/media/icons/favicon.png
+apple_touch_icon: https://gishai.top/media/icons/favicon.png
 
 # 浏览器标签页中的标题分隔符，效果： 文章名 - 站点名
 # Title separator in browser tab, eg: article - site
@@ -341,7 +341,7 @@ navbar:
   menu: # 可自行增减，key 用来关联 languages/*.yml，如不存在关联则显示 key 本身的值；icon 是 css class，可以省略；增加 name 可以强制显示指定名称
     - {
         key: "首页",
-        link: "http://aigisss.com",
+        link: "http://gishai.top",
         icon: "iconfont icon-google-fill",
       }
     - { key: "博客", link: "/", icon: "iconfont icon-home-fill" }
@@ -745,7 +745,7 @@ valine:
 # A comment plugin with backend derived from Valine
 # See: https://waline.js.org/
 waline:
-  serverURL: 'https://walines.aigisss.com'
+  serverURL: 'https://walines.gishai.top'
   path: window.location.pathname
   avatar: retro
   meta: ['nick', 'mail', 'link']
@@ -862,7 +862,7 @@ tag:
 #---------------------------
 about: # 以下仅为页面顶部的基本信息，更多内容请在 ./pages/about.md 中编辑，支持 markdown 和 HTML
   enable: true
-  banner_img: https://api.aigisss.com/media/images/webp/about.webp
+  banner_img: https://api.gishai.top/media/images/webp/about.webp
   banner_img_height: 60 # available: 0 - 100
   banner_mask_alpha: 0.3 # available: 0 - 1.0
   subtitle: # 打字机内容
@@ -887,7 +887,7 @@ about: # 以下仅为页面顶部的基本信息，更多内容请在 ./pages/ab
       }
     - {
         class: "iconfont icon-google-fill",
-        link: "https://aigisss.com",
+        link: "https://gishai.top",
         tip: "个人网站",
       }
     # - { class: "iconfont icon-wechat-fill", qrcode: "/img/favicon.png" }
@@ -919,7 +919,7 @@ links:
   subtitle: # 打字机内容
   # 当成员头像加载失败时，替换为指定图片
   # When the member avatar fails to load, replace the specified image
-  onerror_avatar: https://api.btstu.cn/sjtx/api.php?lx=c1&format=images  #随机动漫头像
+  onerror_avatar: https://api.vvhan.com/api/acgimg  #随机动漫头像
 
   # 友链下方自定义区域，支持 HTML，可插入例如申请友链的文字
   # Custom content at the bottom of the links
@@ -928,8 +928,8 @@ links:
     content: '<hr><p>在下方留言申请加入我的友链，按如下格式提供信息：</p>
               <ul class="card note note-info"><li>名称：爱即是诗的博客</li>
               <li>简介：一个关于GIS的博客</li>
-              <li>链接：https://aigisss.com/blog/</li>
-              <li>头像：https://aigisss.com/blog/images/profile/avatar.jpg</li></ul>'
+              <li>链接：https://gishai.top/blog/</li>
+              <li>头像：https://gishai.top/blog/images/profile/avatar.jpg</li></ul>'
 
   # 评论插件
   # Comment plugin

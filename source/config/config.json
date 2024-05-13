@@ -3,13 +3,13 @@
   "config": {
     "home": {
       "content": {
-        "background-image": "url(https://api.aigisss.com/media/images/webp/bg.webp)",
+        "background-image": "url(https://api.gishai.top/media/images/webp/bg.webp)",
         "background-repeat": "repeat"
       }
     },
     "posts": {
       "content": {
-        "background-image": "url(https://api.aigisss.com/resources/images/1)",
+        "background-image": "url(https://api.gishai.top/resources/images/1)",
         "background-size": "cover"
       }
     }

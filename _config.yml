@@ -13,7 +13,7 @@ timezone: Asia/Shanghai
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://www.aigisss.com/blog
+url: https://www.gishai.top/blog
 root: /blog/
 
 permalink: posts/:abbrlink.html
@@ -121,7 +121,7 @@ deploy:
   - type: git
     repo:
       # github: https://github.com/Cenergy/blog.git
-      aigisss: root@aigisss:/home/git/blog
+      aigisss: root@gishai:/home/git/blog
     branch: master
 
   # - type: git
@@ -147,7 +147,7 @@ baidusitemap:
 
 baidu_url_submit:
   count: 1000               # 提交最新的多少个链接
-  host: www.aigisss.com    # 在百度站长平台中添加的域名
+  host: www.gishai.top    # 在百度站长平台中添加的域名
   token: ay3cXIG8GmB5KGr0      # 秘钥
   path: baidu_urls.txt   # 文本文档的地址， 新链接会保存在此文本文档里
 
@@ -218,7 +218,7 @@ githubcalendar:
   pc_minheight: 280px
   mobile_minheight: 0px
   color: "['#ebedf0', '#fdcdec', '#fc9bd9', '#fa6ac5', '#f838b2', '#f5089f', '#c4067e', '#92055e', '#540336', '#48022f', '#30021f']"
-  api: https://api.aigisss.com/api/github/cenergy
+  api: https://api.gishai.top/api/github/cenergy
   # api: https://python-gitee-calendar-api.vercel.app/api
   calendar_js: /blog/js/hexo_githubcalendar.js
   # calendar_js: https://cdn.jsdelivr.net/gh/Zfour/hexo-github-calendar@1.21/hexo_githubcalendar.js

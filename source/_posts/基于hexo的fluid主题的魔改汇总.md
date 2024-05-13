@@ -14,7 +14,7 @@ date: 2021-04-24 22:16:5
 
 ## 背景固定
 
-效果如[背景所示](https://aigisss.com/blog/posts/1563abd8.html)，这种效果贯穿着整个博客。具体做法如下：使用`注入器`(如果没有`injector.js`文件，则在`scripts`文件夹下新建`injector.js`)，在`injector.js`中写下这些代码。
+效果如[背景所示](https://gishai.top/blog/posts/1563abd8.html)，这种效果贯穿着整个博客。具体做法如下：使用`注入器`(如果没有`injector.js`文件，则在`scripts`文件夹下新建`injector.js`)，在`injector.js`中写下这些代码。
 
 ```js
 // 全屏背景的需要导入这些js

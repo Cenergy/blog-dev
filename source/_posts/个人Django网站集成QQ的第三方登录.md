@@ -5,7 +5,7 @@ abbrlink: 2205c935
 date: 2020-12-14 20:38:43
 tags: Django
 ---
-**体验地址**: https://www.aigisss.com/view/#/login
+**体验地址**: https://www.gishai.top/view/#/login
 
 <div class="note note-warning">特别注意的是,当前文章的Django版本是3.1.4</div>
 
