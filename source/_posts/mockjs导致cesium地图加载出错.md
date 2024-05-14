@@ -1,6 +1,6 @@
 ---
 title: mockjs导致cesium地图加载出错
-index_img: 'https://www.aigisss.com/static/images/bg.jpg'
+index_img: /images/cover/3.png
 abbrlink: ab207de9
 date: 2024-05-09 09:39:14
 tags: cesium

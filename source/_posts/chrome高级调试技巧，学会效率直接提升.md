@@ -1,6 +1,6 @@
 ---
 title: chrome高级调试技巧，学会效率直接提升
-index_img: 'https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/4a38610e87774d718ef6633d80b48409~tplv-k3u1fbpfcp-zoom-crop-mark:1304:1304:1304:734.awebp?'
+index_img: /images/cover/1.png
 abbrlink: 2137c6ac
 date: 2022-05-28 23:44:13
 tags: 前端
