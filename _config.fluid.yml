@@ -438,7 +438,7 @@ footer:
 
   beian: # The footer of China's website policy, other areas keep disable
     enable: true
-    icp_text: 赣ICP备18013338-1号 # ICP证号
+    icp_text: ©2024 及时嗨版权所有 赣ICP备18013338-1号 # ICP证号
     police_text: # 公安备案号，不填则只显示ICP
     police_code: 12345678 # 公安备案的编号，用于URL跳转查询
     police_icon: /img/police_beian.png # 公安备案的图片. 为空时不显示备案图片
@@ -745,7 +745,7 @@ valine:
 # A comment plugin with backend derived from Valine
 # See: https://waline.js.org/
 waline:
-  serverURL: 'https://walines.gishai.top'
+  serverURL: 'https://waline.gishai.top'
   path: window.location.pathname
   avatar: retro
   meta: ['nick', 'mail', 'link']
