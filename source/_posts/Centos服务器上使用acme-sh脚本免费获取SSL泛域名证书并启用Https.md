@@ -205,6 +205,10 @@ openssl x509 -in /path/to/certfile/cert/cert.pem -noout -dates
 
 ![image-20240613112451383](Centos服务器上使用acme-sh脚本免费获取SSL泛域名证书并启用Https/image-20240613112451383.png)
 
+![image-20240613115714065](Centos服务器上使用acme-sh脚本免费获取SSL泛域名证书并启用Https/image-20240613115714065.png)
+
+二级域名的`ssl`也是可以的。
+
 看看有木有自动任务，因为证书3个月就过期了。
 
 ```sh
